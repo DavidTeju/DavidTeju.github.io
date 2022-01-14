@@ -1,0 +1,3 @@
+I want the div to have a maximum width in pixels while having a percentage width
+I want to put two texts on one line with different alignments without using tables
+How to center an unordered list
