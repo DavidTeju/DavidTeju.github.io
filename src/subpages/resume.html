@@ -1,36 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href="../styling/darkMode.css" rel="stylesheet"/>
-    <title>My Resume</title>
-    <style>
-        h1,
-        h2,
-        h3 {
-            margin-bottom: 5px;
-            margin-top: 5px;
-        }
-        p.subheader, ul{
-            margin-bottom: 0;
-            margin-top: 0;
-        }
-    </style>
-</head>
-<body>
-<h1><a href="../index.html">David Tejuosho</a></h1>
-<p class="subheader">6737 Spaniel Court, Riverdale, GA</p>
-<p class="subheader">(678) 754 - 6641 | <a href="mailto:tejuoshodavid@gmail.com">tejuoshodavid@gmail.com</a></p>
-<p class="subheader" style="margin-bottom: 10px">Github: <a href="https://github.com/DavidTeju">GitHub.com/DavidTeju</a></p>
-<h2>Education</h2>
-<hr />
-<h3>Dominican University</h3>
-<p class="subheader"><em>Bachelor of Science in Math and Computer Science</em></p>
-<ul>
-    <li><b>GPA:</b> 3.5/4.0; <b>SAT:</b> 1530</li>
-</ul>
-<h2>Projects</h2>
-<hr />
-<h3>Hang Man</h3>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<link href="../styling/darkMode.css" rel="stylesheet" />
+		<title>My Resume</title>
+		<style>
+			h1,
+			h2,
+			h3 {
+				margin: 5px auto;
+			}
+			main p,
+			main tr,
+			ul {
+				margin-bottom: 0;
+				margin-top: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<h1><a href="../index.html" , title="Home">David Tejuosho</a></h1>
+			<p><em>Student of Computer Science</em></p>
+			<hr />
+		</header>
+
+		<main>
+			<div style="border: solid; padding: 2vh; margin-bottom: 2vh">
+				<div class="resume-header">
+					<h1 style="color: #989898">David Tejuosho</h1>
+					<p>6737 Spaniel Court, Riverdale, GA</p>
+					<p>
+						(678) 754 - 6641 |
+						<a href="mailto:tejuoshodavid@gmail.com">tejuoshodavid@gmail.com</a>
+					</p>
+					<p style="margin-bottom: 10px">
+						Github:
+						<a href="https://github.com/DavidTeju">GitHub.com/DavidTeju</a>
+					</p>
+				</div>
+
+				<h2>Education</h2>
+				<hr />
+				<table style="width: 100%">
+					<thead>
+						<h3>
+							<tr>
+								<th style="text-align: left">Dominican University</th>
+								<th style="text-align: right">River Forest</th>
+							</tr>
+						</h3>
+					</thead>
+					<tbody>
+						<tr style="font-style: italic">
+							<td>Bachelor of Science in Math and Computer Science</td>
+						</tr>
+					</tbody>
+				</table>
+				<p></p>
+				<ul>
+					<li><b>GPA:</b> 3.5/4.0; <b>SAT:</b> 1530</li>
+				</ul>
+				<h2>Projects</h2>
+				<hr />
+				<h3>Hang Man</h3>
+			</div>
+		</main>
+		<footer>
+			<p>
+				<a href="https://evenbettermotherfucking.website/">Inspiration</a> for
+				original style
+			</p>
+		</footer>
+	</body>
 </html>
