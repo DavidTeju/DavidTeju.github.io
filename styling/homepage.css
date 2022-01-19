@@ -1,0 +1,47 @@
+nav ul {
+    display: inline;
+    padding: 0;
+}
+nav {
+    padding-left: 30px;
+}
+nav li {
+    display: block;
+}
+.heading {
+    width: 65%;
+    border-right: solid;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+.heading h1 {
+    font-size: 7em;
+}
+.heading p {
+    margin-top: 0.5em;
+    line-height: normal;
+}
+.container p,
+.container li {
+    font-size: 3em;
+}
+.container {
+    display: flex;
+    border: solid;
+    padding: 20px;
+    /*ᐯ to maintain the aspect ratio of the container ᐯ*/
+    height: calc(85 / 100 * 100vw / 2.5);
+    min-height: 25em;
+    align-items: center;
+}
+footer {
+    display: absolute;
+    bottom: 0;
+}
+main {
+    display: flex;
+    align-items: center;
+}
+body {
+    max-width: 85%;
+}

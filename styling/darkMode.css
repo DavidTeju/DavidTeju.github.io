@@ -4,7 +4,7 @@ body {
 	max-width: 73%;
 	line-height: 1.8;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-	Arial, sans-serif;
+		Arial, sans-serif;
 	font-size: 16px;
 	background: #252525;
 	color: #cacaca;
@@ -25,14 +25,14 @@ header > hr {
 header > hr:after {
 	top: -10px;
 }
-header th{
+header th {
 	border-right: solid;
 	padding-right: 3%;
 	width: 40%;
 	min-width: 9.5em;
 }
-header > table{
-	margin-bottom: -.8%;
+header > table {
+	margin-bottom: -0.8%;
 	width: 100%;
 	text-align: left;
 	bottom: 0;
