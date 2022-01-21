@@ -5,6 +5,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="../styling/darkMode.css" rel="stylesheet" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png" />
+		<link rel="manifest" href="../icons/site.webmanifest" />
 		<title>My Resume</title>
 		<style>
 			h1,
@@ -13,10 +17,28 @@
 				margin: 5px auto;
 			}
 			main p,
-			main tr,
-			ul {
-				margin-bottom: 0;
-				margin-top: 0;
+			main tr {
+				line-height: 1.6;
+			}
+			.resume {
+				border: solid;
+				padding: 2vh;
+			}
+			.resume hr {
+				height: 0;
+			}
+			.resume h3 {
+				margin-top: 8px;
+			}
+			.resume table {
+				width: 100%;
+			}
+			.resume td:nth-child(2) {
+				font-size: 0.9em;
+				text-align: right;
+			}
+			.resume td:nth-child(1) {
+				text-align: left;
 			}
 		</style>
 	</head>
@@ -25,10 +47,10 @@
 		<header>
 			<table>
 				<tr>
-					<th>
+					<td>
 						<h1><a href="../index.html" title="Home">David Tejuosho</a></h1>
 						<p><em>Student of Computer Science</em></p>
-					</th>
+					</td>
 					<td>
 						<nav>
 							<ul>
@@ -46,7 +68,7 @@
 		</header>
 
 		<main>
-			<div style="border: solid; padding: 2vh">
+			<div class="resume">
 				<div class="resume-header">
 					<h1 style="color: #989898">David Tejuosho</h1>
 					<p>6737 Spaniel Court, Riverdale, GA</p>
@@ -66,11 +88,11 @@
 
 				<h2>Education</h2>
 				<hr />
-				<table style="width: 100%">
+				<table>
 					<thead>
 						<tr>
-							<th style="text-align: left"><h3>Dominican University</h3></th>
-							<th style="text-align: right"><h3>River Forest</h3></th>
+							<td><h3>Dominican University</h3></td>
+							<td><h3>River Forest</h3></td>
 						</tr>
 					</thead>
 					<tbody>
@@ -87,11 +109,24 @@
 				</ul>
 				<h2>Projects</h2>
 				<hr />
-				<h3>
-					<a href="https://github.com/DavidTeju/HangMan" title="repository"
-						>Hang Man</a
-					>
-				</h3>
+				<table>
+					<thead>
+						<tr>
+							<td>
+								<h3>
+									<a
+										href="https://github.com/DavidTeju/HangMan"
+										title="git repository"
+										>Hang Man</a
+									>
+								</h3>
+							</td>
+							<td>
+								<h3>Fall, 2021 – Winter, 2022</h3>
+							</td>
+						</tr>
+					</thead>
+				</table>
 				<p>Independent project programming java GUI hangman game.</p>
 				<ul>
 					<li>
@@ -113,13 +148,77 @@
 						scores&mdash;scored using scrabble point system
 					</li>
 				</ul>
-				<h3>Page Builder</h3>
+				<table>
+					<thead>
+						<tr>
+							<td>
+								<h3>
+									<a
+										href="https://github.com/DavidTeju/page-builder-redacted"
+										title="git repository"
+										>Web Page Builder</a
+									>
+								</h3>
+							</td>
+							<td>
+								<h3>Summer, 2021 – Fall, 2021</h3>
+							</td>
+						</tr>
+					</thead>
+				</table>
 				<ul>
 					<li>
-						wrote program to sort loosely typed questions and answers into
-						sectioned and properly formatted html
+						Wrote program to sort loosely typed questions and answers into
+						properly formatted semantic html
 					</li>
 				</ul>
+				<table>
+					<thead>
+						<tr>
+							<td>
+								<h3>
+									<a href="https://github.com/DavidTeju/Data-Structures"
+										>Java Data Structures</a
+									>
+								</h3>
+							</td>
+							<td>
+								<h3>Fall, 2021 – Spring, 2022</h3>
+							</td>
+						</tr>
+					</thead>
+				</table>
+				<p>
+					Just a fun little project to test and improve my knowledge of data
+					structures. What better way to do that than to try and recreate them
+					all
+				</p>
+				<ul>
+					<li>
+						Implemented the following data structures in java (without peeking
+						at the source code):
+						<ul>
+							<li>Linked List (even added a reverse method 😉)</li>
+							<li>Array List (with a better growth factor, I think)</li>
+							<li>Hash Sets (hashmaps really did all the work)</li>
+						</ul>
+					</li>
+				</ul>
+				<h2>Experience, Activities and Hobbies</h2>
+				<hr />
+
+				<table>
+					<thead>
+						<tr>
+							<td>
+								<h3>Entrepreneurship</h3>
+							</td>
+							<td>
+								<h3>Fall, 2021 – Spring, 2022</h3>
+							</td>
+						</tr>
+					</thead>
+				</table>
 			</div>
 			<div id="push"></div>
 		</main>
