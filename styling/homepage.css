@@ -1,47 +1,49 @@
 nav ul {
-    display: inline;
-    padding: 0;
+	display: inline;
+	padding: 0;
 }
 nav {
-    padding-left: 30px;
+	padding-left: 30px;
 }
 nav li {
-    display: block;
+	display: block;
 }
 .heading {
-    width: 65%;
-    border-right: solid;
-    padding-right: 1em;
-    padding-left: 1em;
+	width: 65%;
+	border-right: solid;
+	padding-right: 1em;
+	padding-left: 1em;
 }
 .heading h1 {
-    font-size: 7em;
+	font-size: 7em;
+	border: none;
+	margin: 5px auto;
 }
 .heading p {
-    margin-top: 0.5em;
-    line-height: normal;
+	margin-top: 0.5em;
+	line-height: normal;
 }
 .container p,
 .container li {
-    font-size: 3em;
+	font-size: 3em;
 }
 .container {
-    display: flex;
-    border: solid;
-    padding: 20px;
-    /*ᐯ to maintain the aspect ratio of the container ᐯ*/
-    height: calc(85 / 100 * 100vw / 2.5);
-    min-height: 25em;
-    align-items: center;
+	display: flex;
+	border: solid;
+	padding: 20px;
+	/*ᐯ to maintain the aspect ratio of the container ᐯ*/
+	height: calc(85 / 100 * 100vw / 2.5);
+	min-height: 25em;
+	align-items: center;
 }
 footer {
-    position: fixed;
-    bottom: 0;
+	position: fixed;
+	bottom: 0;
 }
 main {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 body {
-    max-width: 85%;
+	max-width: 85%;
 }
