@@ -22,24 +22,25 @@ header > table {
 	text-align: left;
 	bottom: 0;
 }
-header th{
-	font-weight:normal;
+header th {
+	font-weight: normal;
 	border-right: solid #999999;
 	padding-right: 1em;
 	width: 50%;
 	min-width: 9.5em;
 }
-header th, header td{
+header th,
+header td {
 	border-bottom: solid #999999;
 }
-header th::after{
+header th::after {
 	content: "❃";
 	background: #252525;
 	color: #999999;
 	position: relative;
 	padding: 0 4px;
-	left: calc(100% + .5em);
-	top: .5em;
+	left: calc(100% + 0.5em);
+	top: 0.5em;
 }
 header th p {
 	margin-bottom: 0;
@@ -52,7 +53,7 @@ nav li {
 	white-space: nowrap;
 	line-height: 1.4;
 }
-nav{
+nav {
 	margin-left: 10%;
 }
 main {
@@ -79,7 +80,7 @@ footer {
 	background-color: rgb(53, 99, 146, 0.1);
 	color: #fafafa;
 }
-footer > p{
+footer > p {
 	margin: 0;
 	padding: 1em 0;
 }
@@ -87,16 +88,16 @@ ul,
 li {
 	padding-left: 10px;
 }
-h1{
+h1 {
 	margin: 1em 0;
 	border-bottom: double #999999;
 	padding-bottom: 0.2em;
 }
-h2{
+h2 {
 	margin: 0 0 0.3em;
 	border-bottom: double #999999;
 	padding-bottom: 0.1em;
-	padding-right: .5em;
+	padding-right: 0.5em;
 	display: inline-block;
 }
 h1,
@@ -106,7 +107,7 @@ h4,
 .faux-h1 {
 	line-height: 1;
 }
-.faux-h1{
+.faux-h1 {
 	color: #989898;
 	font-size: 2em;
 	font-weight: bold;
@@ -118,6 +119,13 @@ a {
 }
 a:hover {
 	border-bottom: 0;
+}
+.download:hover {
+	height: 1.25em;
+	min-width: 1.25em;
+	left: -0.125em;
+	bottom: -0.125em;
+	margin-top: -0.25em;
 }
 hr {
 	border: none;
