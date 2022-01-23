@@ -120,6 +120,11 @@ a {
 a:hover {
 	border-bottom: 0;
 }
+.download {
+	width: 1em;
+	bottom: -0.1em;
+	position: relative;
+}
 .download:hover {
 	height: 1.25em;
 	min-width: 1.25em;
