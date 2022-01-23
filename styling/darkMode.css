@@ -87,12 +87,29 @@ ul,
 li {
 	padding-left: 10px;
 }
+h1{
+	margin: 1em 0;
+	border-bottom: double #999999;
+	padding-bottom: 0.2em;
+}
+h2{
+	margin: 0 0 0.3em;
+	border-bottom: double #999999;
+	padding-bottom: 0.1em;
+	padding-right: .5em;
+	display: inline-block;
+}
 h1,
 h2,
 h3,
-h4 {
+h4,
+.faux-h1 {
 	line-height: 1;
-	margin: 5px auto;
+}
+.faux-h1{
+	color: #989898;
+	font-size: 2em;
+	font-weight: bold;
 }
 a {
 	border-bottom: 1px solid #d7d7d7;

@@ -35,9 +35,9 @@
 		<link rel="manifest" href="/icons/site.webmanifest" />
 		<title>My Resume</title>
 		<style>
-			h1,
 			h2,
 			h3 {
+				border: none;
 				margin: 5px auto;
 			}
 			main p,
@@ -68,11 +68,24 @@
 			#activities ul {
 				margin-left: 0.5em;
 			}
-			#honours li {
+			#honours li li{
 				list-style: inside;
+				font-weight: normal;
+				list-style: circle;
+			}
+			#honours li{
+				font-weight: bold;
+				list-style-type: none;
 			}
 			li {
 				line-height: 1.5;
+			}
+			.faux-h1{
+				color: #989898;
+				font-size: 2em;
+				line-height: 1;
+				margin: 5px auto;
+				font-weight: bold;
 			}
 		</style>
 	</head>
@@ -82,7 +95,7 @@
 			<table>
 				<tr>
 					<th>
-						<h1><a href="/index.html" title="Home">David Tejuosho</a></h1>
+						<a href="/index.html" title="Home" class="faux-h1">David Tejuosho</a>
 						<p><em>Student of Computer Science</em></p>
 					</th>
 					<td>
@@ -101,8 +114,11 @@
 		</header>
 
 		<main>
+			<h1>
+				My Resume
+			</h1>
 			<div id="resume">
-				<h1 style="color: #989898">David Tejuosho</h1>
+				<div class="faux-h1">David Tejuosho</div>
 				<p>6737 Spaniel Court, Riverdale, GA</p>
 				<p>
 					(678) 754 - 6641 |
@@ -279,31 +295,39 @@
 						</li>
 					</ul>
 				</section>
-				<h2>Achievements and Honours</h2>
-				<hr />
 				<section id="honours">
+					<h2>Achievements and Honours</h2>
+					<hr />
 					<ul style="margin-top: 0.4em">
-						<p><strong>Questbridge National College Match Finalist</strong></p>
 						<li>
-							Selected as finalist for a nationally recognized program that
-							connects low-income students like myself to the top Universities
-							in the country.
+							Questbridge National College Match Finalist
+							<ul>
+								<li>
+									Selected as finalist for a nationally recognized program that
+									connects low-income students like myself to the top Universities
+									in the country.
+								</li>
+							</ul>
 						</li>
-						<p><strong>International Mathematics Olympiad</strong></p>
 						<li>
-							Achieved 6th place in my state at the 2015-2016 Mathematics
-							Olympiad qualifiers, going on with 9 other students to represent
-							the state at the national level.
+							International Mathematics Olympiad
+						<ul>
+							<li>
+								Achieved 6th place in my state at the 2015-2016 Mathematics
+								Olympiad qualifiers, going on with 9 other students to represent
+								the state at the national level.
+							</li>
+						</ul>
 						</li>
-						<p>
-							<strong
-								>Cowbellpedia Senior Secondary Schools Mathematics TV Quiz
-								Show</strong
-							>
-						</p>
 						<li>
-							Attained 2nd place in my state in the 2017-2018 Cowbellpedia
-							Mathematics competition
+							Cowbellpedia Senior Secondary Schools Mathematics TV Quiz
+							Show
+							<ul>
+								<li>
+									Attained 2nd place in my state in the 2017-2018 Cowbellpedia
+									Mathematics competition
+								</li>
+							</ul>
 						</li>
 					</ul>
 				</section>
