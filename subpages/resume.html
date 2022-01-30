@@ -77,6 +77,12 @@
 				font-weight: bold;
 				list-style-type: none;
 			}
+			tbody#education-body tr {
+				line-height: 1.2;
+			}
+			tbody#education-body tr:nth-child(n + 2) {
+				text-indent: 2em;
+			}
 			li {
 				line-height: 1.5;
 			}
@@ -92,27 +98,19 @@
 
 	<body>
 		<header>
-			<table>
-				<tr>
-					<th>
-						<a href="/index.html" title="Home" class="faux-h1"
-							>David Tejuosho</a
-						>
-						<p><em>Student of Computer Science</em></p>
-					</th>
-					<td>
-						<nav>
-							<ul>
-								<li><a href="/subpages/about-me.html">Who am I?</a></li>
-								<li><a href="/subpages/resume.html">My Resume</a></li>
-								<li>
-									<a href="/subpages/stuff-I-like.html">Stuff I like</a>
-								</li>
-							</ul>
-						</nav>
-					</td>
-				</tr>
-			</table>
+			<nav>
+				<div class="nav">
+					<a href="/index.html" title="Home" class="faux-h1">David Tejuosho</a>
+					<p><em>Student of Computer Science</em></p>
+				</div>
+				<ul>
+					<li><a href="/subpages/about-me.html">Who am I?</a></li>
+					<li><a href="/subpages/resume.html">My Resume</a></li>
+					<li>
+						<a href="/subpages/stuff-I-like.html">Stuff I like</a>
+					</li>
+				</ul>
+			</nav>
 		</header>
 
 		<main>
@@ -156,12 +154,21 @@
 							<td><h3>River Forest</h3></td>
 						</tr>
 					</thead>
-					<tbody>
-						<tr style="font-style: italic">
+					<tbody id="education-body" style="font-style: italic">
+						<tr>
 							<td title="and computer engineering (hopefully)">
-								Bachelor of Science in Math and Computer Science
+								Bachelor of Science anticipated 2025
 							</td>
 							<td><b>GPA:</b> 3.5/4.0; <b>SAT:</b> 1530</td>
+						</tr>
+						<tr>
+							<td><b>Majors:</b> Computer Science and Mathematics</td>
+						</tr>
+						<tr>
+							<td>
+								Presidential Scholarship, Graham Scholarship, Pillars
+								Scholarship
+							</td>
 						</tr>
 					</tbody>
 				</table>
@@ -181,7 +188,7 @@
 								</h3>
 							</td>
 							<td>
-								<h3>Fall, 2021 – Winter, 2022</h3>
+								<h3>Fall 2021 – Present</h3>
 							</td>
 						</tr>
 					</thead>
@@ -214,20 +221,28 @@
 									<a
 										href="https://github.com/DavidTeju/page-builder-redacted"
 										title="git repository"
-										>Web Page Builder</a
+										>Web Page Parser</a
 									>
 								</h3>
 							</td>
 							<td>
-								<h3>Summer, 2021 – Fall, 2021</h3>
+								<h3>Summer 2021 – Winter 2022</h3>
 							</td>
 						</tr>
 					</thead>
 				</table>
 				<ul>
 					<li>
-						Wrote program to sort loosely typed questions and answers into
-						properly formatted semantic html
+						Obtained policy information from >400 US public & private
+						universities
+					</li>
+					<li>
+						Wrote program to parse >200 records of loosely formatted questions
+						and answers into strongly formatted semantic HTML
+					</li>
+					<li>
+						Designed another program to parse the records into more strongly
+						formatted CSV
 					</li>
 				</ul>
 				<table>
@@ -243,7 +258,7 @@
 								</h3>
 							</td>
 							<td>
-								<h3>Fall, 2021 – Spring, 2022</h3>
+								<h3>Fall 2021 – Present</h3>
 							</td>
 						</tr>
 					</thead>
@@ -261,15 +276,10 @@
 				<section id="activities">
 					<h2>Activities</h2>
 					<hr />
-					<h3>Entrepreneurship</h3>
-					<table>
-						<thead>
-							<tr style="line-height: 1">
-								<td>Founder</td>
-								<td>Fall, 2013 – Summer 2021</td>
-							</tr>
-						</thead>
-					</table>
+					<div style="display: flex; justify-content: space-between">
+						<h3 style="margin-left: 0">Entrepreneurship</h3>
+						<p>Fall, 2013 – Summer 2021</p>
+					</div>
 					<ul>
 						<li>
 							Employed and paid seven student artists to work on comic books,

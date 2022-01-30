@@ -16,34 +16,26 @@ header {
 	margin-top: 2vh;
 	line-height: 1;
 }
-header > table {
-	margin-bottom: -0.8%;
-	width: 100%;
-	text-align: left;
-	bottom: 0;
-}
-header th {
-	font-weight: normal;
+div.nav {
+	border-right: solid;
+	min-width: 50%;
 	border-right: solid #999999;
-	padding-right: 1em;
-	width: 50%;
-	min-width: 9.5em;
+	padding: 1px;
 }
-header th,
-header td {
-	border-bottom: solid #999999;
-}
-header th::after {
+header::after {
 	content: "❃";
 	background: #252525;
 	color: #999999;
 	position: relative;
 	padding: 0 4px;
-	left: calc(100% + 0.5em);
-	top: 0.5em;
+	left: calc(50% - 0.4em);
+	top: -0.5em;
 }
-header th p {
+header nav {
+	display: flex;
+	border-bottom: solid #999999;
 	margin-bottom: 0;
+	margin-top: 2em;
 }
 nav li {
 	list-style-type: none;
@@ -53,8 +45,9 @@ nav li {
 	white-space: nowrap;
 	line-height: 1.4;
 }
-nav {
-	margin-left: 10%;
+nav ul {
+	padding-top: 2em;
+	padding-left: 2em;
 }
 main {
 	min-height: calc(100vh - 9em);
