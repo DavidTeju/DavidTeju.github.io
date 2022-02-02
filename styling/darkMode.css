@@ -114,18 +114,6 @@ a:hover,
 a:focus {
 	border-bottom: 0;
 }
-.download-resume {
-	width: 1em;
-	bottom: -0.1em;
-	position: relative;
-}
-.download-resume:hover {
-	height: 1.25em;
-	min-width: 1.25em;
-	left: -0.125em;
-	bottom: -0.125em;
-	margin-top: -0.25em;
-}
 hr {
 	border: none;
 	margin: 0;
@@ -135,11 +123,14 @@ hr {
 	text-align: center;
 	height: 10px;
 }
-hr:after {
+hr::after {
 	content: "❃";
 	background: #252525;
 	color: #999999;
 	padding: 0 4px;
 	position: relative;
 	top: -1em;
+}
+::selection {
+	background-color: rgba(100, 148, 237, 0.534);
 }
