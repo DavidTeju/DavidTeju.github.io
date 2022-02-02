@@ -110,15 +110,16 @@ a {
 	color: #989898;
 	text-decoration: none;
 }
-a:hover {
+a:hover,
+a:focus {
 	border-bottom: 0;
 }
-.download {
+.download-resume {
 	width: 1em;
 	bottom: -0.1em;
 	position: relative;
 }
-.download:hover {
+.download-resume:hover {
 	height: 1.25em;
 	min-width: 1.25em;
 	left: -0.125em;
@@ -140,5 +141,5 @@ hr:after {
 	color: #999999;
 	padding: 0 4px;
 	position: relative;
-	top: -16px;
+	top: -1em;
 }
