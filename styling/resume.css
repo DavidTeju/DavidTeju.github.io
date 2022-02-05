@@ -1,0 +1,95 @@
+h2,
+h3 {
+	border: none;
+	margin: 5px auto;
+}
+main p,
+main tr {
+	line-height: 1.6;
+}
+#resume {
+	border: solid;
+	padding: 1.5em;
+	margin-bottom: 2vh;
+}
+#resume hr {
+	height: 0;
+}
+#resume h3 {
+	margin-top: 8px;
+}
+#resume table {
+	width: 100%;
+}
+#resume td:nth-child(2) {
+	font-size: 0.9em;
+	text-align: right;
+}
+#resume td:nth-child(1) {
+	text-align: left;
+}
+.download-resume {
+	width: 1em;
+	height: auto;
+	bottom: -0.1em;
+	position: relative;
+}
+.download-resume:hover {
+	height: 1.25em;
+	min-width: 1.25em;
+	left: -0.125em;
+	bottom: -0.125em;
+	margin-top: -0.25em;
+}
+#activities ul {
+	margin-left: 0.5em;
+}
+#honours li li {
+	list-style: inside;
+	font-weight: normal;
+	list-style: circle;
+}
+#honours li {
+	font-weight: bold;
+	list-style-type: none;
+}
+tbody#education-body tr {
+	line-height: 1.2;
+}
+tbody#education-body tr:nth-child(n + 2) {
+	text-indent: 2em;
+}
+li {
+	line-height: 1.5;
+}
+.faux-h1 {
+	color: #989898;
+	font-size: 2em;
+	line-height: 1;
+	margin: 5px auto;
+	font-weight: bold;
+}
+.resume-header {
+	text-align: center;
+	margin: 5px 0 15px;
+}
+@media print {
+	header,
+	footer,
+	h1 {
+		display: none;
+	}
+	* {
+		color: black;
+		text-shadow: none;
+	}
+	#resume {
+		display: block;
+		width: 100vw;
+		margin: 0;
+	}
+	body {
+		width: 100vw !important;
+		margin: 0;
+	}
+}

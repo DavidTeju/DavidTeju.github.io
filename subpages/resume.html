@@ -13,9 +13,9 @@
 			content="David Tejuosho, CS Student, Tejuosho, Resume"
 		/>
 		<meta name="author" content="David Tejuosho" />
-
 		<link rel="stylesheet" href="/styling/normalize.css" />
 		<link href="/styling/darkMode.css" rel="stylesheet" />
+		<link rel="stylesheet" href="/styling/resume.css" />
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
@@ -35,80 +35,6 @@
 		/>
 		<link rel="manifest" href="/icons/site.webmanifest" />
 		<title>My Resume</title>
-		<!-- <base target="_blank" rel="noopener noreferrer" /> -->
-		<style>
-			h2,
-			h3 {
-				border: none;
-				margin: 5px auto;
-			}
-			main p,
-			main tr {
-				line-height: 1.6;
-			}
-			#resume {
-				border: solid;
-				padding: 2vh;
-				margin-bottom: 2vh;
-			}
-			#resume hr {
-				height: 0;
-			}
-			#resume h3 {
-				margin-top: 8px;
-			}
-			#resume table {
-				width: 100%;
-			}
-			#resume td:nth-child(2) {
-				font-size: 0.9em;
-				text-align: right;
-			}
-			#resume td:nth-child(1) {
-				text-align: left;
-			}
-			.download-resume {
-				width: 1em;
-				height: auto;
-				bottom: -0.1em;
-				position: relative;
-			}
-			.download-resume:hover {
-				height: 1.25em;
-				min-width: 1.25em;
-				left: -0.125em;
-				bottom: -0.125em;
-				margin-top: -0.25em;
-			}
-			#activities ul {
-				margin-left: 0.5em;
-			}
-			#honours li li {
-				list-style: inside;
-				font-weight: normal;
-				list-style: circle;
-			}
-			#honours li {
-				font-weight: bold;
-				list-style-type: none;
-			}
-			tbody#education-body tr {
-				line-height: 1.2;
-			}
-			tbody#education-body tr:nth-child(n + 2) {
-				text-indent: 2em;
-			}
-			li {
-				line-height: 1.5;
-			}
-			.faux-h1 {
-				color: #989898;
-				font-size: 2em;
-				line-height: 1;
-				margin: 5px auto;
-				font-weight: bold;
-			}
-		</style>
 	</head>
 
 	<body>
@@ -160,24 +86,26 @@
 				</a>
 			</h1>
 			<div id="resume">
-				<div class="faux-h1">David Tejuosho</div>
-				<p>Somewhere in Riverdale, GA</p>
-				<p>
-					(678) 754 - 6641 |
-					<a href="mailto:tejuoshodavid@gmail.com" title="Email me :)"
-						>tejuoshodavid@gmail.com</a
-					>
-				</p>
-				<p style="margin-bottom: 10px">
-					Github:
-					<a
-						href="https://github.com/DavidTeju"
-						title="My Github :)"
-						target="_blank"
-						rel="noopener noreferrer"
-						>GitHub.com/DavidTeju</a
-					>
-				</p>
+				<section class="resume-header">
+					<div class="faux-h1">David Tejuosho</div>
+					<p>Somewhere in Riverdale, GA</p>
+					<p>
+						(678) 754 - 6641 |
+						<a href="mailto:tejuoshodavid@gmail.com" title="Email me :)"
+							>tejuoshodavid@gmail.com</a
+						>
+					</p>
+					<p style="margin-bottom: 10px">
+						Github:
+						<a
+							href="https://github.com/DavidTeju"
+							title="My Github :)"
+							target="_blank"
+							rel="noopener noreferrer"
+							>GitHub.com/DavidTeju</a
+						>
+					</p>
+				</section>
 				<section>
 					<h2>Education</h2>
 					<hr />
@@ -320,18 +248,16 @@
 					</div>
 					<ul>
 						<li>
-							Employed and paid seven student artists to work on comic books,
-							and learned how to manage and lead a team
+							Employed seven student artists. Managed team to work on comic
+							books
 						</li>
 						<li>
 							Built marketplace for student writers to share their work with
-							paying readers, and learned to mediate and communicate
-							professionally
+							paying readers and mediated conflicts with subscribers
 						</li>
 						<li>
-							Created text-based social chat/forum service for students with
-							over 100 subscribers and learned, through trial and error, how to
-							reinvest in and expand ventures
+							Reinvested initial revenues to create text-based social chat/forum
+							service with over 100 student subscribers
 						</li>
 					</ul>
 					<table>
