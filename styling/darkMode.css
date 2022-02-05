@@ -39,15 +39,20 @@ header nav {
 }
 nav li {
 	list-style-type: none;
-	display: inline;
 	padding: 0;
 	margin-right: 2em;
+	margin-bottom: 5px;
+
 	white-space: nowrap;
 	line-height: 1.4;
 }
 nav ul {
-	padding-top: 2em;
-	padding-left: 2em;
+	display: flex;
+	width: 100%;
+	justify-content: flex-start;
+	align-content: center;
+	flex-wrap: wrap;
+	margin-left: 20px;
 }
 main {
 	min-height: calc(100vh - 9em);
