@@ -14,8 +14,9 @@
 		/>
 		<meta name="author" content="David Tejuosho" />
 		<link rel="stylesheet" href="/styling/normalize.css" />
-		<link href="/styling/darkMode.css" rel="stylesheet" />
-		<link rel="stylesheet" href="/styling/resume.css" />
+		<link rel="stylesheet" href="/styling/style-main.css">
+		<link rel="stylesheet" href="/styling/colorful.css" id="page-color"/>
+		<link rel="stylesheet" href="/styling/resume.css">
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
@@ -337,5 +338,26 @@
 				>
 			</p>
 		</footer>
+
+		<!-- Switch for color or no color -->
+		<label class="color-switch">
+			<input type="checkbox" id="color-switch" onclick="changeColor()" />
+			<span class="slider round"></span>
+		</label>
+		<script>
+			window.onload = onPageLoad();
+
+			function onPageLoad() {
+				document.getElementById("color-switch").checked = true;
+			}
+			function changeColor() {
+				const pageTheme = document.getElementById("page-color");
+				if (document.getElementById("color-switch").checked) pageTheme.setAttribute("href", "/styling/colorful.css");
+				else {
+					pageTheme.setAttribute("href", "/styling/dark.css");
+					isLight = false;
+				}
+			}
+		</script>
 	</body>
 </html>

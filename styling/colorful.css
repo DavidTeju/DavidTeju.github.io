@@ -1,0 +1,50 @@
+body{
+    background: #222831;
+    color: #dcdcdc;
+    text-shadow: 0 1px 0 black;
+}
+div.nav{
+    border-right: solid #dcdcdc;
+}
+header::after{
+    background: #222831;
+    color: #dcdcdc;
+}
+header nav {
+    border-bottom: solid #dcdcdc;
+}
+footer{
+    background-color: rgb(53, 99, 146, 0.1);
+    color: #fafafa;
+}
+h1,
+h2,
+h3
+{
+    border-bottom: double #dcdcdc;
+}
+a{
+    border-bottom: 1px solid #d7d7d7;
+    color: #b8c6c8;
+}
+h1,
+h1 a,
+h2,
+h2 a,
+h3,
+h3 a,
+h4,
+h4 a,
+.faux-h1,
+nav a,
+.faux-h1 a {
+    color: #d7f3f7 !important;
+}
+
+input:checked + .slider {
+    background-color: #2196f3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+}
