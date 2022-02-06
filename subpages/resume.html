@@ -14,9 +14,9 @@
 		/>
 		<meta name="author" content="David Tejuosho" />
 		<link rel="stylesheet" href="/styling/normalize.css" />
-		<link rel="stylesheet" href="/styling/style-main.css">
-		<link rel="stylesheet" href="/styling/colorful.css" id="page-color"/>
-		<link rel="stylesheet" href="/styling/resume.css">
+		<link rel="stylesheet" href="/styling/style-main.css" />
+		<link rel="stylesheet" href="/styling/colorful.css" id="page-color" />
+		<link rel="stylesheet" href="/styling/resume.css" />
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
@@ -350,13 +350,11 @@
 			function onPageLoad() {
 				document.getElementById("color-switch").checked = true;
 			}
-			function changeColor() {
+			function swapThemeStyleSheet() {
 				const pageTheme = document.getElementById("page-color");
-				if (document.getElementById("color-switch").checked) pageTheme.setAttribute("href", "/styling/colorful.css");
-				else {
-					pageTheme.setAttribute("href", "/styling/dark.css");
-					isLight = false;
-				}
+				if (document.getElementById("color-switch").checked)
+					pageTheme.setAttribute("href", "/styling/colorful.css");
+				else pageTheme.setAttribute("href", "/styling/dark.css");
 			}
 		</script>
 	</body>

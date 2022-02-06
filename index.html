@@ -16,9 +16,9 @@
 		/>
 
 		<link rel="stylesheet" href="/styling/normalize.css" />
-		<link rel="stylesheet" href="/styling/style-main.css">
-		<link rel="stylesheet" href="/styling/colorful.css" id="page-color"/>
-		<link rel="stylesheet" href="/styling/homepage.css">
+		<link rel="stylesheet" href="/styling/style-main.css" />
+		<link rel="stylesheet" href="/styling/colorful.css" id="page-color" />
+		<link rel="stylesheet" href="/styling/homepage.css" />
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
@@ -91,7 +91,11 @@
 		</footer>
 		<!-- Switch for color or no color -->
 		<label class="color-switch">
-			<input type="checkbox" id="color-switch" onclick="changeColor()" />
+			<input
+				type="checkbox"
+				id="color-switch"
+				onclick="swapThemeStyleSheet()"
+			/>
 			<span class="slider round"></span>
 		</label>
 		<script>
@@ -100,13 +104,11 @@
 			function onPageLoad() {
 				document.getElementById("color-switch").checked = true;
 			}
-			function changeColor() {
+			function swapThemeStyleSheet() {
 				const pageTheme = document.getElementById("page-color");
-				if (document.getElementById("color-switch").checked) pageTheme.setAttribute("href", "/styling/colorful.css");
-				else {
-					pageTheme.setAttribute("href", "/styling/dark.css");
-					isLight = false;
-				}
+				if (document.getElementById("color-switch").checked)
+					pageTheme.setAttribute("href", "/styling/colorful.css");
+				else pageTheme.setAttribute("href", "/styling/dark.css");
 			}
 		</script>
 	</body>
