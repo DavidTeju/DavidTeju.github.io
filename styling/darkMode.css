@@ -1,6 +1,7 @@
 body {
-	background: #252525;
-	color: #cacaca;
+	/*background: #252525;*/
+	background: #222831;
+	color: #dcdcdc;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
 		Arial, sans-serif;
 	font-size: 16px;
@@ -17,15 +18,14 @@ header {
 	min-height: 6em;
 }
 div.nav {
-	border-right: solid;
 	min-width: 50%;
-	border-right: solid #999999;
+	border-right: solid #dcdcdc;
 	padding: 1px;
 }
 header::after {
 	content: "❃";
-	background: #252525;
-	color: #999999;
+	background: #222831;
+	color: #dcdcdc;
 	position: relative;
 	padding: 0 4px;
 	left: calc(50% - 0.4em);
@@ -33,7 +33,7 @@ header::after {
 }
 header nav {
 	display: flex;
-	border-bottom: solid #999999;
+	border-bottom: solid #dcdcdc;
 	margin-bottom: 0;
 	margin-top: 2em;
 }
@@ -88,27 +88,15 @@ li {
 }
 h1 {
 	margin: 1em 0;
-	border-bottom: double #999999;
+	border-bottom: double #dcdcdc;
 	padding-bottom: 0.2em;
 }
 h2 {
 	margin: 0 0 0.3em;
-	border-bottom: double #999999;
+	border-bottom: double #dcdcdc;
 	padding-bottom: 0.1em;
 	padding-right: 0.5em;
 	display: inline-block;
-}
-h1,
-h2,
-h3,
-h4,
-.faux-h1 {
-	line-height: 1;
-}
-.faux-h1 {
-	color: #989898;
-	font-size: 2em;
-	font-weight: bold;
 }
 a {
 	border-bottom: 1px solid #d7d7d7;
@@ -119,19 +107,42 @@ a:hover,
 a:focus {
 	border-bottom: 0;
 }
+h1,
+h1 a,
+h2,
+h2 a,
+h3,
+h3 a,
+h4,
+h4 a,
+.faux-h1,
+nav,
+nav a,
+.faux-h1 a {
+	line-height: 1;
+	color: #d7f3f7 !important;
+}
+a {
+	color: #b8c6c8;
+}
+.faux-h1 {
+	color: #989898;
+	font-size: 2em;
+	font-weight: bold;
+}
 hr {
 	border: none;
 	margin: 0;
-	border-top: 3px double #999999;
-	color: #999999;
+	border-top: 3px double #dcdcdc;
+	/* color: #dcdcdc; */
 	overflow: visible;
 	text-align: center;
 	height: 10px;
 }
 hr::after {
 	content: "❃";
-	background: #252525;
-	color: #999999;
+	background: #222831;
+	color: #dcdcdc;
 	padding: 0 4px;
 	position: relative;
 	top: -1em;
