@@ -1,0 +1,34 @@
+body {
+	background: #252525;
+	text-shadow: 0 1px 0 black;
+}
+div.nav {
+	border-right: solid #999999;
+}
+header::after {
+	background: #252525;
+}
+header nav {
+	border-bottom: solid #999999;
+}
+h1 {
+	border-bottom: double #999999;
+}
+h2 {
+	border-bottom: double #999999;
+}
+a {
+	color: #989898;
+	border-bottom: 1px solid #d7d7d7;
+}
+hr {
+	border-top: 3px double #999999;
+	color: #999999;
+}
+hr::after {
+	background: #252525;
+	color: #999999;
+}
+::selection {
+	background-color: rgba(100, 148, 237, 0.534);
+}

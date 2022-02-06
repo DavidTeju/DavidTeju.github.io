@@ -9,7 +9,6 @@ nav {
 }
 .heading {
 	width: 65%;
-	border-right: solid;
 	padding-right: 1em;
 	padding-left: 1em;
 }
@@ -30,7 +29,6 @@ nav {
 }
 .container {
 	display: flex;
-	border: solid;
 	padding: 20px;
 	aspect-ratio: 54/25;
 	min-height: 25em;
@@ -85,10 +83,9 @@ body {
 		text-align: center;
 	}
 	nav::before {
+		border-bottom: solid;
 		content: "";
 		display: block;
-		/* width: 90%; */
-		border-bottom: solid;
 		margin-bottom: 20px;
 	}
 	li {

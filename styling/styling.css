@@ -1,6 +1,4 @@
 body {
-	background: #252525;
-	color: #cacaca;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
 		Arial, sans-serif;
 	font-size: 16px;
@@ -9,7 +7,6 @@ body {
 	margin: 0 auto;
 	max-width: 73%;
 	min-width: 20em;
-	text-shadow: 0 1px 0 black;
 }
 header {
 	line-height: 1;
@@ -17,15 +14,11 @@ header {
 	min-height: 6em;
 }
 div.nav {
-	border-right: solid;
 	min-width: 50%;
-	border-right: solid #999999;
 	padding: 1px;
 }
 header::after {
 	content: "❃";
-	background: #252525;
-	color: #999999;
 	position: relative;
 	padding: 0 4px;
 	left: calc(50% - 0.4em);
@@ -33,7 +26,6 @@ header::after {
 }
 header nav {
 	display: flex;
-	border-bottom: solid #999999;
 	margin-bottom: 0;
 	margin-top: 2em;
 }
@@ -75,8 +67,6 @@ footer {
 	height: 3em;
 	width: 100vw;
 	min-width: 100%;
-	background-color: rgb(53, 99, 146, 0.1);
-	color: #fafafa;
 }
 footer > p {
 	margin: 0;
@@ -88,12 +78,10 @@ li {
 }
 h1 {
 	margin: 1em 0;
-	border-bottom: double #999999;
 	padding-bottom: 0.2em;
 }
 h2 {
 	margin: 0 0 0.3em;
-	border-bottom: double #999999;
 	padding-bottom: 0.1em;
 	padding-right: 0.5em;
 	display: inline-block;
@@ -106,13 +94,10 @@ h4,
 	line-height: 1;
 }
 .faux-h1 {
-	color: #989898;
 	font-size: 2em;
 	font-weight: bold;
 }
 a {
-	border-bottom: 1px solid #d7d7d7;
-	color: #989898;
 	text-decoration: none;
 }
 a:hover,
@@ -120,22 +105,19 @@ a:focus {
 	border-bottom: 0;
 }
 hr {
-	border: none;
 	margin: 0;
-	border-top: 3px double #999999;
-	color: #999999;
 	overflow: visible;
 	text-align: center;
 	height: 10px;
 }
 hr::after {
 	content: "❃";
-	background: #252525;
-	color: #999999;
 	padding: 0 4px;
 	position: relative;
 	top: -1em;
 }
-::selection {
-	background-color: rgba(100, 148, 237, 0.534);
+.theme-change {
+	position: absolute;
+	left: 0;
+	top: 0;
 }

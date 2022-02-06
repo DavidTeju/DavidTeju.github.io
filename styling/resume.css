@@ -8,7 +8,6 @@ main tr {
 	line-height: 1.6;
 }
 #resume {
-	border: solid;
 	padding: 1.5em;
 	margin-bottom: 2vh;
 }
@@ -63,7 +62,6 @@ li {
 	line-height: 1.5;
 }
 .faux-h1 {
-	color: #989898;
 	font-size: 2em;
 	line-height: 1;
 	margin: 5px auto;
