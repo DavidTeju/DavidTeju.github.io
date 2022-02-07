@@ -2,7 +2,7 @@ window.onload = onPageLoad();
 
 function onPageLoad() {
 	const pageTheme = document.getElementById("page-color");
-	if (sessionStorage.getItem("isColored")) {
+	if (sessionStorage.getItem("isDark") == "false") {
 		document.getElementById("color-switch").checked = true;
 	} else {
 		pageTheme.setAttribute("href", "/styling/dark.css");
@@ -11,11 +11,11 @@ function onPageLoad() {
 }
 function swapThemeStyleSheet() {
 	const pageTheme = document.getElementById("page-color");
-	if (sessionStorage.getItem("isColored")) {
+	if (sessionStorage.getItem("isDark") == "false") {
 		pageTheme.setAttribute("href", "/styling/dark.css");
-		sessionStorage.setItem("isColored", "");
+		sessionStorage.setItem("isDark", "true");
 	} else {
 		pageTheme.setAttribute("href", "/styling/colorful.css");
-		sessionStorage.setItem("isColored", true);
+		sessionStorage.setItem("isDark", "false");
 	}
 }
