@@ -98,18 +98,6 @@
 			/>
 			<span class="slider round"></span>
 		</label>
-		<script>
-			window.onload = onPageLoad();
-
-			function onPageLoad() {
-				document.getElementById("color-switch").checked = true;
-			}
-			function swapThemeStyleSheet() {
-				const pageTheme = document.getElementById("page-color");
-				if (document.getElementById("color-switch").checked)
-					pageTheme.setAttribute("href", "/styling/colorful.css");
-				else pageTheme.setAttribute("href", "/styling/dark.css");
-			}
-		</script>
+		<script src="/themeSwapper.js"></script>
 	</body>
 </html>

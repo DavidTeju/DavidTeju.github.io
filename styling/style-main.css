@@ -166,16 +166,15 @@ hr::after {
 	height: 20px;
 	width: 20px;
 	left: 2px;
-	bottom: 3.5px;
-	/*padding-bottom: 5px;*/
+	bottom: 4px;
 	background-color: white;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 }
-.slider:after{
+.slider:after {
 	position: absolute;
 	content: "☀️️";
-	font-size: .9em;
+	font-size: 0.9em;
 	left: 4.5px;
 	text-align: center;
 	line-height: 2em;
@@ -183,9 +182,8 @@ hr::after {
 	transition: 0.4s;
 }
 
-
 input:checked + .slider:before,
-input:checked + .slider:after{
+input:checked + .slider:after {
 	-webkit-transform: translateX(25px);
 	-ms-transform: translateX(25px);
 	transform: translateX(25px);
