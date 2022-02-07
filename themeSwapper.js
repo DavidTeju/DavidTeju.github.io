@@ -2,11 +2,14 @@ window.onload = onPageLoad();
 
 function onPageLoad() {
 	const pageTheme = document.getElementById("page-color");
-	if (sessionStorage.getItem("isDark") == "false") {
+	if (
+		sessionStorage.getItem("isDark") == null ||
+		sessionStorage.getItem("isDark") == "false"
+	) {
 		document.getElementById("color-switch").checked = true;
+		sessionStorage.setItem("isDark", "false");
 	} else {
 		pageTheme.setAttribute("href", "/styling/dark.css");
-		console.log("In else");
 	}
 }
 function swapThemeStyleSheet() {
