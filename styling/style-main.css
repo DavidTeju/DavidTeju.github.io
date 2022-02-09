@@ -46,11 +46,7 @@ nav ul {
 	margin-left: 20px;
 }
 main {
-	min-height: calc(100vh - 9em);
-	margin: 2em 0 -3em;
-}
-#push {
-	height: 3em;
+	margin: 2em 0;
 }
 main p,
 main tr,
@@ -63,9 +59,7 @@ footer {
 	position: absolute;
 	left: 0;
 	line-height: 1;
-	height: 3em;
 	width: 100vw;
-	min-width: 100%;
 }
 footer > p {
 	margin: 0;
@@ -114,7 +108,6 @@ hr {
 	border: none;
 	margin: 0;
 	border-top: 3px double #dcdcdc;
-	/* color: #dcdcdc; */
 	overflow: visible;
 	text-align: center;
 	height: 10px;
