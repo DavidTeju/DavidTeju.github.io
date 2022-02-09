@@ -76,7 +76,8 @@ li {
 @media print {
 	header,
 	footer,
-	h1 {
+	h1,
+	.color-switch {
 		display: none;
 	}
 	* {
