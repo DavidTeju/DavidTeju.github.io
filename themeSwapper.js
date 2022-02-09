@@ -1,4 +1,4 @@
-window.onload = onPageLoad();
+onPageLoad();
 
 function onPageLoad() {
 	const pageTheme = document.getElementById("page-color");
