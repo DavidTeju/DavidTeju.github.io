@@ -26,19 +26,6 @@ a {
 	border-bottom: 1px solid #d7d7d7;
 	color: #989898;
 }
-/*h1,*/
-/*h1 a,*/
-/*h2,*/
-/*h2 a,*/
-/*h3,*/
-/*h3 a,*/
-/*h4,*/
-/*h4 a,*/
-/*.faux-h1,*/
-/*nav a,*/
-/*.faux-h1 a {*/
-/*    color: #d7f3f7 !important;*/
-/*}*/
 
 input:checked + .slider {
 	background-color: #2196f3;
