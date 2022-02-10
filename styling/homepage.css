@@ -1,3 +1,10 @@
+header {
+	min-height: 1px;
+	/* 1px height to prevent margin collapse */
+}
+header::after {
+	display: none;
+}
 nav ul {
 	display: inline-block;
 	padding: 0;
@@ -46,10 +53,6 @@ nav {
 	width: 20vw;
 	height: auto;
 }
-footer {
-	position: fixed;
-	bottom: 0;
-}
 main {
 	display: flex;
 	align-items: center;
@@ -58,6 +61,7 @@ main {
 body {
 	max-width: 85%;
 }
+
 @media screen and (max-width: 930px) {
 	.container {
 		justify-content: center;

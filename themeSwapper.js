@@ -11,7 +11,7 @@ function onPageLoad() {
 	} else {
 		pageTheme.setAttribute("href", "/styling/dark.css");
 	}
-	console.log("I made it");
+
 	pushFooter();
 }
 
@@ -24,8 +24,13 @@ function pushFooter() {
 	let footerHeight = getComputedStyle(footer).height;
 
 	main.style.minHeight =
-		"calc(" + "100vh - 96px - " + headerHeight + " - " + footerHeight + ")";
-	//-96px to account for margins
+		"calc" +
+		"(100vh - 2vh - 64px - " +
+		headerHeight +
+		" - " +
+		footerHeight +
+		")";
+	//-2vh -64px to account for margins
 }
 
 function swapThemeStyleSheet() {

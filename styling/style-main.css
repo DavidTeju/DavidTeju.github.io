@@ -27,7 +27,7 @@ header::after {
 header nav {
 	display: flex;
 	margin-bottom: 0;
-	margin-top: 2em;
+	padding-top: 1em;
 }
 nav li {
 	list-style-type: none;
