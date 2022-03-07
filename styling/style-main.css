@@ -164,16 +164,6 @@ hr::after {
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 }
-.slider:after {
-	position: absolute;
-	content: "☀️️";
-	font-size: 0.9em;
-	left: 4.5px;
-	text-align: center;
-	line-height: 2em;
-	-webkit-transition: 0.4s;
-	transition: 0.4s;
-}
 
 input:checked + .slider:before,
 input:checked + .slider:after {

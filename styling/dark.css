@@ -27,6 +27,17 @@ a {
 	color: #989898;
 }
 
+.slider:after {
+	position: absolute;
+	content: "🌛";
+	font-size: 0.9em;
+	text-shadow: none;
+	left: 4.5px;
+	text-align: center;
+	line-height: 2em;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
 input:checked + .slider {
 	background-color: #2196f3;
 }

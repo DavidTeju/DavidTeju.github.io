@@ -1,31 +1,30 @@
-body{
-    background: #222831;
-    color: #dcdcdc;
-    text-shadow: 0 1px 0 black;
+body {
+	background: #222831;
+	color: #dcdcdc;
+	text-shadow: 0 1px 0 black;
 }
-div.nav{
-    border-right: solid #dcdcdc;
+div.nav {
+	border-right: solid #dcdcdc;
 }
-header::after{
-    background: #222831;
-    color: #dcdcdc;
+header::after {
+	background: #222831;
+	color: #dcdcdc;
 }
 header nav {
-    border-bottom: solid #dcdcdc;
+	border-bottom: solid #dcdcdc;
 }
-footer{
-    background-color: rgb(53, 99, 146, 0.1);
-    color: #fafafa;
+footer {
+	background-color: rgb(53, 99, 146, 0.1);
+	color: #fafafa;
 }
 h1,
 h2,
-h3
-{
-    border-bottom: double #dcdcdc;
+h3 {
+	border-bottom: double #dcdcdc;
 }
-a{
-    border-bottom: 1px solid #d7d7d7;
-    color: #b8c6c8;
+a {
+	border-bottom: 1px solid #d7d7d7;
+	color: #b8c6c8;
 }
 h1,
 h1 a,
@@ -38,13 +37,25 @@ h4 a,
 .faux-h1,
 nav a,
 .faux-h1 a {
-    color: #d7f3f7 !important;
+	color: #d7f3f7 !important;
+}
+
+.slider:after {
+	position: absolute;
+	content: "☀️️";
+	font-size: 0.9em;
+	text-shadow: none;
+	left: 4.5px;
+	text-align: center;
+	line-height: 2em;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
 }
 
 input:checked + .slider {
-    background-color: #2196f3;
+	background-color: #2196f3;
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #2196f3;
+	box-shadow: 0 0 1px #2196f3;
 }
