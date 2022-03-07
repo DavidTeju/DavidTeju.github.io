@@ -6,7 +6,6 @@ function onPageLoad() {
 		sessionStorage.getItem("isDark") == null ||
 		sessionStorage.getItem("isDark") == "false"
 	) {
-		document.getElementById("color-switch").checked = true;
 		sessionStorage.setItem("isDark", "false");
 	} else {
 		document.getElementById("color-switch").checked = false;
@@ -21,8 +20,8 @@ function pushFooter() {
 	const main = document.getElementById("main");
 	const header = document.getElementById("header");
 
-	let headerHeight = getComputedStyle(header).height;
-	let footerHeight = getComputedStyle(footer).height;
+	const headerHeight = getComputedStyle(header).height;
+	const footerHeight = getComputedStyle(footer).height;
 
 	main.style.minHeight =
 		"calc" +
