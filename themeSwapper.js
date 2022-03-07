@@ -9,6 +9,7 @@ function onPageLoad() {
 		document.getElementById("color-switch").checked = true;
 		sessionStorage.setItem("isDark", "false");
 	} else {
+		document.getElementById("color-switch").checked = false;
 		pageTheme.setAttribute("href", "/styling/dark.css");
 	}
 
