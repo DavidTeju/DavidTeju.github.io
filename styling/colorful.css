@@ -1,17 +1,22 @@
+:root{
+	--primary-text: #dcdcdc;
+	--blue-500: #2196f3;
+}
+
 body {
 	background: #222831;
-	color: #dcdcdc;
+	color: var(--primary-text);
 	text-shadow: 0 1px 0 black;
 }
 div.nav {
-	border-right: solid #dcdcdc;
+	border-right: solid var(--primary-text);
 }
 header::after {
 	background: #222831;
-	color: #dcdcdc;
+	color: var(--primary-text);
 }
 header nav {
-	border-bottom: solid #dcdcdc;
+	border-bottom: solid var(--primary-text);
 }
 footer {
 	background-color: rgb(53, 99, 146, 0.1);
@@ -20,7 +25,7 @@ footer {
 h1,
 h2,
 h3 {
-	border-bottom: double #dcdcdc;
+	border-bottom: double var(--primary-text);
 }
 a {
 	border-bottom: 1px solid #d7d7d7;
@@ -53,9 +58,9 @@ nav a,
 }
 
 input:checked + .slider {
-	background-color: #2196f3;
+	background-color: var(--blue-500);
 }
 
 input:focus + .slider {
-	box-shadow: 0 0 1px #2196f3;
+	box-shadow: 0 0 1px var(--blue-500);
 }
