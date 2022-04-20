@@ -47,6 +47,7 @@ nav ul {
 }
 main {
 	margin: 2em 0;
+	position: relative;
 }
 main p,
 main tr,
