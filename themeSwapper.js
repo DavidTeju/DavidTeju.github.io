@@ -9,7 +9,7 @@ function onPageLoad() {
 		sessionStorage.setItem("isDark", "false");
 	} else {
 		document.getElementById("color-switch").checked = false;
-		pageTheme.setAttribute("href", "/styling/dark.css");
+		pageTheme.setAttribute("href", "https://davidteju.dev/styling/dark.css");
 	}
 
 	pushFooter();
@@ -36,10 +36,13 @@ function pushFooter() {
 function swapThemeStyleSheet() {
 	const pageTheme = document.getElementById("page-color");
 	if (sessionStorage.getItem("isDark") == "false") {
-		pageTheme.setAttribute("href", "/styling/dark.css");
+		pageTheme.setAttribute("href", "https://davidteju.dev/styling/dark.css");
 		sessionStorage.setItem("isDark", "true");
 	} else {
-		pageTheme.setAttribute("href", "/styling/colorful.css");
+		pageTheme.setAttribute(
+			"href",
+			"https://davidteju.dev/styling/colorful.css"
+		);
 		sessionStorage.setItem("isDark", "false");
 	}
 }
