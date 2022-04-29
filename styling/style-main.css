@@ -37,6 +37,12 @@ nav li {
 	white-space: nowrap;
 	line-height: 1.4;
 }
+.nav {
+	display: block;
+}
+.nav p {
+	margin-top: 1em;
+}
 nav ul {
 	display: flex;
 	width: 100%;
