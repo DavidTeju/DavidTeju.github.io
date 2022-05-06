@@ -32,7 +32,7 @@ header nav {
 nav li {
 	list-style-type: none;
 	padding: 0;
-	margin-right: 2em;
+	flex-grow: 1;
 	margin-bottom: 5px;
 	white-space: nowrap;
 	line-height: 1.4;

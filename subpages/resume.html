@@ -89,15 +89,11 @@
 			<div id="resume">
 				<section class="resume-header">
 					<div class="faux-h1">David Tejuosho</div>
-					<p>Somewhere in Riverdale, GA</p>
-					<p>
-						(678) 754 - 6641 |
+					<div class="contact subheading">
+						<a href="tel:6787546641">(678) 754 - 6641</a>
 						<a href="mailto:tejuoshodavid@gmail.com" title="Email me :)"
 							>tejuoshodavid@gmail.com</a
 						>
-					</p>
-					<p style="margin-bottom: 10px">
-						Github:
 						<a
 							href="https://github.com/DavidTeju"
 							title="My Github :)"
@@ -105,42 +101,122 @@
 							rel="noopener noreferrer"
 							>GitHub.com/DavidTeju</a
 						>
-					</p>
+					</div>
 				</section>
 				<section>
 					<h2>Education</h2>
 					<hr />
-					<table>
-						<thead>
-							<tr>
-								<td><h3>Dominican University</h3></td>
-								<td><h3>River Forest</h3></td>
-							</tr>
-						</thead>
-						<tbody id="education-body" style="font-style: italic">
-							<tr>
-								<td title="and computer engineering (hopefully)">
-									Bachelor of Science anticipated 2025
-								</td>
-								<td><b>GPA:</b> 3.5/4.0; <b>SAT:</b> 1530</td>
-							</tr>
-							<tr>
-								<td><b>Majors:</b> Computer Science and Mathematics</td>
-							</tr>
-							<tr>
-								<td>
-									Presidential Scholarship, Graham Scholarship, Pillars
-									Scholarship
-								</td>
-							</tr>
-						</tbody>
-					</table>
+
+					<div class="sub-education">
+						<div class="subheading">
+							<h3>Dominican University</h3>
+							<h3>River Forest</h3>
+						</div>
+						<div class="subheading">
+							<p title="and computer engineering (hopefully)">
+								Bachelor of Science in Mathematics and Computer Science
+							</p>
+							<p>expected May 2025</p>
+						</div>
+						<ul>
+							<li>
+								Presidential Scholarship, Graham Scholarship, Pillars
+								Scholarship
+							</li>
+							<li>
+								Relevant Coursework: Data Structures, Computer Programming, Web
+								Development I
+							</li>
+							<li>
+								<strong>GPA:</strong> 3.33/4.0; <strong>SAT:</strong> 1530
+							</li>
+						</ul>
+					</div>
 				</section>
 
 				<section>
 					<h2>Projects</h2>
 					<hr />
-					<table>
+
+					<div class="subheading">
+						<h3>
+							<a
+								href="https://davidteju.dev/David-O-Meter/"
+								title="git repository"
+							>
+								David-O-Meter</a
+							>
+						</h3>
+						<p>April 2022 – Present</p>
+					</div>
+					<ul>
+						<li>
+							Wrote program that uses Twitter API to collect recent tweets that
+							contained the word “David”
+						</li>
+						<li>
+							Program sends tweet text-content to Azure Cognitive Services
+							Language API to analyse tweet sentiment
+						</li>
+						<li>
+							Designed front-end webpage to display ratios of positive to
+							neutral to negative tweets
+						</li>
+					</ul>
+
+					<div class="subheading">
+						<h3>
+							<a href="https://github.com/DavidTeju/HangMan"
+								>Excel/HTML Parser</a
+							>
+						</h3>
+						<p>September 2021 – February 2022</p>
+					</div>
+					<ul>
+						<li>
+							Obtained policy information from >400 US public & private
+							universities
+						</li>
+						<li>
+							Wrote program to parse >200 records of loosely formatted questions
+							and answers into semantic HTML
+						</li>
+						<li>
+							Used Apache POI library to export parsed data into Excel file
+						</li>
+					</ul>
+
+					<div class="subheading">
+						<h3>
+							<a
+								href="https://github.com/DavidTeju/HangMan"
+								title="git repository"
+								>Hang Man</a
+							>
+						</h3>
+						<p>September 2021 – February 2022</p>
+					</div>
+					<ul>
+						<li>
+							Independently designed classic word guessing game
+							<a
+								href="https://www.wikihow.com/Play-Hangman"
+								title="how to play hangman (WikiHow)"
+								>Hangman</a
+							>
+						</li>
+						<li>Built GUI story-mode in game using java Swing API</li>
+						<li>
+							Used object-oriented programming principles to create player
+							profiles and NPCs (non-player characters)
+						</li>
+						<li>
+							Implemented leader board showing the best story mode scores—scored
+							using scrabble point system
+						</li>
+					</ul>
+
+					<!-- <table>
 						<thead>
 							<tr>
 								<td>
@@ -237,14 +313,14 @@
 							Implemented Linked Lists(even added a reverse method 😉), Array
 							Lists and Hash Sets in java (without peeking at the source code)
 						</li>
-					</ul>
+					</ul> -->
 				</section>
 
 				<section id="activities">
 					<h2>Activities</h2>
 					<hr />
-					<div style="display: flex; justify-content: space-between">
-						<h3 style="margin-left: 0">Entrepreneurship</h3>
+					<div class="subheading">
+						<h3>Entrepreneurship</h3>
 						<p>Fall, 2013 – Summer 2021</p>
 					</div>
 					<ul>
@@ -261,18 +337,15 @@
 							service with over 100 student subscribers
 						</li>
 					</ul>
-					<table>
-						<tr>
-							<td><h3>The Teen Magazine</h3></td>
-							<td><h3>Cambridge, MA</h3></td>
-						</tr>
-						<tr>
-							<td style="padding-left: 0.4em">
-								Published Writer | Interviewer
-							</td>
-							<td>March, 2020 – date</td>
-						</tr>
-					</table>
+
+					<div class="subheading">
+						<h3>The Teen Magazine</h3>
+						<h3>Cambridge, MA</h3>
+					</div>
+					<div class="subheading">
+						<p>Published Writer | Interviewer</p>
+						<p>March, 2020 – date</p>
+					</div>
 					<ul>
 						<li>
 							Published five articles about racial inequity, sexism in Nigeria,
@@ -289,7 +362,7 @@
 				<section id="honours">
 					<h2>Achievements and Honours</h2>
 					<hr />
-					<ul style="margin-top: 0.4em">
+					<ul>
 						<li>
 							Questbridge National College Match Finalist
 							<ul>

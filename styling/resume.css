@@ -1,7 +1,8 @@
 h2,
 h3 {
 	border: none;
-	margin: 5px auto;
+	margin: 5px auto 0;
+	padding-bottom: 0;
 }
 main p,
 main tr {
@@ -14,9 +15,7 @@ main tr {
 }
 #resume hr {
 	height: 0;
-}
-#resume h3 {
-	margin-top: 8px;
+	margin-top: -0.25em;
 }
 #resume table {
 	width: 100%;
@@ -47,12 +46,19 @@ main tr {
 #honours li li {
 	list-style: inside;
 	font-weight: normal;
+	font-size: 1rem;
 	list-style: circle;
 }
 #honours li {
 	font-weight: bold;
+	font-size: 1.05em;
 	list-style-type: none;
 }
+#honours > ul {
+	margin-top: 0.3em;
+	padding-left: 0;
+}
+
 tbody#education-body tr {
 	line-height: 1.2;
 }
@@ -63,7 +69,6 @@ li {
 	line-height: 1.5;
 }
 .faux-h1 {
-	color: #989898;
 	font-size: 2em;
 	line-height: 1;
 	margin: 5px auto;
@@ -73,6 +78,30 @@ li {
 	text-align: center;
 	margin: 5px 0 15px;
 }
+
+div.contact {
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+div.contact > a {
+	flex: 0 1 10em;
+}
+.subheading {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	line-height: 1.5;
+}
+.subheading > *:nth-child(2) {
+	text-align: right;
+}
+.subheading h3 {
+	margin: 8px 0 4px;
+}
+.sub-education {
+	font-style: italic;
+}
+
 @media print {
 	header,
 	footer,
@@ -81,8 +110,17 @@ li {
 		display: none;
 	}
 	* {
-		color: black;
+		color: black !important;
 		text-shadow: none;
+	}
+	*::after {
+		color: black !important;
+	}
+	hr {
+		border-top: 3px double black !important;
+	}
+	a {
+		color: -webkit-link !important;
 	}
 	#resume {
 		display: block;
