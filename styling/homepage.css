@@ -14,6 +14,9 @@ nav {
 	position: relative;
 	z-index: 1;
 }
+nav li {
+	text-align: left;
+}
 section#socials {
 	position: absolute;
 	right: 0;
@@ -110,6 +113,9 @@ body {
 		/* width: 90%; */
 		border-bottom: solid;
 		margin-bottom: 20px;
+	}
+	nav li {
+		text-align: center;
 	}
 	li {
 		display: inline-block;

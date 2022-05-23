@@ -29,14 +29,6 @@ header nav {
 	margin-bottom: 0;
 	padding-top: 1em;
 }
-nav li {
-	list-style-type: none;
-	padding: 0;
-	flex-grow: 1;
-	margin-bottom: 5px;
-	white-space: nowrap;
-	line-height: 1.4;
-}
 .nav {
 	display: block;
 }
@@ -50,6 +42,15 @@ nav ul {
 	align-content: center;
 	flex-wrap: wrap;
 	margin-left: 20px;
+	gap: 0 1em;
+}
+nav li {
+	list-style-type: none;
+	padding: 0;
+	flex-grow: 1;
+	margin-bottom: 5px;
+	white-space: nowrap;
+	line-height: 1.4;
 }
 main {
 	margin: 2em 0;
