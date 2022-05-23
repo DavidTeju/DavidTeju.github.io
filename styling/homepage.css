@@ -20,7 +20,7 @@ nav li {
 section#socials {
 	position: absolute;
 	right: 0;
-	top: 0;
+	top: -2em;
 	width: 10em;
 	display: flex;
 	justify-content: space-evenly;
@@ -70,6 +70,7 @@ section#socials > a > img {
 }
 #mobile-home-img img {
 	width: 20vw;
+	max-width: 360px;
 	height: auto;
 }
 main {
@@ -110,7 +111,6 @@ body {
 	nav::before {
 		content: "";
 		display: block;
-		/* width: 90%; */
 		border-bottom: solid;
 		margin-bottom: 20px;
 	}
