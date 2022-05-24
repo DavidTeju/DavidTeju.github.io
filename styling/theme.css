@@ -20,7 +20,24 @@
 .light-theme h1,
 .light-theme h2,
 .light-theme h3 {
-  border-bottom: double #d7f3f7;
+  border-bottom: double #dcdcdc;
+}
+.light-theme h1,
+.light-theme h2,
+.light-theme h3,
+.light-theme h4,
+.light-theme .faux-h1 {
+  color: #d7f3f7;
+}
+.light-theme h1 a,
+.light-theme h2 a,
+.light-theme h3 a,
+.light-theme h4 a,
+.light-theme .faux-h1 a {
+  color: #d7f3f7;
+}
+.light-theme nav {
+  color: #d7f3f7;
 }
 .light-theme a {
   border-bottom: 1px solid #d7d7d7;
@@ -62,7 +79,24 @@
 .dark-theme h1,
 .dark-theme h2,
 .dark-theme h3 {
-  border-bottom: double #dcdcdc;
+  border-bottom: double #999999;
+}
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme .faux-h1 {
+  color: #dcdcdc;
+}
+.dark-theme h1 a,
+.dark-theme h2 a,
+.dark-theme h3 a,
+.dark-theme h4 a,
+.dark-theme .faux-h1 a {
+  color: #dcdcdc;
+}
+.dark-theme nav {
+  color: #dcdcdc;
 }
 .dark-theme a {
   border-bottom: 1px solid #d7d7d7;

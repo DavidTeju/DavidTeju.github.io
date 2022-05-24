@@ -29,7 +29,21 @@
 	h1,
 	h2,
 	h3 {
-		border-bottom: double $headings-color;
+		border-bottom: double $primary-text;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	.faux-h1 {
+		a {
+			color: $headings-color;
+		}
+
+		color: $headings-color;
+	}
+	nav {
+		color: $headings-color;
 	}
 	a {
 		border-bottom: 1px solid $link-underline;
