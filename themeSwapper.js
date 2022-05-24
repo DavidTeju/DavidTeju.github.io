@@ -1,7 +1,7 @@
+forOutDatedPages();
 onPageLoad();
 
 function onPageLoad() {
-	const pageTheme = document.getElementById("page-color");
 	if (
 		sessionStorage.getItem("isDark") == null ||
 		sessionStorage.getItem("isDark") == "false"
@@ -9,7 +9,7 @@ function onPageLoad() {
 		sessionStorage.setItem("isDark", "false");
 	} else {
 		document.getElementById("color-switch").checked = false;
-		pageTheme.setAttribute("href", "https://davidteju.dev/styling/dark.css");
+		document.documentElement.className = "dark-theme";
 	}
 
 	pushFooter();
@@ -34,15 +34,25 @@ function pushFooter() {
 }
 
 function swapThemeStyleSheet() {
-	const pageTheme = document.getElementById("page-color");
 	if (sessionStorage.getItem("isDark") == "false") {
-		pageTheme.setAttribute("href", "https://davidteju.dev/styling/dark.css");
+		document.documentElement.className = "dark-theme";
 		sessionStorage.setItem("isDark", "true");
 	} else {
-		pageTheme.setAttribute(
-			"href",
-			"https://davidteju.dev/styling/colorful.css"
-		);
+		document.documentElement.className = "light-theme";
 		sessionStorage.setItem("isDark", "false");
+	}
+}
+
+/**
+ * To help maintain themes for pages that still link to old stylesheets
+ */
+function forOutDatedPages() {
+	document.documentElement.className = "light-theme";
+
+	const styleLink = document.getElementById("page-color").getAttribute("href");
+	if (styleLink.includes("dark.css") || styleLink.includes("colorful.css")) {
+		document
+			.getElementById("page-color")
+			.setAttribute("href", "https://davidteju.dev/styling/theme.css");
 	}
 }

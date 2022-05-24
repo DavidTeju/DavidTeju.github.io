@@ -1,6 +1,6 @@
 h2,
 h3 {
-	border: none;
+	border: none !important;
 	margin: 5px auto 0;
 	padding-bottom: 0;
 }
