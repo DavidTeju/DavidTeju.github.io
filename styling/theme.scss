@@ -43,7 +43,9 @@
 		color: $headings-color;
 	}
 	nav {
-		color: $headings-color;
+		a {
+			color: $headings-color;
+		}
 	}
 	a {
 		border-bottom: 1px solid $link-underline;

@@ -36,7 +36,7 @@
 .light-theme .faux-h1 a {
   color: #d7f3f7;
 }
-.light-theme nav {
+.light-theme nav a {
   color: #d7f3f7;
 }
 .light-theme a {
@@ -95,7 +95,7 @@
 .dark-theme .faux-h1 a {
   color: #dcdcdc;
 }
-.dark-theme nav {
+.dark-theme nav a {
   color: #dcdcdc;
 }
 .dark-theme a {
