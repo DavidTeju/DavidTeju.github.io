@@ -16,6 +16,7 @@ header {
 	margin-top: 2vh;
 	min-height: 6em;
 }
+
 header::after {
 	content: "❃";
 	position: relative;
@@ -23,33 +24,49 @@ header::after {
 	left: calc(50% - 0.4em);
 	top: -0.5em;
 }
+
 header nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	margin-bottom: 0;
 	padding-top: 1em;
 }
 
 nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	margin-bottom: 0;
 }
+
 nav ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 100%;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
 	justify-content: flex-start;
+	-ms-flex-line-pack: center;
 	align-content: center;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	margin-left: 20px;
 	gap: 0 1em;
 }
+
 nav li {
 	list-style-type: none;
 	padding: 0;
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
 	flex-grow: 1;
 	margin-bottom: 5px;
 	white-space: nowrap;
 	line-height: 1.4;
 }
+
 nav a {
 	line-height: 1;
 }
@@ -57,6 +74,7 @@ nav a {
 .nav {
 	display: block;
 }
+
 .nav p {
 	margin-top: 1em;
 }
@@ -70,6 +88,7 @@ main {
 	margin: 2em 0;
 	position: relative;
 }
+
 main tr,
 main p {
 	margin-bottom: 0;
@@ -81,6 +100,7 @@ ul {
 	margin-top: 0;
 	padding-left: 10px;
 }
+
 ul li {
 	padding-left: 10px;
 }
@@ -92,6 +112,7 @@ footer {
 	line-height: 1;
 	width: 100vw;
 }
+
 footer p {
 	margin: 0;
 	padding: 1em 0;
@@ -116,6 +137,7 @@ h4,
 .faux-h1 {
 	line-height: 1;
 }
+
 h1 a,
 h2 a,
 h3 a,
@@ -127,6 +149,7 @@ h4 a,
 html body a {
 	text-decoration: none;
 }
+
 html body a:hover,
 html body a:focus {
 	border-bottom: 0;
@@ -146,6 +169,7 @@ hr {
 	text-align: center;
 	height: 10px;
 }
+
 hr::after {
 	content: "❃";
 	background: #222831;
@@ -153,6 +177,10 @@ hr::after {
 	padding: 0 4px;
 	position: relative;
 	top: -1em;
+}
+
+::-moz-selection {
+	background-color: rgba(100, 148, 237, 0.534);
 }
 
 ::selection {
@@ -167,6 +195,7 @@ hr::after {
 	width: 50px;
 	height: 28px;
 }
+
 .color-switch input {
 	opacity: 0;
 	width: 0;
@@ -183,6 +212,7 @@ hr::after {
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 }
+
 .slider:before {
 	position: absolute;
 	content: "️";
@@ -194,21 +224,22 @@ hr::after {
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 }
+
 input:checked + .slider:before {
 	-webkit-transform: translateX(25px);
-	-ms-transform: translateX(25px);
 	transform: translateX(25px);
 }
+
 input:checked + .slider:after {
 	-webkit-transform: translateX(25px);
-	-ms-transform: translateX(25px);
 	transform: translateX(25px);
 }
+
 .slider.round {
 	border-radius: 34px;
 }
+
 .slider.round:before {
 	border-radius: 50%;
 }
-
 /*# sourceMappingURL=style-main.css.map */
