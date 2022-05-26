@@ -125,11 +125,13 @@ body {
 		margin: 0;
 		width: 90%;
 		padding: 20px 0;
+		flex-direction: column;
 	}
-	ul {
+	.container nav ul {
 		margin: 0 !important;
 		display: flex !important;
 		justify-content: space-between !important;
+		gap: 0;
 	}
 	#mobile-home-img {
 		display: inline-block;
