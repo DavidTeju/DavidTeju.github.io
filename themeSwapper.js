@@ -15,6 +15,16 @@ function onPageLoad() {
 	pushFooter();
 }
 
+function swapThemeStyleSheet() {
+	if (sessionStorage.getItem("isDark") == "false") {
+		document.documentElement.className = "dark-theme";
+		sessionStorage.setItem("isDark", "true");
+	} else {
+		document.documentElement.className = "light-theme";
+		sessionStorage.setItem("isDark", "false");
+	}
+}
+
 function pushFooter() {
 	const footer = document.getElementById("footer");
 	const main = document.getElementById("main");
@@ -31,16 +41,6 @@ function pushFooter() {
 		footerHeight +
 		")";
 	//-2vh -64px to account for margins
-}
-
-function swapThemeStyleSheet() {
-	if (sessionStorage.getItem("isDark") == "false") {
-		document.documentElement.className = "dark-theme";
-		sessionStorage.setItem("isDark", "true");
-	} else {
-		document.documentElement.className = "light-theme";
-		sessionStorage.setItem("isDark", "false");
-	}
 }
 
 /**
