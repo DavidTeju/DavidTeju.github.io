@@ -1,97 +1,97 @@
 @mixin color-scheme(
-  $page-background,
-  $primary-text,
-  $footer-background,
-  $footer-text,
-  $headings-color,
-  $link-underline,
-  $link-text,
-  $slider-color,
-  $content
+	$page-background,
+	$primary-text,
+	$footer-background,
+	$footer-text,
+	$headings-color,
+	$link-underline,
+	$link-text,
+	$slider-color,
+	$content
 ) {
-  body {
-    background: $page-background;
-    color: #cacaca;
-  }
-  div.nav {
-    border-right: solid $primary-text;
-  }
-  header::after {
-    background: $page-background;
-    color: $primary-text;
-  }
-  header nav {
-    border-bottom: solid $primary-text;
-  }
-  footer {
-    background-color: $footer-background;
-    color: $footer-text;
-  }
-  h1,
-  h2,
-  h3 {
-    border-bottom: double $primary-text;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  .faux-h1 {
-    a {
-      color: $headings-color;
-    }
+	body {
+		background: $page-background;
+		color: #cacaca;
+	}
+	div.nav {
+		border-right: solid $primary-text;
+	}
+	header::after {
+		background: $page-background;
+		color: $primary-text;
+	}
+	header nav {
+		border-bottom: solid $primary-text;
+	}
+	footer {
+		background-color: $footer-background;
+		color: $footer-text;
+	}
+	h1,
+	h2,
+	h3 {
+		border-bottom: double $primary-text;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	.faux-h1 {
+		a {
+			color: $headings-color;
+		}
 
-    color: $headings-color;
-  }
-  nav {
-    a {
-      color: $headings-color;
-    }
-  }
-  a {
-    border-bottom: 1px solid $link-underline;
-    color: $link-text;
-  }
-  .slider:after {
-    position: absolute;
-    content: $content;
-    font-size: 0.9em;
-    text-shadow: none;
-    left: 3px;
-    text-align: center;
-    line-height: 2em;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-  }
-  .slider {
-    background-color: $slider-color;
-  }
+		color: $headings-color;
+	}
+	nav {
+		a {
+			color: $headings-color;
+		}
+	}
+	a {
+		border-bottom: 1px solid $link-underline;
+		color: $link-text;
+	}
+	.slider:after {
+		position: absolute;
+		content: $content;
+		font-size: 0.9em;
+		text-shadow: none;
+		left: 3px;
+		text-align: center;
+		line-height: 2em;
+		-webkit-transition: 0.4s;
+		transition: 0.4s;
+	}
+	.slider {
+		background-color: $slider-color;
+	}
 }
 
 .light-theme {
-  @include color-scheme(
-    #222831,
-    #dcdcdc,
-    rgb(53, 99, 146, 0.1),
-    #fafafa,
-    #d7f3f7,
-    #d7d7d7,
-    #b8c6c8,
-    #2196f3,
-    "🌞"
-  );
+	@include color-scheme(
+		#222831,
+		#dcdcdc,
+		rgb(53, 99, 146, 0.1),
+		#fafafa,
+		#d7f3f7,
+		#d7d7d7,
+		#b8c6c8,
+		#2196f3,
+		"🌞"
+	);
 }
 
 .dark-theme {
-  @include color-scheme(
-    #252525,
-    #999999,
-    rgb(53, 99, 146, 0.1),
-    #fafafa,
-    #dcdcdc,
-    #d7d7d7,
-    #989898,
-    #ccc,
-    "🌚"
-  );
+	@include color-scheme(
+		#252525,
+		#999999,
+		rgb(53, 99, 146, 0.1),
+		#fafafa,
+		#dcdcdc,
+		#d7d7d7,
+		#989898,
+		#ccc,
+		"🌚"
+	);
 }
