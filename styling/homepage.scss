@@ -1,0 +1,173 @@
+body {
+	header {
+		min-height: 1px;
+		/* 1px height to prevent margin collapse */
+
+		&::after {
+			display: none;
+		}
+	}
+	nav {
+		margin-left: 30px;
+		position: relative;
+		z-index: 1;
+
+		ul {
+			display: inline-block;
+			padding: 0;
+
+			li {
+				text-align: left;
+			}
+		}
+	}
+	section#socials,
+	.color-switch {
+		position: absolute;
+		right: 0;
+		// top: 0.5rem;
+		top: -2.5em;
+	}
+	section#socials {
+		// top: 0.5rem;
+		width: 10em;
+		display: flex;
+		justify-content: space-evenly;
+	}
+	section#socials > a {
+		border: none;
+
+		> img {
+			border-radius: 20%;
+			filter: invert(100%);
+			width: 2em;
+		}
+	}
+	.heading {
+		width: 65%;
+		border-right: solid;
+		padding-right: 1em;
+		padding-left: 1em;
+
+		h1 {
+			font-size: 7em;
+			border: none;
+			margin: 5px auto;
+			position: relative;
+			z-index: 1;
+		}
+
+		p {
+			margin-top: 0.5em;
+			line-height: normal;
+		}
+	}
+	.container {
+		display: flex;
+		border: solid;
+		padding: 20px;
+		aspect-ratio: 54/25;
+		min-height: 25em;
+		align-items: center;
+		position: relative;
+
+		p,
+		li {
+			font-size: 3em;
+		}
+	}
+	#mobile-home-img {
+		position: absolute;
+		left: 42%;
+		bottom: 45%;
+		z-index: 0;
+
+		img {
+			width: 20vw;
+			max-width: 360px;
+			height: auto;
+		}
+	}
+	main {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 2em 0;
+	}
+	body {
+		max-width: 85%;
+	}
+
+	@media screen and (max-width: 930px) {
+		nav {
+			margin: 0;
+			width: 90%;
+			padding: 20px 0;
+			flex-direction: column;
+
+			ul {
+				li {
+					text-align: center;
+				}
+			}
+		}
+
+		.container {
+			justify-content: center;
+			flex-direction: column;
+			aspect-ratio: auto;
+			min-width: 0;
+			width: 90vw;
+			flex-basis: 400% !important;
+			padding: 10px;
+			margin: 0;
+
+			p,
+			li {
+				font-size: 1rem;
+			}
+
+			nav ul {
+				margin: 0 !important;
+				display: flex !important;
+				justify-content: space-between !important;
+				gap: 0;
+			}
+		}
+
+		.heading {
+			display: flex;
+			flex-direction: column;
+			border: none;
+			width: auto;
+			text-align: center;
+
+			h1 {
+				font-size: 4rem;
+			}
+		}
+
+		nav::before {
+			content: "";
+			display: block;
+			border-bottom: solid;
+			margin-bottom: 20px;
+		}
+
+		li {
+			display: inline-block;
+			margin: 0 !important;
+		}
+
+		#mobile-home-img {
+			display: inline-block;
+			position: static;
+			flex-grow: 1 !important;
+
+			img {
+				width: 300px;
+				height: 300px;
+			}
+		}
+	}
+}

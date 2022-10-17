@@ -42,26 +42,6 @@
 	<body>
 		<header id="header"></header>
 		<main id="main">
-			<section id="socials">
-				<a
-					href="https://github.com/DavidTeju"
-					target="_blank"
-					rel="noopener noreferrer"
-					><img src="/icons/GitHub-icon.svg" alt="Image of GitHub Icon"
-				/></a>
-				<a
-					href="https://twitter.com/David48201954"
-					target="_blank"
-					rel="noopener noreferrer"
-					><img src="/icons/Twitter-icon.svg" alt="Image of Twitter Icon"
-				/></a>
-				<a
-					href="https://www.linkedin.com/in/david-tejuosho/"
-					target="_blank"
-					rel="noopener noreferrer"
-					><img src="/icons/LinkedIn-icon.svg" alt="Image of LinkedIn Icon"
-				/></a>
-			</section>
 			<div class="container">
 				<div class="heading">
 					<h1><a href="index.html" title="Home">David Tejuosho</a></h1>
@@ -93,6 +73,36 @@
 				<div id="mobile-home-img">
 					<img src="icons/android-chrome-512x512.png" alt="" />
 				</div>
+
+				<section id="socials">
+					<a
+						href="https://github.com/DavidTeju"
+						target="_blank"
+						rel="noopener noreferrer"
+						><img src="/icons/GitHub-icon.svg" alt="Image of GitHub Icon"
+					/></a>
+					<a
+						href="https://twitter.com/David48201954"
+						target="_blank"
+						rel="noopener noreferrer"
+						><img src="/icons/Twitter-icon.svg" alt="Image of Twitter Icon"
+					/></a>
+					<a
+						href="https://www.linkedin.com/in/david-tejuosho/"
+						target="_blank"
+						rel="noopener noreferrer"
+						><img src="/icons/LinkedIn-icon.svg" alt="Image of LinkedIn Icon"
+					/></a>
+				</section>
+				<label class="color-switch">
+					<input
+						type="checkbox"
+						id="color-switch"
+						onclick="swapThemeStyleSheet()"
+						checked
+					/>
+					<span class="slider round"></span>
+				</label>
 			</div>
 		</main>
 
@@ -109,15 +119,7 @@
 		</footer>
 
 		<!-- Switch for color or no color -->
-		<label class="color-switch">
-			<input
-				type="checkbox"
-				id="color-switch"
-				onclick="swapThemeStyleSheet()"
-				checked
-			/>
-			<span class="slider round"></span>
-		</label>
+
 		<script src="/themeSwapper.js"></script>
 	</body>
 </html>

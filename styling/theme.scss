@@ -55,13 +55,16 @@
 	.slider:after {
 		position: absolute;
 		content: $content;
-		font-size: 0.9em;
 		text-shadow: none;
-		left: 3px;
 		text-align: center;
-		line-height: 2em;
 		-webkit-transition: 0.4s;
 		transition: 0.4s;
+		display: inline-block;
+		height: 1.5rem;
+		width: 1.5rem;
+		left: 3px;
+		bottom: 4px;
+		line-height: 1.5rem;
 	}
 	.slider {
 		background-color: $slider-color;

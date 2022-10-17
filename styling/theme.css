@@ -46,13 +46,16 @@
 .light-theme .slider:after {
   position: absolute;
   content: "🌞";
-  font-size: 0.9em;
   text-shadow: none;
-  left: 3px;
   text-align: center;
-  line-height: 2em;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  left: 3px;
+  bottom: 4px;
+  line-height: 1.5rem;
 }
 .light-theme .slider {
   background-color: #2196f3;
@@ -105,13 +108,16 @@
 .dark-theme .slider:after {
   position: absolute;
   content: "🌚";
-  font-size: 0.9em;
   text-shadow: none;
-  left: 3px;
   text-align: center;
-  line-height: 2em;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  left: 3px;
+  bottom: 4px;
+  line-height: 1.5rem;
 }
 .dark-theme .slider {
   background-color: #ccc;
