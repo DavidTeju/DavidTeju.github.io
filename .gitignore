@@ -1,1 +1,7 @@
 .idea/
+.vscode
+*/.DS_Store
+.gitignore
+node_modules
+.hintrc
+package-lock.json

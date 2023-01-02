@@ -17,8 +17,8 @@
 
 		<link rel="stylesheet" href="/styling/normalize.css" />
 		<link rel="stylesheet" href="/styling/style-main.css" />
-		<link rel="stylesheet" href="/styling/theme.css" id="page-color" />
 		<link rel="stylesheet" href="/styling/homepage.css" />
+		<link rel="stylesheet" href="/styling/theme.css" id="page-color" />
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
@@ -40,70 +40,549 @@
 	</head>
 
 	<body>
-		<header id="header"></header>
 		<main id="main">
-			<div class="container">
-				<div class="heading">
-					<h1><a href="index.html" title="Home">David Tejuosho</a></h1>
-					<p><em>Student of Computer Science</em></p>
+			<section id="front">
+				<div class="container">
+					<div class="heading">
+						<h1><a href="index.html" title="Home">David Tejuosho</a></h1>
+						<p><em>Student of Computer Science</em></p>
+					</div>
+					<nav>
+						<ul>
+							<li>
+								<a href="#about-me" title="and how to contact me">Who am I?</a>
+							</li>
+							<li>
+								<a href="#resume-sec" title="all my impressive endeavours"
+									>My Resume</a
+								>
+							</li>
+							<li>
+								<a href="#stuff-i-like" title="You need to see this!"
+									>Stuff I like</a
+								>
+							</li>
+						</ul>
+					</nav>
+					<div id="mobile-home-img">
+						<img src="icons/android-chrome-512x512.png" alt="" />
+					</div>
+					<section id="socials">
+						<a
+							href="https://github.com/DavidTeju"
+							target="_blank"
+							rel="noopener noreferrer"
+							><img src="/icons/GitHub-icon.svg" alt="Image of GitHub Icon"
+						/></a>
+						<a
+							href="https://twitter.com/David48201954"
+							target="_blank"
+							rel="noopener noreferrer"
+							><img src="/icons/Twitter-icon.svg" alt="Image of Twitter Icon"
+						/></a>
+						<a
+							href="https://www.linkedin.com/in/david-tejuosho/"
+							target="_blank"
+							rel="noopener noreferrer"
+							><img src="/icons/LinkedIn-icon.svg" alt="Image of LinkedIn Icon"
+						/></a>
+					</section>
+					<label class="color-switch">
+						<input type="checkbox" id="color-switch" checked />
+						<span class="slider round"></span>
+					</label>
 				</div>
+			</section>
 
-				<nav>
+			<section id="about-me">
+				<h1>About me & Contact info</h1>
+				<h2>Who am I?!</h2>
+				<p style="margin-bottom: 1em">
+					My name is David Tejuosho, and I'm a sophomore studying Computer
+					Science. I love learning new things and solving problems/challenges. I
+					recently finished an internship on J&J R&D's intelligent automation
+					team, and am now looking forward to joining Google this summer as a
+					STEP intern. I also used to be a writer for my university's newspaper
+					and
+					<a href="https://www.theteenmagazine.com/writers/david-tejuosho">
+						The Teen Magazine.</a
+					>
+					I fancy myself to be an idea guy but won't hesitate to jump on the
+					bandwagon/team of someone with a remarkable idea. When I'm not slaving
+					away at my screen or doing dumb stuff with friends, I like to doodle
+					for hours in my notebook or cook new recipes I find on the internet
+					(<a
+						href="https://twitter.com/KevinMKruse/status/1096549128262352902?s=20&t=JYVFUsyPxHGolLxzn25Rzw"
+					>
+						right after reading the life story of the chef, of course
+					</a>
+					)
+				</p>
+				<h2>Contact me</h2>
+				<ul>
+					<li><a href="mailto:david@davidteju.dev">Email me!</a></li>
+					<li>
+						<a href="https://www.linkedin.com/in/david-tejuosho/"
+							>Connect on LinkedIn!</a
+						>
+					</li>
+				</ul>
+			</section>
+			<section id="resume-sec">
+				<h1>
+					My Resume
+					<a
+						href="/other/Resume.pdf"
+						class="download-link"
+						title="download resume"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="download-resume"
+							width="44"
+							height="44"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="#cacaca"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+							<path d="M14 3v4a1 1 0 0 0 1 1h4" />
+							<path
+								d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
+							/>
+							<line x1="12" y1="11" x2="12" y2="17" />
+							<polyline points="9 14 12 17 15 14" />
+						</svg>
+					</a>
+				</h1>
+				<div id="resume">
+					<section class="resume-header">
+						<div class="faux-h1">David Tejuosho</div>
+						<div class="contact subheading">
+							<a href="tel:6787546641">(678) 754 - 6641</a>
+							<a href="mailto:tejuoshodavid@gmail.com" title="Email me :)"
+								>tejuoshodavid@gmail.com</a
+							>
+							<a
+								href="https://github.com/DavidTeju"
+								title="My Github :)"
+								target="_blank"
+								rel="noopener noreferrer"
+								>GitHub.com/DavidTeju</a
+							>
+						</div>
+					</section>
+
+					<section id="activities">
+						<h2>Experience</h2>
+						<hr />
+						<div class="subheading">
+							<h3>Johnson & Johnson</h3>
+							<h3>Raritan, NJ</h3>
+						</div>
+						<div class="subheading">
+							<p>Technology co-op</p>
+							<p>June – December 2022</p>
+						</div>
+						<ul>
+							<li>
+								Automated bot exception handling/support using macros
+								(<em>VBA</em>) and Outlook mail merge
+							</li>
+							<li>
+								Designed and implemented extensive formulas to automate team
+								weekly newsletter, saving colleagues <em>four hours</em> of work
+								per week, including <em>JavaScript</em> to implement updates
+							</li>
+							<li>
+								Created <em>C#</em> and <em>NodeJS (TypeScript)</em> Libraries
+								for team to use in parsing/converting loosely structured data
+								between <em>JSON</em>, <em>DataTables</em> and
+								<em>HTML</em> tables
+							</li>
+							<li>
+								Coordinated with business partners to design automation to
+								support and enhance <em>clinical trial audits</em>
+							</li>
+						</ul>
+
+						<div class="subheading">
+							<h3>The President’s Alliance on Higher Ed and Immigration</h3>
+							<!-- <h3>June – August 2022</h3> -->
+						</div>
+						<div class="subheading">
+							<p>Summer Fellow</p>
+							<p>June – August 2022</p>
+						</div>
+						<ul>
+							<li>
+								Initiated and designed project for online information resource
+								to improve higher education access for non-citizen us resident
+								students (refugees, asylees, DACA)
+							</li>
+							<li>
+								Wrote multiple python scripts and designed java programs to
+								automate tedious processes including information gathering and
+								sorting (see Excel/HTML parser)
+							</li>
+						</ul>
+
+						<div class="subheading">
+							<h3>Varsity Tutors</h3>
+							<!-- <h3>May 2022 – Present</h3> -->
+						</div>
+						<div class="subheading">
+							<p>Coding instructor/Tutor</p>
+							<p>May 2022 – Present</p>
+						</div>
+						<ul>
+							<li>
+								Tutored 8+ students (including master’s student) on programming
+								in java, python, C#, and JavaScript including machine learning
+								and natural language processing concepts
+							</li>
+							<li>
+								Taught 3 classes of 15+ students the basics of programming
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Projects</h2>
+						<hr />
+
+						<div class="subheading">
+							<h3>
+								<a
+									href="https://github.com/DavidTeju/Tweet-Generator/"
+									title="git repository"
+								>
+									Random Tweeter
+								</a>
+							</h3>
+							<p>September – October 2022</p>
+						</div>
+						<ul>
+							<li>
+								Created bot, utilizing natural language model trained on tweets,
+								to post auto-generated tweets daily
+								<ul>
+									<li>Python, Regex, Machine Learning</li>
+								</ul>
+							</li>
+						</ul>
+
+						<div class="subheading">
+							<h3>
+								<a
+									href="https://davidteju.dev/David-O-Meter/"
+									title="git repository"
+								>
+									David-O-Meter
+								</a>
+							</h3>
+							<p>April 2022</p>
+						</div>
+						<ul>
+							<li>
+								Built site displaying ratio of sentiments of tweets containing
+								“David”
+								<ul>
+									<li>
+										Java, JavaScript, Twitter API, Azure cognitive services,
+										SCSS
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+						<div class="subheading">
+							<h3>
+								<a
+									href="https://github.com/DavidTeju/HangMan"
+									title="git repository"
+								>
+									Hang Man
+								</a>
+							</h3>
+							<p>September 2021 – January 2022</p>
+						</div>
+						<ul>
+							<li>
+								Designed classic word guessing game with single player story
+								mode and multiplayer mode
+								<ul>
+									<li>Java, GUI, Object-oriented programming principles</li>
+								</ul>
+							</li>
+						</ul>
+
+						<div class="subheading">
+							<h3>
+								<a
+									href="https://github.com/DavidTeju/MSAccess-HTML-Parser"
+									title="git repository"
+								>
+									Excel/HTML Parser
+								</a>
+							</h3>
+							<p>June – October 2021</p>
+						</div>
+						<ul>
+							<li>
+								Wrote program/scripts to understand and parse data into HTML and
+								Spreadsheet formats
+								<ul>
+									<li>Python, Java, Apache, RegEx</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<section id="honours">
+						<h2>Awards and Honours</h2>
+						<hr />
+						<ul>
+							<li>Inspire scholarship</li>
+							<li>Presidential scholarship</li>
+							<li>Pillars scholarship</li>
+							<li>Graham scholarship</li>
+							<li>Questbridge National College Match Finalist</li>
+							<li>International Mathematics Olympiad state</li>
+							<li>
+								Cowbellpedia Senior Secondary Schools Mathematics state 2nd
+							</li>
+							<!-- <li>
+								Questbridge National College Match Finalist
+								<ul>
+									<li>
+										Finalist for a nationally recognized program that connects
+										low-income students to the top Universities in the country
+									</li>
+								</ul>
+							</li>
+							<li>
+								International Mathematics Olympiad
+								<ul>
+									<li>
+										Achieved sixth place at the 2015-2016 Mathematics Olympiad
+										state qualifiers
+									</li>
+									<li>
+										Represented the state with 9 other students at the national
+										level
+									</li>
+								</ul>
+							</li>
+							<li>
+								Cowbellpedia Senior Secondary Schools Mathematics TV Quiz Show
+								<ul>
+									<li>
+										Placed second in the 2017-2018 Cowbellpedia Mathematics
+										competition at the state level
+									</li>
+								</ul>
+							</li> -->
+						</ul>
+					</section>
+
+					<!-- <section>
+						<h2>Education</h2>
+						<hr />
+
+						<div class="sub-education">
+							<div class="subheading">
+								<h3>Dominican University</h3>
+								<h3>River Forest</h3>
+							</div>
+							<div class="subheading">
+								<p title="and computer engineering (hopefully)">
+									Bachelor of Science in Mathematics and Computer Science
+								</p>
+								<p>expected May 2025</p>
+							</div>
+							<ul>
+								<li>
+									Presidential Scholarship, Graham Scholarship, Pillars
+									Scholarship
+								</li>
+								<li>
+									Relevant Coursework: Data Structures, Computer Programming,
+									Web Development I
+								</li>
+								<li>
+									<strong>GPA:</strong> 3.33/4.0; <strong>SAT:</strong> 1530
+								</li>
+							</ul>
+						</div>
+					</section> -->
+				</div>
+			</section>
+			<section id="stuff-i-like">
+				<h1>Stuff I Like</h1>
+				<section>
+					<h2>Stuff that's just really useful</h2>
 					<ul>
 						<li>
-							<a href="subpages/about-me.html" title="and how to contact me"
-								>Who am I?</a
+							<a href="https://tinywow.com/"
+								>Tools for everything you will ever need to do with files</a
+							>
+						</li>
+						<li>
+							<a href="https://10minutemail.com/"
+								>10 Minute Disposable Mail
+								<span class="context">spam spam go away</span></a
+							>
+						</li>
+						<li>
+							<a href="https://musclewiki.com/"
+								>Workouts and stretches for every muscle
+								<span class="context">male or female</span></a
+							>
+						</li>
+						<li>
+							<a href="https://www.when2meet.com/"
+								>Plan meetings with synchronized schedules</a
+							>
+						</li>
+						<li>
+							<a href="https://tosdr.org/"
+								>Summarize terms of service
+								<span class="context"
+									>cause, be honest. nobody reads the full thing</span
+								></a
+							>
+						</li>
+						<li>
+							<a href="https://www.remove.bg/"
+								>Quick image background remover</a
+							>
+						</li>
+						<li>
+							<a href="https://regex101.com/"
+								>RegEx101
+								<span class="context">Almost makes regex bearable</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://excalidraw.com/"
+								>Minimal online drawing app
+								<span class="context">that's actually clean</span></a
+							>
+						</li>
+						<li>
+							<a href="https://thewebtoolbox.cc/">The Web ToolBox</a>
+						</li>
+						<li>
+							<a href="https://devdocs.io/"
+								>DevDocs
+								<span class="context"
+									>all the documentation you need in one place</span
+								></a
+							>
+						</li>
+					</ul>
+				</section>
+				<!--------------------------------------------------------------------------------->
+				<section>
+					<h2>Stuff that makes me go "where have you been all my life"</h2>
+					<ul>
+						<li>
+							<a href="whatthefuckshouldimakefordinner.com/"
+								>What the f should I make for dinner?
+								<span class="context">with recipes and vegan options</span></a
+							>
+						</li>
+						<li>
+							<a href="https://www.algorithmexamples.com/"
+								>Algorithm Examples
+								<span class="context">my one-stop shop for algorithms</span></a
 							>
 						</li>
 						<li>
 							<a
-								href="subpages/resume.html"
-								title="all my impressive endeavours"
-								>My Resume</a
+								href="https://getbootstrap.com/docs/5.1/examples/cheatsheet/#scrollspyHeading5"
+								>Bootstrap cheatsheet
+								<span class="context"
+									>The day I became a man was the day I learned everyone uses
+									bootstrap</span
+								></a
 							>
 						</li>
 						<li>
-							<a href="subpages/stuff-I-like.html" title="You need to see this!"
-								>Stuff I like</a
+							<a href="https://docs.emmet.io/"
+								>Emmet Toolkit
+								<span class="context"
+									>Once you go Emmet, you can't go back</span
+								></a
 							>
 						</li>
 					</ul>
-				</nav>
-
-				<div id="mobile-home-img">
-					<img src="icons/android-chrome-512x512.png" alt="" />
-				</div>
-
-				<section id="socials">
-					<a
-						href="https://github.com/DavidTeju"
-						target="_blank"
-						rel="noopener noreferrer"
-						><img src="/icons/GitHub-icon.svg" alt="Image of GitHub Icon"
-					/></a>
-					<a
-						href="https://twitter.com/David48201954"
-						target="_blank"
-						rel="noopener noreferrer"
-						><img src="/icons/Twitter-icon.svg" alt="Image of Twitter Icon"
-					/></a>
-					<a
-						href="https://www.linkedin.com/in/david-tejuosho/"
-						target="_blank"
-						rel="noopener noreferrer"
-						><img src="/icons/LinkedIn-icon.svg" alt="Image of LinkedIn Icon"
-					/></a>
 				</section>
-				<label class="color-switch">
-					<input
-						type="checkbox"
-						id="color-switch"
-						onclick="swapThemeStyleSheet()"
-						checked
-					/>
-					<span class="slider round"></span>
-				</label>
-			</div>
+				<!--------------------------------------------------------------------------------->
+				<section>
+					<h2>Stuff that makes me go "hmm. that's pretty cool"</h2>
+					<ul>
+						<li>
+							<a href="https://thispersondoesnotexist.com/"
+								>This person does not exist</a
+							>
+						</li>
+						<li>
+							<a href="https://radio.garden/visit/accra/K2VIX0Q7"
+								>Global Radio</a
+							>
+						</li>
+						<li>
+							<a href="https://www.atlasobscura.com/"
+								>Hidden wonders
+								<span class="context">for when you travel</span></a
+							>
+						</li>
+					</ul>
+				</section>
+				<!--------------------------------------------------------------------------------->
+				<!-- <section>
+					<h2>Stuff that changed my life (Don't ask me how)</h2>
+					<ul>
+						<li>
+							<a href="https://www.imdb.com/title/tt2404233/">Gods of Egypt</a>
+						</li>
+						<li>
+							<a href="https://www.imdb.com/title/tt0454876/">Life of Pi</a>
+						</li>
+					</ul>
+				</section> -->
+				<!--------------------------------------------------------------------------------->
+				<section>
+					<h2>Stuff that taught me a lot</h2>
+					<ul>
+						<li>
+							<a
+								href="https://stackoverflow.com/questions/869033/how-do-i-copy-an-object-in-java"
+								>How do I copy an object in java?
+								<span class="context"
+									>learned a lot about object mutability and references in
+									java</span
+								></a
+							>
+						</li>
+						<li>
+							<a href="https://web.dev/fast/#optimize-your-images"
+								>Fast Load Times</a
+							>
+						</li>
+						<li>
+							<a href="https://rogerdudler.github.io/git-guide/"
+								>A simple guide to Git</a
+							>
+						</li>
+					</ul>
+				</section>
+			</section>
 		</main>
 
 		<footer id="footer">
@@ -120,6 +599,7 @@
 
 		<!-- Switch for color or no color -->
 
-		<script src="/themeSwapper.js"></script>
+		<script src="/index.js"></script>
+		<script src="/homepage.js"></script>
 	</body>
 </html>
