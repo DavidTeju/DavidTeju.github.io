@@ -1,5 +1,3 @@
-// noinspection EqualityComparisonWithCoercionJS
-
 "use strict";
 function loadThemeCookie(mySwitch) {
     if (sessionStorage.getItem("isDark") == null ||

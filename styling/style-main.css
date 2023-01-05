@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Product Sans";
+  src: url("/other/Product Sans Regular.ttf") format("truetype");
+}
 html {
   scroll-behavior: smooth;
 }
@@ -70,20 +74,6 @@ body .nav p {
 body div.nav {
   min-width: 50%;
   padding: 1px;
-}
-body main {
-  margin: 2em 0;
-  position: relative;
-}
-body main .download-link {
-  font-weight: normal;
-  font-size: 0.8em;
-  border: none;
-}
-body main tr,
-body main p {
-  margin-bottom: 0;
-  margin-top: 0;
 }
 body ul {
   margin-bottom: 0;
@@ -198,133 +188,41 @@ body .slider.round {
 body .slider.round:before {
   border-radius: 50%;
 }
+body .google {
+  font-family: "Product Sans";
+  text-shadow: 0 0.2px 0 #cacaca;
+}
+body .google :nth-child(1) {
+  color: #4284f3;
+}
+body .google :nth-child(2) {
+  color: #ea4335;
+}
+body .google :nth-child(3) {
+  color: #fabc05;
+}
+body .google :nth-child(4) {
+  color: #4284f3;
+}
+body .google :nth-child(5) {
+  color: #33a852;
+}
+body .google :nth-child(6) {
+  color: #ea4335;
+}
 body main {
   margin: 2em 0;
-}
-body main > section {
-  margin: 2vh auto;
-  padding: 1px 10%;
-  min-height: 96vh;
-  border-radius: 2em;
-  transition: box-shadow 0.6s;
-}
-body main > section#front {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-body main > section#stuff-i-like section {
-  margin: 1em 0;
-}
-body main > section#about-me {
-  padding-bottom: 2em;
-}
-body main > section#resume-sec h2,
-body main > section#resume-sec h3 {
-  border: none !important;
-  margin: 5px auto 0;
-  padding-bottom: 0;
-}
-body main > section#resume-sec p,
-body main > section#resume-sec tr {
-  line-height: 1.6;
-}
-body main > section#resume-sec em {
-  font-style: normal;
-  font-weight: bold;
-}
-body main > section#resume-sec #resume {
-  border: solid;
-  padding: 1.5em;
-  margin-bottom: 3em;
-}
-body main > section#resume-sec #resume hr {
-  height: 0;
-  margin-top: -0.25em;
-}
-body main > section#resume-sec #resume table {
-  width: 100%;
-}
-body main > section#resume-sec #resume td:nth-child(2) {
-  font-size: 0.9em;
-  text-align: right;
-}
-body main > section#resume-sec #resume td:nth-child(1) {
-  text-align: left;
-}
-body main > section#resume-sec .download-resume {
-  width: 1em;
-  height: auto;
-  bottom: -0.1em;
   position: relative;
 }
-body main > section#resume-sec .download-resume:hover {
-  height: 1.25em;
-  min-width: 1.25em;
-  left: -0.125em;
-  bottom: -0.125em;
-  margin-top: -0.25em;
-}
-body main > section#resume-sec #activities ul {
-  margin-left: 0.5em;
-}
-body main > section#resume-sec #honours li {
-  font-style: italic;
-}
-body main > section#resume-sec #honours li li {
-  list-style: inside;
+body main .download-link {
   font-weight: normal;
-  font-size: 1rem;
-  list-style: circle;
-}
-body main > section#resume-sec #honours > ul {
-  margin-top: 0.3em;
-  padding-left: 0;
-}
-body main > section#resume-sec li {
-  line-height: 1.5;
-}
-body main > section#resume-sec .faux-h1 {
-  font-size: 2em;
-  line-height: 1;
-  margin: 5px auto;
-  font-weight: bold;
-}
-body main > section#resume-sec .resume-header {
-  text-align: center;
-  margin: 5px 0 15px;
-}
-body main > section#resume-sec div.contact {
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-body main > section#resume-sec div > a {
-  flex: 0 1 10em;
-}
-body main > section#resume-sec .subheading {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  line-height: 1.5;
-}
-body main > section#resume-sec .subheading > *:nth-child(2) {
-  text-align: right;
-}
-body main > section#resume-sec .subheading h3 {
-  margin: 8px 0 4px;
-}
-body section#socials {
-  width: 10em;
-  display: flex;
-  justify-content: space-evenly;
-}
-body section#socials > a {
+  font-size: 0.8em;
   border: none;
 }
-body section#socials > a > img {
-  border-radius: 20%;
-  filter: invert(100%);
-  width: 2em;
+body main tr,
+body main p {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 body .heading {
   width: 65%;
@@ -427,5 +325,3 @@ body .container li {
     height: 300px;
   }
 }
-
-/*# sourceMappingURL=style-main.css.map */

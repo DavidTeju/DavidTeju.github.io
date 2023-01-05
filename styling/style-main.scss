@@ -1,3 +1,7 @@
+@font-face {
+	font-family: "Product Sans";
+	src: url("/other/Product Sans Regular.ttf") format("truetype");
+}
 html {
 	scroll-behavior: smooth;
 }
@@ -92,21 +96,6 @@ body {
 	@mixin clear-top-bottom-margin {
 		margin-bottom: 0;
 		margin-top: 0;
-	}
-
-	main {
-		.download-link {
-			font-weight: normal;
-			font-size: 0.8em;
-			border: none;
-		}
-		tr,
-		p {
-			@include clear-top-bottom-margin;
-		}
-
-		margin: 2em 0;
-		position: relative;
 	}
 
 	ul {
@@ -237,161 +226,41 @@ body {
 		transition: 0.4s;
 	}
 
-	main {
-		margin: 2em 0;
-		> section {
-			margin: 2vh auto;
-			padding: 1px 10%; // prevent collapse
-			min-height: calc(100vh - 4vh);
-			border-radius: 2em;
-			transition: box-shadow 0.6s;
-
-			&#front {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-
-			&#stuff-i-like section {
-				margin: 1em 0;
-			}
-
-			&#about-me {
-				padding-bottom: 2em;
-			}
-
-			&#resume-sec {
-				h2,
-				h3 {
-					border: none !important;
-					margin: 5px auto 0;
-					padding-bottom: 0;
-				}
-				p,
-				tr {
-					line-height: 1.6;
-				}
-				em {
-					font-style: normal;
-					font-weight: bold;
-				}
-				#resume {
-					border: solid;
-					padding: 1.5em;
-					margin-bottom: 3em;
-
-					hr {
-						height: 0;
-						margin-top: -0.25em;
-					}
-
-					table {
-						width: 100%;
-					}
-
-					td:nth-child(2) {
-						font-size: 0.9em;
-						text-align: right;
-					}
-
-					td:nth-child(1) {
-						text-align: left;
-					}
-				}
-				.download-resume {
-					width: 1em;
-					height: auto;
-					bottom: -0.1em;
-					position: relative;
-
-					&:hover {
-						height: 1.25em;
-						min-width: 1.25em;
-						left: -0.125em;
-						bottom: -0.125em;
-						margin-top: -0.25em;
-					}
-				}
-				#activities ul {
-					margin-left: 0.5em;
-				}
-				#honours li {
-					font-style: italic;
-
-					li {
-						list-style: inside;
-						font-weight: normal;
-						font-size: 1rem;
-						list-style: circle;
-					}
-				}
-				#honours > ul {
-					margin-top: 0.3em;
-					padding-left: 0;
-				}
-
-				//tbody#education-body tr {
-				//	line-height: 1.2;
-				//
-				//	&:nth-child(n + 2) {
-				//		text-indent: 2em;
-				//	}
-				//}
-				li {
-					line-height: 1.5;
-				}
-				.faux-h1 {
-					font-size: 2em;
-					line-height: 1;
-					margin: 5px auto;
-					font-weight: bold;
-				}
-				.resume-header {
-					text-align: center;
-					margin: 5px 0 15px;
-				}
-
-				div {
-					&.contact {
-						justify-content: space-evenly;
-						flex-wrap: wrap;
-					}
-					> a {
-						flex: 0 1 10em;
-					}
-				}
-				.subheading {
-					display: flex;
-					flex-direction: row;
-					justify-content: space-between;
-					line-height: 1.5;
-
-					> *:nth-child(2) {
-						text-align: right;
-					}
-
-					h3 {
-						margin: 8px 0 4px;
-					}
-				}
-				//.sub-education {
-				//	font-style: italic;
-				//}
-			}
+	.google {
+		font-family: "Product Sans";
+		text-shadow: 0 0.2px 0 #cacaca;
+		:nth-child(1) {
+			color: rgb(66, 132, 243);
+		}
+		:nth-child(2) {
+			color: rgb(234, 67, 53);
+		}
+		:nth-child(3) {
+			color: rgb(250, 188, 5);
+		}
+		:nth-child(4) {
+			color: rgb(66, 132, 243);
+		}
+		:nth-child(5) {
+			color: rgb(51, 168, 82);
+		}
+		:nth-child(6) {
+			color: rgb(234, 67, 53);
 		}
 	}
-	section#socials {
-		width: 10em;
-		display: flex;
-		justify-content: space-evenly;
-		> a {
-			border: none;
 
-			> img {
-				border-radius: 20%;
-				filter: invert(100%);
-				width: 2em;
-			}
+	main {
+		margin: 2em 0;
+		position: relative;
+
+		.download-link {
+			font-weight: normal;
+			font-size: 0.8em;
+			border: none;
+		}
+		tr,
+		p {
+			@include clear-top-bottom-margin;
 		}
 	}
 	.heading {
