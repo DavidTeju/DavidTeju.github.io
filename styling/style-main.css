@@ -179,8 +179,7 @@ body .slider.round:before {
   border-radius: 50%;
 }
 body .google {
-  font-family: "Product Sans";
-  text-shadow: 0 0.2px 0 #cacaca;
+  font-family: "Product Sans", sans-serif;
 }
 body .google :nth-child(1) {
   color: #4284f3;
