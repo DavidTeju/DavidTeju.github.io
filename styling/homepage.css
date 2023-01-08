@@ -13,6 +13,19 @@ body nav ul {
 body nav ul li {
   text-align: left;
 }
+body h1 {
+  margin: 1em 0;
+  padding-bottom: 0.2em;
+}
+body h2 {
+  margin: 0 0 0.3em;
+  padding-bottom: 0.1em;
+  padding-right: 0.5em;
+  display: inline-block;
+}
+body main {
+  position: relative;
+}
 body main > section {
   margin: 2vh auto;
   padding: 1px 10%;
@@ -142,4 +155,64 @@ body section#socials > a > img {
   border-radius: 20%;
   filter: invert(100%);
   width: 2em;
+}
+@media screen and (max-width: 1025px) {
+  body nav {
+    margin: 0;
+    width: 90%;
+    padding: 20px 0;
+    flex-direction: column;
+  }
+  body nav ul li {
+    text-align: center;
+  }
+  body .container {
+    justify-content: center;
+    flex-direction: column;
+    aspect-ratio: auto;
+    min-width: 0;
+    width: 90vw;
+    flex-basis: 400% !important;
+    padding: 10px;
+    margin: 0;
+  }
+  body .container p,
+body .container li {
+    font-size: 1rem;
+  }
+  body .container nav ul {
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    gap: 0;
+  }
+  body .heading {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    width: auto;
+    text-align: center;
+  }
+  body .heading h1 {
+    font-size: 4rem;
+  }
+  body nav::before {
+    content: "";
+    display: block;
+    border-bottom: solid;
+    margin-bottom: 20px;
+  }
+  body section#front li {
+    display: inline-block;
+    margin: 0 !important;
+  }
+  body #mobile-home-img {
+    display: inline-block;
+    position: static;
+    flex-grow: 1 !important;
+  }
+  body #mobile-home-img img {
+    width: 300px;
+    height: 300px;
+  }
 }

@@ -94,16 +94,6 @@ body footer p {
   margin: 0;
   padding: 1em 0;
 }
-body h1 {
-  margin: 1em 0;
-  padding-bottom: 0.2em;
-}
-body h2 {
-  margin: 0 0 0.3em;
-  padding-bottom: 0.1em;
-  padding-right: 0.5em;
-  display: inline-block;
-}
 body h1,
 body h2,
 body h3,
@@ -212,7 +202,6 @@ body .google :nth-child(6) {
 }
 body main {
   margin: 2em 0;
-  position: relative;
 }
 body main .download-link {
   font-weight: normal;
@@ -264,64 +253,4 @@ body #mobile-home-img img {
   width: 20vw;
   max-width: 360px;
   height: auto;
-}
-@media screen and (max-width: 1025px) {
-  body nav {
-    margin: 0;
-    width: 90%;
-    padding: 20px 0;
-    flex-direction: column;
-  }
-  body nav ul li {
-    text-align: center;
-  }
-  body .container {
-    justify-content: center;
-    flex-direction: column;
-    aspect-ratio: auto;
-    min-width: 0;
-    width: 90vw;
-    flex-basis: 400% !important;
-    padding: 10px;
-    margin: 0;
-  }
-  body .container p,
-body .container li {
-    font-size: 1rem;
-  }
-  body .container nav ul {
-    margin: 0 !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    gap: 0;
-  }
-  body .heading {
-    display: flex;
-    flex-direction: column;
-    border: none;
-    width: auto;
-    text-align: center;
-  }
-  body .heading h1 {
-    font-size: 4rem;
-  }
-  body nav::before {
-    content: "";
-    display: block;
-    border-bottom: solid;
-    margin-bottom: 20px;
-  }
-  body section#front li {
-    display: inline-block;
-    margin: 0 !important;
-  }
-  body #mobile-home-img {
-    display: inline-block;
-    position: static;
-    flex-grow: 1 !important;
-  }
-  body #mobile-home-img img {
-    width: 300px;
-    height: 300px;
-  }
 }

@@ -120,18 +120,6 @@ body {
 		width: 100vw;
 	}
 
-	h1 {
-		margin: 1em 0;
-		padding-bottom: 0.2em;
-	}
-
-	h2 {
-		margin: 0 0 0.3em;
-		padding-bottom: 0.1em;
-		padding-right: 0.5em;
-		display: inline-block;
-	}
-
 	h1,
 	h2,
 	h3,
@@ -251,7 +239,6 @@ body {
 
 	main {
 		margin: 2em 0;
-		position: relative;
 
 		.download-link {
 			font-weight: normal;
@@ -306,81 +293,6 @@ body {
 			width: 20vw;
 			max-width: 360px;
 			height: auto;
-		}
-	}
-
-	@media screen and (max-width: 1025px) {
-		nav {
-			margin: 0;
-			width: 90%;
-			padding: 20px 0;
-			flex-direction: column;
-
-			ul {
-				li {
-					text-align: center;
-				}
-			}
-		}
-
-		.container {
-			justify-content: center;
-			flex-direction: column;
-			aspect-ratio: auto;
-			min-width: 0;
-			width: 90vw;
-			flex-basis: 400% !important;
-			padding: 10px;
-			margin: 0;
-
-			p,
-			li {
-				font-size: 1rem;
-			}
-
-			nav ul {
-				margin: 0 !important;
-				display: flex !important;
-				justify-content: space-between !important;
-				gap: 0;
-			}
-		}
-
-		.heading {
-			display: flex;
-			flex-direction: column;
-			border: none;
-			width: auto;
-			text-align: center;
-
-			h1 {
-				font-size: 4rem;
-			}
-		}
-
-		nav::before {
-			content: "";
-			display: block;
-			border-bottom: solid;
-			margin-bottom: 20px;
-		}
-
-		section#front {
-			li {
-				display: inline-block;
-				margin: 0 !important;
-			}
-		}
-
-		#mobile-home-img {
-			display: inline-block;
-			position: static;
-			flex-grow: 1 !important;
-
-			img {
-				width: 300px;
-				height: 300px;
-			}
 		}
 	}
 }
