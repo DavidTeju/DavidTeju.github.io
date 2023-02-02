@@ -34,7 +34,7 @@ body {
 		> section {
 			margin: 2vh auto;
 			padding: 1px 10%; // prevent collapse
-			min-height: calc(100vh - 4vh);
+			min-height: 96vh;
 			border-radius: 2em;
 			transition: box-shadow 0.6s;
 
@@ -44,8 +44,22 @@ body {
 				justify-content: center;
 			}
 
-			&#stuff-i-like section {
-				margin: 1em 0;
+			&#stuff-i-like {
+				section {
+					margin-bottom: 15px;
+					h2 {
+						padding-bottom: 2px;
+					}
+				}
+				span.context {
+					font-size: 10px;
+					&::before {
+						content: "(";
+					}
+					&::after {
+						content: ")";
+					}
+				}
 			}
 
 			&#about-me {

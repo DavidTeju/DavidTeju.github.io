@@ -29,7 +29,7 @@ body main {
 body main > section {
   margin: 2vh auto;
   padding: 1px 10%;
-  min-height: calc(100vh - 4vh);
+  min-height: 96vh;
   border-radius: 2em;
   transition: box-shadow 0.6s;
 }
@@ -39,7 +39,19 @@ body main > section#front {
   justify-content: center;
 }
 body main > section#stuff-i-like section {
-  margin: 1em 0;
+  margin-bottom: 15px;
+}
+body main > section#stuff-i-like section h2 {
+  padding-bottom: 2px;
+}
+body main > section#stuff-i-like span.context {
+  font-size: 10px;
+}
+body main > section#stuff-i-like span.context::before {
+  content: "(";
+}
+body main > section#stuff-i-like span.context::after {
+  content: ")";
 }
 body main > section#about-me {
   padding-bottom: 2em;
