@@ -9,6 +9,17 @@
 	$slider-color,
 	$content
 ) {
+	#scroll-to-top {
+		background-color: adjust-color(
+			$page-background,
+			$saturation: 15,
+			$lightness: 4
+		);
+		box-shadow: 2px 2px 2px 2px darken($page-background, 3%);
+	}
+	.selected {
+		box-shadow: 0 0 5px 5px mix(#14181d, $page-background, 50%);
+	}
 	body {
 		background: $page-background;
 		color: #cacaca;

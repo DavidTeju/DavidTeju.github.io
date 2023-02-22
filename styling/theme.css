@@ -1,4 +1,11 @@
 @charset "UTF-8";
+.light-theme #scroll-to-top {
+  background-color: #233045;
+  box-shadow: 2px 2px 2px 2px #1c2128;
+}
+.light-theme .selected {
+  box-shadow: 0 0 5px 5px #1b2027;
+}
 .light-theme body {
   background: #222831;
   color: #cacaca;
@@ -61,6 +68,13 @@
   background-color: #2196f3;
 }
 
+.dark-theme #scroll-to-top {
+  background-color: #362828;
+  box-shadow: 2px 2px 2px 2px #1d1d1d;
+}
+.dark-theme .selected {
+  box-shadow: 0 0 5px 5px #1d1f21;
+}
 .dark-theme body {
   background: #252525;
   color: #cacaca;

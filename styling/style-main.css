@@ -182,22 +182,22 @@ body .google {
   font-family: "Product Sans", sans-serif;
 }
 body .google :nth-child(1) {
-  color: #4284f3;
+  color: rgb(66, 132, 243);
 }
 body .google :nth-child(2) {
-  color: #ea4335;
+  color: rgb(234, 67, 53);
 }
 body .google :nth-child(3) {
-  color: #fabc05;
+  color: rgb(250, 188, 5);
 }
 body .google :nth-child(4) {
-  color: #4284f3;
+  color: rgb(66, 132, 243);
 }
 body .google :nth-child(5) {
-  color: #33a852;
+  color: rgb(51, 168, 82);
 }
 body .google :nth-child(6) {
-  color: #ea4335;
+  color: rgb(234, 67, 53);
 }
 body main {
   margin: 2em 0;
@@ -253,3 +253,44 @@ body #mobile-home-img img {
   max-width: 360px;
   height: auto;
 }
+@font-face {
+  body {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtXK-F2qC0s.woff) format("woff");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+}
+body #scroll-to-top {
+  width: 4vw;
+  min-width: 2.5rem;
+  height: 4vw;
+  min-height: 2.5rem;
+  border-radius: 1em;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 6%;
+  bottom: 1em;
+  padding: 0;
+  font-size: 2.2rem;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+  border: none;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+body #scroll-to-top div {
+  height: 0.8em;
+}
+body #scroll-to-top:active {
+  transform: translate(2px, 2px);
+}
+body #scroll-to-top:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style-main.css.map */
