@@ -253,21 +253,13 @@ body #mobile-home-img img {
   max-width: 360px;
   height: auto;
 }
-@font-face {
-  body {
-    font-family: "Playfair Display";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtXK-F2qC0s.woff) format("woff");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-}
 body #scroll-to-top {
   width: 4vw;
   min-width: 2.5rem;
+  max-width: 5vh;
   height: 4vw;
   min-height: 2.5rem;
+  max-height: 5vh;
   border-radius: 1em;
   position: fixed;
   display: flex;
@@ -278,7 +270,7 @@ body #scroll-to-top {
   padding: 0;
   font-size: 2.2rem;
   font-weight: bold;
-  font-family: "Playfair Display", serif;
+  font-family: "Product Sans", serif;
   border: none;
   opacity: 0;
   transition: opacity 0.25s;
