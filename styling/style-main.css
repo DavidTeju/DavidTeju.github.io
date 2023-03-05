@@ -22,7 +22,6 @@ body {
   margin: 0 auto;
   max-width: 73%;
   min-width: 20em;
-  text-shadow: 0 1px 0 black;
 }
 body header {
   line-height: 1;
@@ -122,7 +121,6 @@ body .faux-h1 {
 body hr {
   border: none;
   margin: 0;
-  border-top: 3px double #dcdcdc;
   overflow: visible;
   text-align: center;
   height: 10px;
@@ -211,47 +209,6 @@ body main tr,
 body main p {
   margin-bottom: 0;
   margin-top: 0;
-}
-body .heading {
-  width: 65%;
-  border-right: solid;
-  padding-right: 1em;
-  padding-left: 1em;
-}
-body .heading h1 {
-  font-size: 7em;
-  border: none;
-  margin: 0 auto 5px;
-  position: relative;
-  z-index: 1;
-}
-body .heading p {
-  margin-top: 0.5em;
-  line-height: normal;
-}
-body .container {
-  display: flex;
-  border: solid;
-  padding: 20px;
-  aspect-ratio: 54/25;
-  min-height: 25em;
-  align-items: center;
-  position: relative;
-}
-body .container p,
-body .container li {
-  font-size: 3em;
-}
-body #mobile-home-img {
-  position: absolute;
-  left: 42%;
-  bottom: 45%;
-  z-index: 0;
-}
-body #mobile-home-img img {
-  width: 20vw;
-  max-width: 360px;
-  height: auto;
 }
 body #scroll-to-top {
   font-family: "Product Sans", serif;

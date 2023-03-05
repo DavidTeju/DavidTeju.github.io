@@ -1,12 +1,13 @@
 "use strict";
 function loadThemeCookie(mySwitch) {
-    if (sessionStorage.getItem("isDark") == null ||
-        sessionStorage.getItem("isDark") == "false") {
-        sessionStorage.setItem("isDark", "false");
+    if (localStorage.getItem("isLight")) {
+        document.documentElement.className = "light-theme";
+        console.log("yes");
     }
     else {
         mySwitch.checked = false;
         document.documentElement.className = "dark-theme";
+        console.log("no");
     }
 }
 function pushFooter() {
@@ -27,13 +28,13 @@ function pushFooter() {
 }
 function swapThemeStyleSheet() {
     // noinspection EqualityComparisonWithCoercionJS
-    if (sessionStorage.getItem("isDark") == "false") {
+    if (localStorage.getItem("isLight")) {
         document.documentElement.className = "dark-theme";
-        sessionStorage.setItem("isDark", "true");
+        localStorage.setItem("isLight", "");
     }
     else {
         document.documentElement.className = "light-theme";
-        sessionStorage.setItem("isDark", "false");
+        localStorage.setItem("isLight", "true");
     }
 }
 /**

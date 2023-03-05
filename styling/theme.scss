@@ -1,111 +1,147 @@
 @mixin color-scheme(
-	$page-background,
-	$primary-text,
-	$footer-background,
-	$footer-text,
-	$headings-color,
-	$link-underline,
-	$link-text,
-	$slider-color,
-	$content
+  $page-background,
+  $primary-text,
+  $footer-background,
+  $footer-text,
+  $headings-color,
+  $link-underline,
+  $link-text,
+  $slider-color,
+  $slider-emoji
 ) {
-	#scroll-to-top {
-		background-color: adjust-color(
-			$page-background,
-			$saturation: 15,
-			$lightness: 4
-		);
-		box-shadow: 2px 2px 2px 2px darken($page-background, 3%);
-	}
-	.selected {
-		box-shadow: 0 0 5px 5px mix(#14181d, $page-background, 50%);
-	}
-	body {
-		background: $page-background;
-		color: #cacaca;
-	}
-	div.nav {
-		border-right: solid $primary-text;
-	}
-	header::after {
-		background: $page-background;
-		color: $primary-text;
-	}
-	header nav {
-		border-bottom: solid $primary-text;
-	}
-	footer {
-		background-color: $footer-background;
-		color: $footer-text;
-	}
-	h1,
-	h2,
-	h3 {
-		border-bottom: double $primary-text;
-	}
-	h1,
-	h2,
-	h3,
-	h4,
-	.faux-h1 {
-		a {
-			color: $headings-color;
-		}
+  #mobile-home-img::after {
+    background: radial-gradient(transparent 30%, $page-background);
 
-		color: $headings-color;
-	}
-	nav {
-		a {
-			color: $headings-color;
-		}
-	}
-	a {
-		border-bottom: 1px solid $link-underline;
-		color: $link-text;
-	}
-	.slider:after {
-		position: absolute;
-		content: $content;
-		text-shadow: none;
-		text-align: center;
-		-webkit-transition: 0.4s;
-		transition: 0.4s;
-		display: inline-block;
-		height: 1.5rem;
-		width: 1.5rem;
-		left: 3px;
-		bottom: 4px;
-		line-height: 1.5rem;
-	}
-	.slider {
-		background-color: $slider-color;
-	}
-}
+  }
+  #scroll-to-top {
+    background-color: adjust-color(
+                    $page-background,
+            $saturation: 15,
+            $lightness: 4
+    );
+    box-shadow: 2px 2px 2px 2px darken($page-background, 3%);
+  }
+  .selected {
+    box-shadow: 0 0 5px 5px mix(#14181d, $page-background, 50%);
+  }
+  body {
+    background: $page-background;
+    color: $primary-text;
 
-.light-theme {
-	@include color-scheme(
-		#222831,
-		#dcdcdc,
-		rgb(53, 99, 146, 0.1),
-		#fafafa,
-		#d7f3f7,
-		#d7d7d7,
-		#b8c6c8,
-		#2196f3,
-		"🌞"
-	);
+    .slider:after {
+      position: absolute;
+      content: $slider-emoji;
+      text-shadow: none;
+      text-align: center;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      display: inline-block;
+      height: 1.5rem;
+      width: 1.5rem;
+      left: 3px;
+      bottom: 4px;
+      line-height: 1.5rem;
+    }
+
+    .slider {
+      background-color: $slider-color;
+      box-shadow: 0 0 0 1px $primary-text;
+    }
+  }
+  hr {
+    border-top: 3px double $primary-text;
+
+    &::after {
+      content: "❃";
+      background: $page-background;
+      color: $primary-text;
+    }
+  }
+
+  div.nav {
+    border-right: solid $primary-text;
+  }
+
+  header::after {
+    background: $page-background;
+    color: $primary-text;
+  }
+
+  header nav {
+    border-bottom: solid $primary-text;
+  }
+
+  footer {
+    background-color: $footer-background;
+    color: $footer-text;
+  }
+
+  h1,
+  h2,
+  h3 {
+    border-bottom: double $primary-text;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .faux-h1 {
+    a {
+      color: $headings-color;
+    }
+
+    color: $headings-color;
+  }
+
+  nav {
+    a {
+      color: $headings-color;
+    }
+  }
+
+  a {
+    border-bottom: 1px solid $link-underline;
+    color: $link-text;
+  }
 }
 
 .dark-theme {
-	@include color-scheme(
-		#252525,
-		#999999,
-		rgb(53, 99, 146, 0.1),
-		#fafafa,
-		#dcdcdc,
-		#d7d7d7,
-		#989898,
-		#ccc,
-		"🌚"
-	);
+  @include color-scheme(
+                  #222831,
+                  #dcdcdc,
+                  rgb(53, 99, 146, 0.1),
+                  #fafafa,
+                  #d7f3f7,
+                  #d7d7d7,
+                  #b8c6c8,
+                  invert(#ccc),
+                  "🌚"
+  );
 }
+
+.light-theme {
+  @include color-scheme(
+                  #d7f3f7,
+                  mix(mix(#222831, #d7f3f7, 70%), black, 50%),
+                  mix(darken(#d7f3f7, 5%), #14181d, 95%),
+                  black,
+                  mix(mix(#222831, #d7f3f7, 40%), black, 30%),
+                  invert(#d7d7d7),
+                  black,
+                  #2196f3,
+                  "🌞"
+  );
+
+  #socials {
+    filter: invert(90%);
+  }
+
+  #resume-sec > h1 > a > svg {
+    filter: invert(90%);
+  }
+
+  text-shadow: none !important;
+}
+
+// mix(black, #d7f3f7, 70%)
