@@ -252,14 +252,14 @@ body .container li {
     justify-content: space-between !important;
     gap: 0;
   }
-  body .heading {
+  body .container .heading {
     display: flex;
     flex-direction: column;
     border: none;
     width: auto;
     text-align: center;
   }
-  body .heading h1 {
+  body .container .heading h1 {
     font-size: 4rem;
   }
   body nav::before {
@@ -293,12 +293,10 @@ body .container li {
     display: inline-block !important;
     position: absolute !important;
     flex-grow: 1 !important;
-    right: calc((100% - 300px) / 2) !important;
+    right: calc(calc(100% - 300px) / 2) !important;
     top: 0 !important;
   }
   body #mobile-home-img img {
     width: 300px !important;
   }
 }
-
-/*# sourceMappingURL=homepage.css.map */
