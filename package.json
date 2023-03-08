@@ -7,7 +7,14 @@
     "watch:eleventy": "eleventy --serve",
     "watch:sass": "sass src/styling:build/styles src/projects:build/styles --watch",
     "watch:typescript": "tsc --watch",
-    "start": "npm run watch:eleventy & npm run watch:sass & npm run watch:typescript"
+
+    "start": "npm run watch:eleventy & npm run watch:sass & npm run watch:typescript",
+
+    "build:eleventy": "eleventy",
+    "build:sass": "sass src/styling:build/styles src/projects:build/styles",
+    "build:typescript": "tsc",
+    
+    "build": "npm run build:eleventy & npm run build:sass & npm run build:typescript"
   },
   "keywords": [],
   "author": "",
