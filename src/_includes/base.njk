@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta
+            name="description"
+            content="David Tejuosho is a Computer science and engineering student who's passionate for taking initiative and using technology to solve novel problems"
+    />
+    <meta name="keywords" content="David Tejuosho, CS Student, Tejuosho"/>
+    <meta name="author" content="David Tejuosho"/>
+    <meta
+            name="google-site-verification"
+            content="cSfle5mp0F-emhsyOuBiLCkIG9omHuJ_UdEKg0m8wkI"
+    />
+    {% for url in externalStyles %}
+        <link rel="stylesheet" href="{{ url }}" crossorigin="anonymous"/>
+    {% endfor %}
+    {% if not excludeDefaultStyles %}
+        <link rel="stylesheet" href="/styles/normalize.css"/>
+        <link rel="stylesheet" href="/styles/style-main.css"/>
+        <link rel="stylesheet" href="/styles/theme.css" id="page-color"/>
+    {% endif %}
+    {%- for style in styles -%}
+        <link rel="stylesheet" href="/styles/{{ style }}.css"/>
+    {%- endfor -%}
+
+    <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/icons/apple-touch-icon.png"
+    />
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/icons/favicon-32x32.png"
+    />
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/icons/favicon-16x16.png"
+    />
+    <title>David's Personal Site</title>
+</head>
+
+<body>
+{% if not excludeHeader %}
+    <header id="header">
+        <nav>
+            <div class="nav">
+                <a href="/index.html" title="Home" class="faux-h1">David Tejuosho</a>
+                <p><em>Student of Computer Science</em></p>
+            </div>
+            <ul>
+                <li>
+                    <a href="/#about-me" title="and how to contact me">Who am I?</a>
+                </li>
+                <li>
+                    <a href="/#resume-sec" title="all my impressive endeavours"
+                    >My Resume</a
+                    >
+                </li>
+                <li>
+                    <a href="/#stuff-i-like" title="You need to see this!"
+                    >Stuff I like</a
+                    >
+                </li>
+            </ul>
+        </nav>
+    </header>
+{% endif %}
+
+<main id="main">
+    {{ content | safe }}
+</main>
+
+{% if not excludeFooter %}
+    <footer id="footer">
+        <p>
+            <a
+                    href="https://evenbettermotherfucking.website/"
+                    target="_blank"
+                    rel="noopener"
+            >Inspiration</a
+            >
+            for original style
+            <span style="color: rgb(163, 161, 161); font-size: 0.7em"
+            >(vulgar)</span
+            >
+        </p>
+    </footer>
+{% endif %}
+<button id="scroll-to-top" title="scroll to top" disabled>
+    <div>^</div>
+</button>
+
+<!-- Switch for color or no color -->
+{% if not excludeSwitch %}
+    <label class="color-switch">
+        <input type="checkbox" id="color-switch" checked/>
+        <span class="slider round"></span>
+    </label>
+{% endif %}
+
+
+{% if not excludeDefaultJs %}
+    <script src="/js/index.js"></script>
+    {% for script in scripts %}
+    <script src="/js/{{ script }}.js"></script>
+    {% endfor %}
+{% endif %}
+</body>
+</html>
