@@ -6,4 +6,3 @@ node_modules
 .hintrc
 package-lock.json
 build
-static/.git
