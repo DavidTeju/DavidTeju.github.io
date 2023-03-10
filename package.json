@@ -16,7 +16,7 @@
 
     "build": "npm run build:eleventy & npm run build:sass & npm run build:typescript",
 
-    "push-build": "sudo ./push-build"
+    "push-build": "./push-build"
   },
   "keywords": [],
   "author": "",
