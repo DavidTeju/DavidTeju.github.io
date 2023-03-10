@@ -1,0 +1,8 @@
+#! /bin/zsh
+
+cd build || exit
+git add .
+git pull
+git commit -m 'rebuild'
+git push
+cp -r ./.git ../static

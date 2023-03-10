@@ -13,8 +13,10 @@
     "build:eleventy": "eleventy",
     "build:sass": "sass src/styling:build/styles src/projects:build/styles",
     "build:typescript": "tsc",
-    
-    "build": "npm run build:eleventy & npm run build:sass & npm run build:typescript"
+
+    "build": "npm run build:eleventy & npm run build:sass & npm run build:typescript",
+
+    "push-build": "sudo ./push-build"
   },
   "keywords": [],
   "author": "",
