@@ -5,4 +5,4 @@ git add .
 git pull
 git commit -m 'rebuild'
 git push
-cp -rf ./.git ../static/.git-static
+cp -rf ./.git ../.git-static
