@@ -1,0 +1,10 @@
+#! /bin/bash
+
+git clone https://github.com/DavidTeju/DavidTeju.github.io.git
+rm -rf ./build
+mv ./DavidTeju.github.io ./build
+cd build || exit
+git checkout build
+git pull
+rm -rf ../.git-static
+cp -rf ./.git ../.git-static

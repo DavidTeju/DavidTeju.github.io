@@ -1,8 +1,9 @@
-#! /bin/zsh
+#! /bin/bash
 
 cd ./build || exit
 git add .
 git pull
 git commit -m 'rebuild'
 git push
+rm -rf ../.git-static
 cp -rf ./.git ../.git-static
