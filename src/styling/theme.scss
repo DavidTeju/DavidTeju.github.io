@@ -17,100 +17,39 @@
   --link-underline: #{$link-underline};
   --link-text: #{$link-text};
   --slider-color: #{$slider-color};
-  --slider-emoji: #{$slider-emoji};
 
+  .slider {
+    background-color: $slider-color;
+    box-shadow: 0 0 0 1px $primary-text;
 
-  body {
-    background: $page-background;
-    color: $primary-text;
-
-
-    .slider {
-      background-color: $slider-color;
-      box-shadow: 0 0 0 1px $primary-text;
-
-      &::after {
-        position: absolute;
-        content: $slider-emoji;
-        text-shadow: none;
-        text-align: center;
-        -webkit-transition: 0.4s;
-        transition: 0.4s;
-        display: inline-block;
-        height: 1.5rem;
-        width: 1.5rem;
-        left: 3px;
-        bottom: 4px;
-        line-height: 1.5rem;
-      }
+    &::after {
+      position: absolute;
+      content: $slider-emoji;
+      text-shadow: none;
+      text-align: center;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      display: inline-block;
+      height: 1.5rem;
+      width: 1.5rem;
+      left: 3px;
+      bottom: 4px;
+      line-height: 1.5rem;
     }
+  }
 
-    #mobile-home-img::after {
-      background: radial-gradient(transparent 30%, $page-background);
+  #mobile-home-img::after {
+    background: radial-gradient(transparent 30%, $page-background);
 
-    }
+  }
 
-    #scroll-to-top {
-      background-color: adjust-color($page-background, $saturation: 15%, $lightness: 4%);
-      box-shadow: 1.5px 1.5px 2px 2px darken($page-background, 3%);
-    }
+  #scroll-to-top {
+    background-color: adjust-color($page-background, $saturation: 15%, $lightness: 4%);
+    box-shadow: 1.5px 1.5px 2px 2px darken($page-background, 3%);
+  }
 
-    .selected {
-      box-shadow: 0 0 5px 5px mix(#14181d, $page-background, 50%);
-    }
-
-    div.nav {
-      border-right: solid $primary-text;
-    }
-
-    header nav {
-      border-bottom: solid $primary-text;
-    }
-
-    footer {
-      background-color: $footer-background;
-      color: $footer-text;
-    }
-
-    h1,
-    h2,
-    h3 {
-      border-bottom: double $primary-text;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    .faux-h1 {
-      a {
-        color: $headings-color;
-      }
-
-      color: $headings-color;
-    }
-
-    nav {
-      a {
-        color: $headings-color;
-      }
-    }
-
-    a {
-      border-bottom: 1px solid $link-underline;
-      color: $link-text;
-    }
-
-    hr {
-      border-top: 3px double $primary-text;
-
-      &::after {
-        content: "❃";
-        background: $page-background;
-        color: $primary-text;
-      }
-
-    }
+  .selected {
+    box-shadow: 0 0 5px 5px mix(#14181d, $page-background, 50%);
   }
 }
 
@@ -154,4 +93,55 @@
   }
 }
 
+body {
+  background: var(--page-background);
+  color: var(--primary-text);
+}
 
+div.nav {
+  border-right: solid var(--primary-text);
+}
+
+header nav {
+  border-bottom: solid var(--primary-text);
+}
+
+footer {
+  background-color: var(--footer-background);
+  color: var(--footer-text);
+}
+
+h1,
+h2,
+h3 {
+  border-bottom: double var(--primary-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+.faux-h1 {
+  a {
+    color: var(--headings-color);
+  }
+
+  color: var(--headings-color);
+}
+
+nav {
+  a {
+    color: var(--headings-color);
+  }
+}
+
+a {
+  color: var(--link-text);
+}
+
+hr {
+  &::after {
+    background: var(--page-background);
+    color: var(--primary-text);
+  }
+}

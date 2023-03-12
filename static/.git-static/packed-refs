@@ -1,4 +1,0 @@
-# pack-refs with: peeled fully-peeled sorted 
-c72761ba92e98f658c839e334fdaf94bdd80988a refs/remotes/origin/build
-660a6971fb66c9c13d96b51f3b68d85aab53009d refs/remotes/origin/main
-9dc3098fb598fc76529d943ed4e199a98d308d65 refs/remotes/origin/testing-colors

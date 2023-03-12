@@ -14,14 +14,17 @@
             name="google-site-verification"
             content="cSfle5mp0F-emhsyOuBiLCkIG9omHuJ_UdEKg0m8wkI"
     />
+
     {% for url in externalStyles %}
         <link rel="stylesheet" href="{{ url }}" crossorigin="anonymous"/>
     {% endfor %}
+
     {% if not excludeDefaultStyles %}
         <link rel="stylesheet" href="/styles/normalize.css"/>
         <link rel="stylesheet" href="/styles/style-main.css"/>
         <link rel="stylesheet" href="/styles/theme.css" id="page-color"/>
     {% endif %}
+
     {%- for style in styles -%}
         <link rel="stylesheet" href="/styles/{{ style }}.css"/>
     {%- endfor -%}
@@ -43,7 +46,7 @@
             sizes="16x16"
             href="/icons/favicon-16x16.png"
     />
-    <title>David's Personal Site</title>
+    <title>{{ title }}</title>
 </head>
 
 <body>
@@ -108,9 +111,14 @@
 
 {% if not excludeDefaultJs %}
     <script src="/js/index.js"></script>
-    {% for script in scripts %}
-    <script src="/js/{{ script }}.js"></script>
-    {% endfor %}
 {% endif %}
+
+{% for script in externalScripts %}
+    <script src="{{ script }}"></script>
+{% endfor %}
+
+{% for script in scripts %}
+    <script src="/js/{{ script }}.js"></script>
+{% endfor %}
 </body>
 </html>

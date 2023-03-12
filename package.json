@@ -5,17 +5,13 @@
   "main": "index.js",
   "scripts": {
     "watch:eleventy": "eleventy --serve",
-    "watch:sass": "sass src/styling:build/styles src/projects:build/styles --watch",
+    "watch:sass": "sass src/styling:build/styles src/projects:build/styles --watch --style compressed",
     "watch:typescript": "tsc --watch",
-
     "start": "npm run watch:eleventy & npm run watch:sass & npm run watch:typescript",
-
     "build:eleventy": "eleventy",
-    "build:sass": "sass src/styling:build/styles src/projects:build/styles",
+    "build:sass": "sass src/styling:build/styles src/projects:build/styles --style compressed",
     "build:typescript": "tsc",
-
-    "build": "npm run build:eleventy & npm run build:sass & npm run build:typescript",
-
+    "build": "rm -rf build & npm run build:eleventy & npm run build:sass & npm run build:typescript",
     "push-build": "./push-build"
   },
   "keywords": [],
@@ -23,6 +19,7 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
+    "html-minifier": "^4.0.0",
     "sass": "^1.58.3",
     "typescript": "^4.9.5",
     "webpack": "^5.75.0",

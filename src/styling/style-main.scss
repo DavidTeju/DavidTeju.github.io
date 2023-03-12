@@ -141,11 +141,15 @@ body {
       border-bottom: 0;
     }
 
+    &:has(> :is(h1, h2, h3)) {
+      border: none;
+    }
+
+    border-bottom: 1px solid var(--link-underline);
     text-decoration: none;
   }
 
   .faux-h1 {
-    color: #989898;
     font-size: 2em;
     font-weight: bold;
   }
@@ -158,11 +162,10 @@ body {
     height: 10px;
     z-index: -10;
     position: relative;
+    border-top: 3px double var(--primary-text);
 
     &::after {
       content: "❃";
-      background: #222831;
-      color: #dcdcdc;
       padding: 0 4px;
       position: relative;
       top: -1em;

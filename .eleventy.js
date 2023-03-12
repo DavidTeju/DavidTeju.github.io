@@ -1,19 +1,29 @@
 const fs = require("fs")
+const delay = ms => new Promise(res => setTimeout(res, ms));
+const htmlmin = require("html-minifier");
+
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({"static": "./"});
+    eleventyConfig.addPassthroughCopy({".git-static": "./.git"});
     eleventyConfig.addPassthroughCopy({"src/styling/*.css": "./styles"});
-    eleventyConfig.on('eleventy.before', () => {
-        fs.renameSync("./static/.git-static", "./static/.git")
-    });
-    eleventyConfig.on('eleventy.after', () => {
-        fs.renameSync("./static/.git", "./static/.git-static")
-    });
 
     for (const path of findIncludeDirs("./")) {
         const pass = {[path]: path.slice("./src/".length, path.length - ".11ty.include/".length)}
         eleventyConfig.addPassthroughCopy(pass)
     }
+
+    eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
+        if (outputPath.endsWith(".html")) {
+            return htmlmin.minify(content, {
+                collapseWhitespace: true,
+                removeComments: true,
+                useShortDoctype: true,
+            });
+        }
+
+        return content;
+    });
 
     return {dir: {input: "src", output: "build"}}
 }
