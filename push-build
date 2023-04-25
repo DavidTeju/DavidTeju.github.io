@@ -2,8 +2,16 @@
 
 cd ./build || exit
 git add .
-git pull
+git pull || exit
 git commit -m 'rebuild'
 git push
 rm -rf ../.git-static
 cp -rf ./.git ../.git-static
+
+cd ..
+git add ./.git-static
+git pull || exit
+git commit -m 'build branch git update'
+git push
+
+exit
