@@ -1,0 +1,10 @@
+#! /bin/zsh
+
+# Find all files in the build directory that end with .js and store them in the files variable.
+files=$(find ./build -type f -name "*.js")
+
+# Loop through each file in the files variable and minify it.
+for file in ${(f)files}; do
+  # Minify the file and overwrite it
+  esbuild $file --allow-overwrite --minify --outfile=$file
+done
