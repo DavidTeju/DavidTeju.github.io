@@ -11,6 +11,7 @@
 ) {
   --page-background: #{$page-background};
   --primary-text: #{$primary-text};
+  --primary-shadow: #{mix(#14181d, $page-background, 50%)};
   --footer-background: #{$footer-background};
   --footer-text: #{$footer-text};
   --headings-color: #{$headings-color};
@@ -49,7 +50,7 @@
   }
 
   .selected {
-    box-shadow: 0 0 5px 5px mix(#14181d, $page-background, 50%);
+    box-shadow: 0 0 5px 5px var(--primary-shadow);
   }
 }
 

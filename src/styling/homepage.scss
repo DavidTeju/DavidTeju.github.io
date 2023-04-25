@@ -135,7 +135,7 @@ body {
       &#resume-sec {
         h2,
         h3 {
-          border: none !important;
+          border: none;
           margin: 5px auto 0;
           padding-bottom: 0;
         }
@@ -191,6 +191,58 @@ body {
 
         #activities ul {
           margin-left: 0.5em;
+        }
+
+        #projects-display {
+          .project {
+            &:hover {
+              box-shadow: 4px 4px 5px 5px var(--primary-shadow);
+            }
+
+            h3 {
+              font-size: 1.5em;
+              margin: 0.3em auto .15em;
+            }
+
+            * {
+              margin: 0.2em auto;
+              text-align: center;
+            }
+
+            .description {
+              flex-grow: 1;
+            }
+
+            .dates, .languages {
+              font-size: 0.8em;
+              opacity: 0.8;
+            }
+
+            .languages::before {
+              content: "Keywords: ";
+            }
+
+            @media screen and (max-width: 500px) {
+              margin: 0;
+              max-width: none;
+            }
+
+            margin: 0 auto;
+            padding: 0.8em;
+            display: flex;
+            flex-direction: column;
+            border: solid;
+            max-width: 20em;
+            min-height: 15em;
+            border-radius: 1em;
+          }
+
+
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(min(300px, 50vw), 1fr));
+          grid-column-gap: 1em;
+          grid-row-gap: 1em;
+          margin: 1em;
         }
 
         #honours li {
@@ -286,6 +338,7 @@ body {
       }
     }
   }
+
 
   @media screen and (max-width: 1025px) {
     section#front {
