@@ -233,13 +233,13 @@ body {
             flex-direction: column;
             border: solid;
             max-width: 20em;
-            min-height: 15em;
+            min-height: 15rem;
             border-radius: 1em;
           }
 
 
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(min(300px, 50vw), 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(min(16rem, 50vw), 1fr));
           grid-column-gap: 1em;
           grid-row-gap: 1em;
           margin: 1em;

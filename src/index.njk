@@ -216,71 +216,17 @@ excludeSwitch: true
                 <hr/>
             </div>
             <div id="projects-display">
-                <a
-                        class="project"
-                        href="https://github.com/DavidTeju/Tweet-Generator/"
-                >
-                    <h3>Random Tweeter</h3>
-                    <p class="dates">September – October 2022</p>
-                    <p class="description">
-                        Created bot, utilizing natural language model trained on tweets, to
-                        post auto-generated tweets daily
-                    </p>
-                    <p class="languages">Python, Regex, Machine Learning</p>
-                </a>
 
-                <a
-                        class="project"
-                        href="https://github.com/DavidTeju/Port-Robot"
-                >
-                    <h3>Port Robot</h3>
-                    <p class="dates">September 2022 – January 2023</p>
-                    <p class="description">
-                        Wrote software and designed hardware integration for cargo-offloading robot including algorithm
-                        for
-                        it to iteratively test and measure performance by tweaking weights on a cargo-priority function.
-                    </p>
-                    <p class="languages">Python, Raspberry Pi</p>
-                </a>
+                <!-- projects.njk -->
+                {% for project in collections.projects %}
+                    <a class="project" href="{{ project.urlToProject }}">
+                        <h3>{{ project.projectName }}</h3>
+                        <p class="dates">{{ project.durationString }}</p>
+                        <p class="description">{{ project.longDescription }}</p>
+                        <p class="languages">{{ project.languageString }}</p>
+                    </a>
+                {% endfor %}
 
-                <a class="project" href="/projects/David-O-Meter/">
-                    <h3>David-O-Meter</h3>
-                    <p class="dates">April 2022</p>
-                    <p class="description">
-                        Built site displaying ratio of sentiments of tweets containing “David”
-                    </p>
-                    <p class="languages">
-                        Java, JavaScript, Twitter API, Azure cognitive services, SCSS
-                    </p>
-                </a>
-
-                <a
-                        class="project"
-                        href="https://github.com/DavidTeju/HangMan"
-                >
-                    <h3>Hang Man</h3>
-                    <p class="dates">September 2021 – January 2022</p>
-                    <p class="description">
-                        Designed classic word guessing game with single player story mode and
-                        multiplayer mode
-                    </p>
-                    <p class="languages">
-                        Java, GUI, Object-oriented programming principles
-                    </p>
-                </a>
-
-                <a
-                        class="project"
-                        href="https://github.com/DavidTeju/MSAccess-HTML-Parser"
-                >
-                    <h3>Excel/HTML Parser</h3>
-                    <p class="dates">June – October 2021</p>
-                    <p class="description">
-                        Wrote program/scripts to understand and parse data into HTML and
-                        Spreadsheet formats
-                    </p>
-                    <p class="languages">Python, Java, Apache, RegEx</p>
-                </a>
             </div>
 
         </section>

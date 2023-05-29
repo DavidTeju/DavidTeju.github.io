@@ -12,7 +12,7 @@
     "build:sass": "sass src/styling:build/styles src/projects:build/styles --style compressed",
     "build:typescript": "tsc",
     "build": "rm -rf build; npm run build:eleventy & npm run build:sass & npm run build:typescript; ./minify-files",
-    "push-build": "./push-build"
+    "push-build": "npm run build; ./push-build"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +21,7 @@
     "@11ty/eleventy": "^2.0.0",
     "esbuild": "^0.17.15",
     "html-minifier": "^4.0.0",
+    "js-yaml": "^4.1.0",
     "sass": "^1.58.3",
     "typescript": "^4.9.5"
   }
