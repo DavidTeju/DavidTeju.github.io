@@ -7,4 +7,4 @@ cd build || exit
 git checkout build
 git pull
 rm -rf ../.git-static
-cp -rf ./.git ../.git-static
+mv ./.git ../.git-static

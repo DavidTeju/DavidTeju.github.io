@@ -1,6 +1,7 @@
 #! /bin/bash
 
 cd ./build || exit
+cp -rf ../.git-static ./.git
 git add .
 git pull || exit
 git commit -m 'rebuild'
