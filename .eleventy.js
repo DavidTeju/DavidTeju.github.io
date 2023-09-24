@@ -32,6 +32,21 @@ module.exports = function (eleventyConfig) {
         return content;
     });
 
+    const markdownIt = require("markdown-it");
+    const markdownItOptions = {
+        html: true,
+        breaks: true,
+        linkify: true
+    };
+    const markdownLib = markdownIt(markdownItOptions);
+
+    eleventyConfig.setLibrary("md", markdownLib);
+
+    eleventyConfig.addPairedShortcode("markdown", (content) => {
+        return markdownLib.render(content);
+    });
+
+
     return {dir: {input: "src", output: "build"}}
 }
 
