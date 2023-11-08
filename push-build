@@ -1,6 +1,5 @@
 #! /bin/bash
 
-./repull-build
 cd ./build || exit
 cp -rf ../.git-static ./.git
 git add .
