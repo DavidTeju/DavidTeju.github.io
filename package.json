@@ -12,7 +12,7 @@
     "build:sass": "npx sass src/styling:build/styles src/projects:build/styles --style compressed",
     "build:typescript": "npx tsc",
     "build": "rm -rf build; npm run build:eleventy & npm run build:sass & npm run build:typescript; npm run minify",
-    "minify": "find ./build -type f -name \"*.js\" | xargs -I{} esbuild {} --allow-overwrite --minify --outfile={}",
+    "minify": "find ./build -type f -name \"*.js\" | xargs -I{} esbuild {} --allow-overwrite --minify --outfile={}"
   },
   "keywords": [],
   "author": "",
