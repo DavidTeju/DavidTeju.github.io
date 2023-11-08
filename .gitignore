@@ -3,6 +3,5 @@
 */.DS_Store
 node_modules
 .hintrc
-package-lock.json
 build
 .DS_Store

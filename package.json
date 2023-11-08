@@ -11,6 +11,8 @@
     "build:eleventy": "eleventy",
     "build:sass": "sass src/styling:build/styles src/projects:build/styles --style compressed",
     "build:typescript": "tsc",
+    "build": "env NODE_ENV=production npx eleventy --pathprefix 'eleventy-gh-demo'",
+
     "build": "rm -rf build; npm run build:eleventy & npm run build:sass & npm run build:typescript; ./minify-files",
     "push-build": "npm run build; ./push-build"
   },

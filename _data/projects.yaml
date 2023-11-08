@@ -1,15 +1,15 @@
+- urlToProject: "https://louie.davidteju.dev"
+  projectName: "Louie's Catalog"
+  durationString: "November 2023"
+  longDescription: "Built fast and flexible search to help students explore and discover classes based on whatever topics they want to learn"
+  languageString: "Next.js, Express, TypeScript"
+
 - urlToProject: "https://github.com/arcturus3/handwriting-teacher"
   projectName: "HackMIT 2023 (Handwriting Teacher)"
   durationString: "September 2023"
   longDescription: "Won hackmit with web app to generate sample phrases with GPT, parse, score and give feedback to help master
 character writing in various languages"
   languageString: "OpenAI, OCR, Flask/Python, JavaScript"
-
-- urlToProject: "https://github.com/DavidTeju/MSAccess-HTML-Parser"
-  projectName: "Excel/HTML Parser"
-  durationString: "June – October 2021"
-  longDescription: "Wrote program/scripts to understand and parse data into HTML and Spreadsheet formats"
-  languageString: "Python, Java, Apache, RegEx"
 
 - urlToProject: "/projects/David-O-Meter/"
   projectName: "David-O-Meter"
@@ -28,6 +28,12 @@ character writing in various languages"
   durationString: "September – October 2022"
   longDescription: "Created bot, utilizing natural language model trained on tweets, to post auto-generated tweets daily"
   languageString: "Python, Regex, Machine Learning"
+
+- urlToProject: "https://github.com/DavidTeju/MSAccess-HTML-Parser"
+  projectName: "Excel/HTML Parser"
+  durationString: "June – October 2021"
+  longDescription: "Wrote program/scripts to understand and parse data into HTML and Spreadsheet formats"
+  languageString: "Python, Java, Apache, RegEx"
 
 - urlToProject: "https://github.com/DavidTeju/HangMan"
   projectName: "Hang Man"
