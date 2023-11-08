@@ -13,7 +13,6 @@
     "build:typescript": "npx tsc",
     "build": "rm -rf build; npm run build:eleventy & npm run build:sass & npm run build:typescript; npm run minify",
     "minify": "find ./build -type f -name \"*.js\" | xargs -I{} esbuild {} --allow-overwrite --minify --outfile={}",
-    "push-build": "./repull-build; npm run build; ./push-build"
   },
   "keywords": [],
   "author": "",
