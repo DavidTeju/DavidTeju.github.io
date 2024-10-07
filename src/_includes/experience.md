@@ -3,6 +3,41 @@
 ## Experience
 
 ---
+<div class="subheading">
+
+### Microsoft
+
+### Redmond, WA
+
+</div>
+
+<div class="subheading">
+
+Software Engineering Intern
+
+August – November 2024
+
+</div>
+
+<div class="subheading">
+
+### Benchling
+
+### San Francisco, CA
+
+</div>
+
+<div class="subheading">
+
+Software Engineering Intern
+
+May – August 2024
+
+</div>
+
+- Defined feature spec, wrote tech plan for and developed filtering feature for Benchling Structured Table Spreadsheets
+- Remodeled cell selection, copy-paste, fill-down, cell-search, formula referencing etc. in data layer and UI to support non-
+contiguous operations
 
 <div class="subheading">
 
@@ -20,13 +55,12 @@ May – August 2023
 
 </div>
 
-- Created design docs for and implemented key features for Google Classroom Mobile App, used by 150M+ users
-  worldwide, ensuring equity for tens of millions of users who only have access to this feature on iOS and android
-- Designed and implemented 'Grading Periods', enabling educators to plan, organise, and analyse assignments and
-  grades based on quarters, semesters, or terms
+- Created design docs for and implemented key features for Google Classroom Mobile App, used by 150M+ users 
+worldwide, ensuring parity for tens of millions of users who only have access to this feature on iOS and android
+- Designed and implemented 'Grading Periods', enabling educators to plan, organize, and analyze assignments and grades 
+based on quarters, semesters, or terms
 - Developed 'Excused State' feature, allowing teachers to excuse students from specific assignments
-- Updated the data layer to support new data guarded by flags, with proper on-disk cache migration and feature rollout
-  safeguards to ensure smooth changes among different versions of the app
+- Updated the data layer to support new DAOs, with on-disk cache migration and feature rollout safeguards
 
 <div class="subheading">
 
