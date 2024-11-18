@@ -1,0 +1,1 @@
+"use strict";function generateName(){$.getJSON("names.json",function(n){const t=n["first-name"],e=n["last-name"],a=t[Math.round(Math.random()*(t.length-1))],o=e[Math.round(Math.random()*(e.length-1))];document.getElementById("name-box").innerHTML=a+" "+o})}
