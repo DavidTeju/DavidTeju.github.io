@@ -2,7 +2,6 @@
   "name": "davidteju.github.io",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "watch:eleventy": "eleventy --serve",
     "watch:sass": "sass src/styling:build/styles src/projects:build/styles --watch --style compressed",
@@ -15,7 +14,7 @@
     "minify": "find ./build -type f -name \"*.js\" | xargs -I{} esbuild {} --allow-overwrite --minify --outfile={}"
   },
   "keywords": [],
-  "author": "",
+  "author": "David Tejuosho",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
