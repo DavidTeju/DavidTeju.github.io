@@ -19,6 +19,9 @@ August – November 2024
 
 </div>
 
+- Implemented secure approval storage system for Microsoft Planner, Todo, Tasks, Forms and Project diagnostics tooling
+- Created automated system for detecting and removing fully rolled out feature flags using AI code-gen including self-testing
+
 <div class="subheading">
 
 ### Benchling
