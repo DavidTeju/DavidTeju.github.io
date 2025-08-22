@@ -1,3 +1,9 @@
+- urlToProject: "https://undocustudent.org/"
+  projectName: "College Advising Database for Undocumented Students"
+  durationString: "April 2025"
+  longDescription: "Deployed informational resource for immigrant students seeking higher education"
+  languageString: "Docker, SveltKit, SupaBase, TypeScript"
+
 - urlToProject: "https://louie.davidteju.dev"
   projectName: "Louie's Catalog"
   durationString: "November 2023"
@@ -7,8 +13,7 @@
 - urlToProject: "https://github.com/arcturus3/handwriting-teacher"
   projectName: "HackMIT 2023 (Handwriting Teacher)"
   durationString: "September 2023"
-  longDescription: "Won hackmit with web app to generate sample phrases with GPT, parse, score and give feedback to help master
-character writing in various languages"
+  longDescription: "Won hackmit with web app to generate sample phrases with GPT, parse, score and give feedback to help master character writing in various languages"
   languageString: "OpenAI, OCR, Flask/Python, JavaScript"
 
 - urlToProject: "https://github.com/DavidTeju/Trend-Reports-Generator"
