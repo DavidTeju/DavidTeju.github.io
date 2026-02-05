@@ -3,6 +3,31 @@
 ## Experience
 
 ---
+
+<div class="subheading">
+
+### Microsoft
+
+### Seattle, WA
+
+</div>
+
+<div class="subheading">
+
+Software Engineer II
+
+September 2025 – Present
+
+</div>
+
+- Built recurring tasks feature for Microsoft Planner—complex recurrence patterns (every 4th Thursday, every other Tue/Wed), performant rendering on unbounded calendars, timezone support for distributed teams
+- Currently figuring out dev prod in the age of AI
+
+<!-- RESUME VERSION:
+- Shipped recurring tasks for Microsoft Planner supporting complex recurrence patterns, performant calendar rendering, and timezone handling for distributed teams
+- Driving developer productivity initiatives
+-->
+
 <div class="subheading">
 
 ### Microsoft
@@ -19,8 +44,13 @@ August – November 2024
 
 </div>
 
-- Implemented secure approval storage system for Microsoft Planner, Todo, Tasks, Forms and Project diagnostics tooling
-- Created automated system for detecting and removing fully rolled out feature flags using AI code-gen including self-testing
+- Rewrote the approval system for sensitive diagnostics commands—replaced file-passing workflow with database-backed records, proper audit logs, revocation, and one-time-use controls
+- Built a pipeline that finds stale feature flags, uses AI to generate removal code, runs tests, and opens PRs automatically
+
+<!-- RESUME VERSION:
+- Redesigned approval system for sensitive operations: migrated from stateless file-based tokens to database-backed records with audit logging, revocation, and granular access controls
+- Built automated pipeline using AI code generation to detect, remove, test, and PR stale feature flags
+-->
 
 <div class="subheading">
 
@@ -38,9 +68,13 @@ May – August 2024
 
 </div>
 
-- Defined feature spec, wrote tech plan for and developed filtering feature for Benchling Structured Table Spreadsheets
-- Remodeled cell selection, copy-paste, fill-down, cell-search, formula referencing etc. in data layer and UI to support non-
-contiguous operations
+- Built filtering for Benchling's structured tables—where scientists capture experimental data like assay results and sample registrations
+- Reworked cell selection, copy-paste, fill-down, search, and formula referencing (data layer + UI) to support non-contiguous selections
+
+<!-- RESUME VERSION:
+- Developed filtering feature for structured data tables used by 200K+ scientists for experimental data capture
+- Redesigned selection model, clipboard operations, fill-down, search, and formula referencing across data layer and UI to support non-contiguous cell selections
+-->
 
 <div class="subheading">
 
@@ -58,12 +92,13 @@ May – August 2023
 
 </div>
 
-- Created design docs for and implemented key features for Google Classroom Mobile App, used by 150M+ users 
-worldwide, ensuring parity for tens of millions of users who only have access to this feature on iOS and android
-- Designed and implemented 'Grading Periods', enabling educators to plan, organize, and analyze assignments and grades 
-based on quarters, semesters, or terms
-- Developed 'Excused State' feature, allowing teachers to excuse students from specific assignments
-- Updated the data layer to support new DAOs, with on-disk cache migration and feature rollout safeguards
+- Shipped features for Google Classroom's mobile app (150M+ users)—Grading Periods for organizing assignments by quarter/semester, and Excused State for exempting students from assignments
+- Brought mobile to parity with web for users who only have phone access
+
+<!-- RESUME VERSION:
+- Designed and implemented Grading Periods and Excused State features for Google Classroom mobile app (150M+ users), achieving feature parity with web for mobile-only users
+- Updated data layer with new DAOs, on-disk cache migration, and feature rollout safeguards
+-->
 
 <div class="subheading">
 
@@ -81,12 +116,15 @@ June – December 2022
 
 </div>
 
-- Automated bot exception handling/support using macros (*VBA*) and Outlook mail merge
-- Designed and implemented extensive formulas to automate team weekly newsletter, saving colleagues *four hours* of work
-  per week, including *JavaScript* to implement updates
-- Created *C#* and *NodeJS (TypeScript)* Libraries for team to use in parsing/converting loosely structured data between
-  *JSON*, *DataTables* and *HTML* tables
-- Coordinated with business partners to design automation to support and enhance *clinical trial audits*
+- Built automation for the R&D intelligent automation team—including tools that supported clinical trial audits
+- Automated the team's weekly newsletter, saving 4 hours/week of manual work
+- Created C# and TypeScript libraries for parsing messy data between JSON, DataTables, and HTML
+
+<!-- RESUME VERSION:
+- Developed automation tooling supporting clinical trial audit processes in R&D
+- Automated team newsletter generation, reducing manual effort by 4 hours per week
+- Built C# and Node.js (TypeScript) libraries for parsing and converting between JSON, DataTables, and HTML formats
+-->
 
 <div class="subheading">
 
@@ -102,10 +140,11 @@ June – August 2022
 
 </div>
 
-- Initiated and designed project for online information resource to improve higher education access for non-citizen US
-  resident students (refugees, asylees, DACA)
-- Wrote multiple python scripts and designed java programs to automate tedious processes including information gathering
-  and sorting (see Excel/HTML parser)
+- Designed and built an online resource helping undocumented students (refugees, asylees, DACA) navigate higher education—now live
+
+<!-- RESUME VERSION:
+- Initiated and developed informational web resource improving higher education access for undocumented students (refugees, asylees, DACA recipients)
+-->
 
 <div class="subheading">
 
@@ -117,10 +156,14 @@ June – August 2022
 
 Coding instructor/Tutor
 
-May 2022 – Present
+May 2022 – May 2024
 
 </div>
 
-- Tutored 8+ students (including master’s student) on programming in java, python, C#, and JavaScript including machine
-  learning and natural language processing concepts
-- Taught 3 classes of 15+ students the basics of programming
+- Tutored students (including a master's student) on programming, ML, and NLP concepts
+- Taught intro programming classes of 15+ students
+
+<!-- RESUME VERSION:
+- Provided 1:1 tutoring in Python, Java, C#, JavaScript, machine learning, and NLP to students ranging from beginners to graduate level
+- Instructed 3 introductory programming classes of 15+ students each
+-->
