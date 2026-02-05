@@ -97,8 +97,40 @@
     </footer>
 {% endif %}
 <button id="scroll-to-top" title="scroll to top" disabled>
-    <div>^</div>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5"/>
+        <path d="M5 12l7-7 7 7"/>
+    </svg>
 </button>
+
+<!-- Easter egg: skittering rat -->
+<svg id="trail-rat" aria-hidden="true" viewBox="0 0 60 30" fill="var(--primary-text)">
+  <!-- Body -->
+  <ellipse cx="30" cy="18" rx="16" ry="10"/>
+  <!-- Head -->
+  <ellipse cx="48" cy="15" rx="8" ry="7"/>
+  <!-- Ear -->
+  <ellipse cx="52" cy="9" rx="4" ry="5"/>
+  <!-- Eye -->
+  <circle cx="52" cy="13" r="1.5" fill="var(--page-background)"/>
+  <!-- Nose -->
+  <circle cx="56" cy="15" r="2"/>
+  <!-- Tail -->
+  <path class="tail" d="M14 18 Q5 18 2 12 Q0 8 3 5" stroke="var(--primary-text)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Whiskers -->
+  <g stroke="var(--primary-text)" stroke-width="0.5">
+    <line x1="56" y1="14" x2="60" y2="11"/>
+    <line x1="56" y1="15" x2="60" y2="15"/>
+    <line x1="56" y1="16" x2="60" y2="19"/>
+  </g>
+  <!-- Legs (animated) -->
+  <g class="legs">
+    <line class="leg leg-1" x1="38" y1="24" x2="40" y2="30" stroke="var(--primary-text)" stroke-width="2" stroke-linecap="round"/>
+    <line class="leg leg-2" x1="32" y1="26" x2="30" y2="30" stroke="var(--primary-text)" stroke-width="2" stroke-linecap="round"/>
+    <line class="leg leg-3" x1="26" y1="26" x2="28" y2="30" stroke="var(--primary-text)" stroke-width="2" stroke-linecap="round"/>
+    <line class="leg leg-4" x1="20" y1="24" x2="18" y2="30" stroke="var(--primary-text)" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>
 
 <!-- Switch for color or no color -->
 {% if not excludeSwitch %}

@@ -56,3 +56,25 @@ pushFooter();
 let themeSwitch = document.getElementById("color-switch") as HTMLInputElement;
 loadThemeCookie(themeSwitch);
 themeSwitch.addEventListener("click", swapThemeStyleSheet);
+
+// Easter egg: Set rat animation duration based on screen width
+// Uses logarithmic scaling so wide screens don't have 10+ second runs
+function setupRatAnimation() {
+    const rat = document.getElementById("trail-rat");
+    if (!rat) return;
+
+    const screenWidth = window.innerWidth + 120;
+    // Logarithmic duration: ~2s at 500px, ~3s at 1500px, ~4s at 3000px
+    const duration = 1 + Math.log2(screenWidth / 300) * 0.9;
+    const delay = 3; // seconds before rat appears
+
+    rat.style.animationDuration = `${duration}s, 0.1s, ${duration}s`;
+    rat.style.animationDelay = `${delay}s, ${delay}s, ${delay}s`;
+
+    // Start leg/tail animations after delay
+    setTimeout(() => {
+        rat.classList.add("running");
+    }, delay * 1000);
+}
+
+setupRatAnimation();

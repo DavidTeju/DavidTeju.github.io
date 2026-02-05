@@ -1,3 +1,13 @@
+// Topographic Explorer Theme
+// A nature-journal aesthetic with earthy tones and contour line textures
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+
+// Topographic contour line pattern (SVG encoded)
+$topo-pattern-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cg fill='none' stroke='%232d4a2d' stroke-width='1' opacity='0.3'%3E%3Cpath d='M0 50 Q100 30 200 50 T400 50'/%3E%3Cpath d='M0 100 Q150 70 250 100 T400 100'/%3E%3Cpath d='M0 150 Q80 180 200 150 T400 150'/%3E%3Cpath d='M0 200 Q120 170 280 200 T400 200'/%3E%3Cpath d='M0 250 Q90 280 180 250 T400 250'/%3E%3Cpath d='M0 300 Q140 270 260 300 T400 300'/%3E%3Cpath d='M0 350 Q100 380 200 350 T400 350'/%3E%3Ccircle cx='320' cy='180' r='40'/%3E%3Ccircle cx='320' cy='180' r='55'/%3E%3Ccircle cx='80' cy='300' r='30'/%3E%3Ccircle cx='80' cy='300' r='45'/%3E%3C/g%3E%3C/svg%3E");
+
+$topo-pattern-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cg fill='none' stroke='%234a7c4a' stroke-width='1' opacity='0.15'%3E%3Cpath d='M0 50 Q100 30 200 50 T400 50'/%3E%3Cpath d='M0 100 Q150 70 250 100 T400 100'/%3E%3Cpath d='M0 150 Q80 180 200 150 T400 150'/%3E%3Cpath d='M0 200 Q120 170 280 200 T400 200'/%3E%3Cpath d='M0 250 Q90 280 180 250 T400 250'/%3E%3Cpath d='M0 300 Q140 270 260 300 T400 300'/%3E%3Cpath d='M0 350 Q100 380 200 350 T400 350'/%3E%3Ccircle cx='320' cy='180' r='40'/%3E%3Ccircle cx='320' cy='180' r='55'/%3E%3Ccircle cx='80' cy='300' r='30'/%3E%3Ccircle cx='80' cy='300' r='45'/%3E%3C/g%3E%3C/svg%3E");
+
 @mixin color-scheme(
   $page-background,
   $primary-text,
@@ -7,142 +17,202 @@
   $link-underline,
   $link-text,
   $slider-color,
-  $slider-emoji
+  $slider-emoji,
+  $accent-warm,
+  $accent-earth,
+  $topo-pattern
 ) {
   --page-background: #{$page-background};
   --primary-text: #{$primary-text};
-  --primary-shadow: #{mix(#14181d, $page-background, 50%)};
+  --primary-shadow: #{rgba(darken($page-background, 15%), 0.5)};
   --footer-background: #{$footer-background};
   --footer-text: #{$footer-text};
   --headings-color: #{$headings-color};
   --link-underline: #{$link-underline};
   --link-text: #{$link-text};
   --slider-color: #{$slider-color};
+  --accent-warm: #{$accent-warm};
+  --accent-earth: #{$accent-earth};
+  --topo-pattern: #{$topo-pattern};
 
   .slider {
-    background-color: $slider-color;
-    box-shadow: 0 0 0 1px $primary-text;
+    background: linear-gradient(135deg, $slider-color, darken($slider-color, 10%));
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border: none;
 
     &::after {
       position: absolute;
       content: $slider-emoji;
       text-shadow: none;
       text-align: center;
-      -webkit-transition: 0.4s;
-      transition: 0.4s;
+      -webkit-transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       display: inline-block;
       height: 1.5rem;
       width: 1.5rem;
       left: 3px;
       bottom: 4px;
       line-height: 1.5rem;
+      font-size: 1.1rem;
     }
   }
 
   #mobile-home-img::after {
     background: radial-gradient(transparent 30%, $page-background);
-
   }
 
   #scroll-to-top {
-    background-color: adjust-color($page-background, $saturation: 15%, $lightness: 4%);
-    box-shadow: 1.5px 1.5px 2px 2px darken($page-background, 3%);
+    // Styling now in style-main.scss
   }
 
   .selected {
-    box-shadow: 0 0 5px 5px var(--primary-shadow);
+    box-shadow: 0 0 20px 8px rgba($accent-warm, 0.15), 0 0 40px 16px rgba($accent-warm, 0.05);
   }
 }
 
+// Dark theme: Deep forest at dusk
 :root, :root.dark-theme {
   @include color-scheme(
-                  #222831,
-                  #dcdcdc,
-                  rgb(53, 99, 146, 0.1),
-                  #fafafa,
-                  #d7f3f7,
-                  #d7d7d7,
-                  #b8c6c8,
-                  invert(#ccc),
-                  "🌚",
-  )
-}
-
-:root.light-theme {
-  @include color-scheme(
-                  #d7f3f7,
-                  mix(mix(#222831, #d7f3f7, 70%), black, 50%),
-                  mix(darken(#d7f3f7, 5%), #14181d, 95%),
-                  black,
-                  mix(mix(#222831, #d7f3f7, 40%), black, 30%),
-                  invert(#d7d7d7),
-                  black,
-                  #2196f3,
-                  "🌞",
+    #1a2418,                    // Deep forest green-black
+    #e8e4dc,                    // Warm parchment
+    rgba(26, 36, 24, 0.95),     // Footer bg
+    #c9c4b8,                    // Footer text
+    #a89a80,                    // Headings: stone gray-tan (very muted)
+    #6b8e6b,                    // Link underline: muted sage
+    #9dc09d,                    // Link text: soft green
+    #4a6b4a,                    // Slider: forest green
+    "🏔️",                       // Mountain emoji for dark
+    #9a7560,                    // Accent warm: faded clay
+    #7a6b55,                    // Accent earth: weathered wood
+    $topo-pattern-dark
   );
 
-  #socials {
-    filter: invert(90%);
+  body {
+    background-image: var(--topo-pattern);
+    background-size: 400px 400px;
   }
 
-  #resume-sec > h1 > a > svg {
-    filter: invert(90%);
+  // Warm glow on hover for links
+  a:hover {
+    text-shadow: 0 0 12px rgba(212, 114, 60, 0.3);
   }
+}
+
+// Light theme: Morning on the trail
+:root.light-theme {
+  @include color-scheme(
+    #f5f1e8,                    // Warm cream paper
+    #2d3a2d,                    // Deep forest text
+    rgba(232, 225, 210, 0.95),  // Footer bg
+    #3d4a3d,                    // Footer text
+    #5a4a35,                    // Headings: warm brown (softer)
+    #7a9a7a,                    // Link underline: sage
+    #3d5a3d,                    // Link text: forest green
+    #c9b896,                    // Slider: warm stone
+    "🌲",                       // Tree emoji for light
+    #9a5a3a,                    // Accent warm: muted rust
+    #6b5a42,                    // Accent earth: trail dust
+    $topo-pattern-light
+  );
 
   body {
-    text-shadow: none !important;
+    background-image: var(--topo-pattern);
+    background-size: 400px 400px;
+  }
+
+
+  #resume-sec > h1 > a > svg {
+    stroke: var(--headings-color);
+  }
+
+  // Earthy glow on hover
+  a:hover {
+    text-shadow: 0 0 8px rgba(45, 90, 45, 0.2);
   }
 }
 
+// Base body styles
 body {
-  background: var(--page-background);
+  background-color: var(--page-background);
+  background-image: var(--topo-pattern);
   color: var(--primary-text);
+  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+// Typography overrides
+h1, h2, h3, h4, .faux-h1 {
+  font-family: 'Bitter', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+
+  a {
+    color: var(--headings-color);
+  }
+  color: var(--headings-color);
+}
+
+// Softer borders - earthy feel
 div.nav {
-  border-right: solid var(--primary-text);
+  border-right: 2px solid var(--accent-earth);
 }
 
 header nav {
-  border-bottom: solid var(--primary-text);
+  border-bottom: 2px solid var(--accent-earth);
 }
 
 footer {
   background-color: var(--footer-background);
   color: var(--footer-text);
+  border-top: 1px solid var(--accent-earth);
 }
 
-h1,
-h2,
-h3 {
-  border-bottom: double var(--primary-text);
+// Refined heading underlines
+h1, h2, h3 {
+  border-bottom: 2px solid var(--accent-earth);
+  padding-bottom: 0.3em;
 }
 
-h1,
-h2,
-h3,
-h4,
-.faux-h1 {
-  a {
-    color: var(--headings-color);
-  }
-
+nav a {
   color: var(--headings-color);
-}
+  transition: color 0.2s ease;
 
-nav {
-  a {
-    color: var(--headings-color);
+  &:hover {
+    color: var(--accent-warm);
   }
 }
 
 a {
   color: var(--link-text);
+  border-bottom: 1px solid var(--link-underline);
+  transition: all 0.2s ease;
+
+  &:hover, &:focus {
+    color: var(--accent-warm);
+    border-bottom-color: var(--accent-warm);
+  }
 }
 
 hr {
+  border: none;
+  border-top: 2px solid var(--accent-earth);
+  position: relative;
+  overflow: visible;
+
   &::after {
+    content: "◆";
     background: var(--page-background);
-    color: var(--primary-text);
+    color: var(--accent-earth);
+    padding: 0 8px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -0.6em;
+    font-size: 0.8em;
   }
+}
+
+// Selection color
+::selection {
+  background-color: rgba(212, 165, 116, 0.4);
+  color: inherit;
 }

@@ -1,5 +1,3 @@
-{# Hack to fix weird issue. Do not delete this comment#}
-
 ## Experience
 
 ---

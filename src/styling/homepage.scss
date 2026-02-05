@@ -1,14 +1,68 @@
+// Homepage-specific styles with Topographic Explorer theme refinements
+
+// ============================================
+// ANIMATIONS
+// ============================================
+
+// Hero name letter reveal
+@keyframes letterReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(15px) rotateX(-60deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+.hero-name {
+  display: inline;
+  perspective: 500px;
+
+  .word {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .letter {
+    display: inline-block;
+    opacity: 0;
+    animation: letterReveal 0.4s ease-out forwards;
+  }
+
+  // First word "David" - letters 1-5
+  .word:first-child .letter {
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.05}s;
+      }
+    }
+  }
+
+  // Second word "Tejuosho" - letters 1-8, starting after "David"
+  .word:last-child .letter {
+    @for $i from 1 through 8 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{(5 + $i) * 0.05}s;
+      }
+    }
+  }
+}
+
 body {
   max-width: 90%;
 
   .container {
     display: flex;
-    border: solid;
+    border: 2px solid var(--accent-earth);
+    border-radius: 1em;
     padding: 20px;
     aspect-ratio: 54/25;
     min-height: 25em;
     align-items: center;
     position: relative;
+    background: linear-gradient(135deg, rgba(0,0,0,0.08) 0%, transparent 40%);
 
     p,
     li {
@@ -17,7 +71,7 @@ body {
 
     .heading {
       width: 65%;
-      border-right: solid;
+      border-right: 2px solid var(--accent-earth);
       padding-right: 1em;
       padding-left: 1em;
 
@@ -27,11 +81,21 @@ body {
         margin: 0 auto 5px;
         position: relative;
         z-index: 1;
+
+        a {
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: var(--accent-warm);
+          }
+        }
       }
 
       p {
         margin-top: 0.5em;
         line-height: normal;
+        color: var(--primary-text);
+        opacity: 0.9;
       }
     }
   }
@@ -47,6 +111,17 @@ body {
 
       li {
         text-align: left;
+        margin-bottom: 0.5em;
+
+        a {
+          font-size: 1em;
+          transition: color 0.2s ease, transform 0.2s ease;
+          display: inline-block;
+
+          &:hover {
+            transform: translateX(4px);
+          }
+        }
       }
     }
   }
@@ -68,10 +143,25 @@ body {
 
     > section {
       margin: 2vh auto;
-      padding: 1px 10%; // prevent collapse
+      padding: 1px 10%;
       min-height: 96vh;
-      border-radius: 2em;
-      transition: box-shadow 0.6s;
+      border-radius: 1.5em;
+      transition: box-shadow 0.6s ease;
+      position: relative;
+
+      // Subtle gradient overlay for depth
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 1.5em;
+        background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.05) 100%);
+        pointer-events: none;
+        z-index: -1;
+      }
 
       &#front {
         display: flex;
@@ -89,6 +179,8 @@ body {
             max-width: 300px;
             height: auto;
             border-radius: 100%;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 3px solid var(--accent-earth);
           }
 
           &::after {
@@ -117,6 +209,8 @@ body {
 
         span.context {
           font-size: 10px;
+          opacity: 0.7;
+          font-style: italic;
 
           &::before {
             content: "(";
@@ -147,13 +241,16 @@ body {
 
         em {
           font-style: normal;
-          font-weight: bold;
+          font-weight: 600;
+          color: var(--accent-warm);
         }
 
         #resume {
-          border: solid;
+          border: 2px solid var(--accent-earth);
+          border-radius: 0.75em;
           padding: 1.5em;
           margin-bottom: 3em;
+          background: rgba(0, 0, 0, 0.1);
 
           hr {
             height: 0;
@@ -179,13 +276,12 @@ body {
           height: auto;
           bottom: -0.1em;
           position: relative;
+          stroke: var(--accent-earth);
+          transition: stroke 0.2s ease, transform 0.2s ease;
 
           &:hover {
-            height: 1.25em;
-            min-width: 1.25em;
-            left: -0.125em;
-            bottom: -0.125em;
-            margin-top: -0.25em;
+            stroke: var(--accent-warm);
+            transform: translateY(2px);
           }
         }
 
@@ -194,14 +290,23 @@ body {
         }
 
         #projects-display {
+          perspective: 1000px;
+
           .project {
+            background: rgba(0, 0, 0, 0.15);
+            transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease;
+            transform-style: preserve-3d;
+
             &:hover {
-              box-shadow: 4px 4px 5px 5px var(--primary-shadow);
+              box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25), 0 0 0 1px var(--accent-warm);
+              transform: translateY(-6px) rotateX(2deg) rotateY(-1deg);
+              background: rgba(0, 0, 0, 0.2);
             }
 
             h3 {
-              font-size: 1.5em;
+              font-size: 1.4em;
               margin: 0.3em auto .15em;
+              color: var(--headings-color);
             }
 
             * {
@@ -211,15 +316,21 @@ body {
 
             .description {
               flex-grow: 1;
+              line-height: 1.5;
             }
 
             .dates, .languages {
               font-size: 0.8em;
-              opacity: 0.8;
+              opacity: 0.7;
             }
 
             .languages::before {
-              content: "Keywords: ";
+              content: "";
+            }
+
+            .languages {
+              font-style: italic;
+              color: var(--accent-earth);
             }
 
             @media screen and (max-width: 500px) {
@@ -228,13 +339,13 @@ body {
             }
 
             margin: 0 auto;
-            padding: 0.8em;
+            padding: 1em;
             display: flex;
             flex-direction: column;
-            border: solid;
+            border: 2px solid var(--accent-earth);
             max-width: 20em;
             min-height: 15rem;
-            border-radius: 1em;
+            border-radius: 0.75em;
           }
 
 
@@ -260,13 +371,6 @@ body {
           padding-left: 0;
         }
 
-        //tbody#education-body tr {
-        //	line-height: 1.2;
-        //
-        //	&:nth-child(n + 2) {
-        //		text-indent: 2em;
-        //	}
-        //}
         li {
           line-height: 1.5;
         }
@@ -302,16 +406,13 @@ body {
 
           > *:nth-child(2) {
             text-align: right;
+            opacity: 0.8;
           }
 
           h3 {
             margin: 8px 0 4px;
           }
         }
-
-        //.sub-education {
-        //	font-style: italic;
-        //}
       }
     }
   }
@@ -330,11 +431,21 @@ body {
 
     > a {
       border: none;
+      transition: transform 0.2s ease;
 
-      > img {
-        border-radius: 20%;
-        filter: invert(100%);
-        width: 2em;
+      &:hover {
+        transform: translateY(-2px);
+      }
+
+      svg {
+        width: 1.75em;
+        height: 1.75em;
+        fill: var(--primary-text);
+        transition: fill 0.2s ease;
+      }
+
+      &:hover svg {
+        fill: var(--accent-warm);
       }
     }
   }
@@ -377,7 +488,7 @@ body {
           &::before {
             content: "";
             display: block;
-            border-bottom: solid;
+            border-bottom: 2px solid var(--accent-earth);
             margin-bottom: 20px;
           }
         }
@@ -430,4 +541,34 @@ body {
       }
     }
   }
+}
+
+// Light theme specific adjustments for homepage
+:root.light-theme {
+  body .container {
+    // Remove the dark gradient overlay in light mode
+    background: none;
+  }
+
+  body main > section::before {
+    background: none;
+  }
+
+  body #mobile-home-img::after {
+    // Softer fade for light mode
+    background: radial-gradient(transparent 50%, var(--page-background));
+  }
+
+  #resume-sec #resume {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  #resume-sec #projects-display .project {
+    background: rgba(255, 255, 255, 0.4);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.6);
+    }
+  }
+
 }

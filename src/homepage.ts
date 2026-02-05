@@ -36,12 +36,12 @@ function onScroll() {
     sections[focused].classList.add("selected");
 }
 
-function changeScrollButton(shouldEnable: boolean) {
-    if (shouldEnable) {
-        scrollButton.style.opacity = "0";
+function changeScrollButton(shouldHide: boolean) {
+    if (shouldHide) {
+        scrollButton.classList.remove("visible");
         scrollButton.setAttribute("disabled", "");
     } else {
-        scrollButton.style.opacity = "1";
+        scrollButton.classList.add("visible");
         if (scrollButton.attributes.getNamedItem("disabled"))
             scrollButton.attributes.removeNamedItem("disabled");
     }

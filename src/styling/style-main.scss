@@ -1,6 +1,77 @@
+// Keep Product Sans for Google logo only
 @font-face {
   font-family: "Product Sans";
   src: url("/files/Product Sans Regular.ttf") format("truetype");
+}
+
+// ============================================
+// EASTER EGG: Trail rat
+// ============================================
+@keyframes skitter {
+  0% {
+    left: -60px;
+  }
+  100% {
+    left: calc(100% + 60px);
+  }
+}
+
+@keyframes ratBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes ratVisibility {
+  0%, 100% { opacity: 0; }
+  3%, 97% { opacity: 0.7; }
+}
+
+@keyframes legRun {
+  0%, 100% { transform: rotate(-20deg); }
+  50% { transform: rotate(20deg); }
+}
+
+@keyframes tailWag {
+  0%, 100% { transform: rotate(-8deg); }
+  50% { transform: rotate(8deg); }
+}
+
+#trail-rat {
+  position: fixed;
+  bottom: 5px;
+  left: -60px;
+  width: 45px;
+  height: 22px;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  // Duration and delay set by JS based on screen width
+  animation-name: skitter, ratBounce, ratVisibility;
+  animation-timing-function: linear, ease-in-out, linear;
+  animation-fill-mode: forwards, none, forwards;
+  animation-iteration-count: 1, infinite, 1;
+
+  .leg {
+    transform-origin: top center;
+  }
+
+  .tail {
+    transform-origin: 14px 18px;
+  }
+
+  // Start leg/tail animations when running class is added
+  &.running .leg {
+    animation: legRun 0.08s ease-in-out infinite;
+  }
+
+  &.running .leg-2,
+  &.running .leg-4 {
+    animation-delay: 0.04s;
+  }
+
+  &.running .tail {
+    animation: tailWag 0.15s ease-in-out infinite;
+  }
 }
 
 html {
@@ -24,24 +95,25 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-  Arial, sans-serif;
+  // Font family now set in theme.scss
   font-size: 16px;
   height: 100%;
-  line-height: 1.8;
+  line-height: 1.75;
   margin: 0 auto;
   max-width: 73%;
   min-width: 20em;
+  transition: background-color 0.3s ease, color 0.3s ease;
 
   header {
     &::after {
-      content: "❃";
+      content: "◆";
       position: relative;
-      padding: 0 4px;
-      left: calc(50% - 0.4em);
+      padding: 0 6px;
+      left: calc(50% - 0.5em);
       top: -0.5em;
       background: var(--page-background);
-      color: var(--primary-text);
+      color: var(--accent-earth);
+      font-size: 0.9em;
     }
 
     nav {
@@ -66,7 +138,7 @@ body {
       align-content: center;
       flex-wrap: wrap;
       margin-left: 20px;
-      gap: 0 1em;
+      gap: 0 1.5em;
     }
 
     li {
@@ -80,12 +152,15 @@ body {
 
     a {
       line-height: 1;
+      font-weight: 500;
     }
   }
 
   .nav {
     p {
       margin-top: 1em;
+      font-style: italic;
+      opacity: 0.85;
     }
 
     display: block;
@@ -132,50 +207,28 @@ body {
       line-height: 1;
     }
 
-    line-height: 1;
+    line-height: 1.2;
   }
 
   a {
     &:hover,
     &:focus {
-      border-bottom: 0;
+      border-bottom-width: 2px;
     }
 
     &:has(> :is(h1, h2, h3)) {
       border: none;
     }
 
-    border-bottom: 1px solid var(--link-underline);
     text-decoration: none;
   }
 
   .faux-h1 {
     font-size: 2em;
-    font-weight: bold;
+    font-weight: 700;
   }
 
-  hr {
-    border: none;
-    margin: 0;
-    overflow: visible;
-    text-align: center;
-    height: 10px;
-    z-index: -10;
-    position: relative;
-    border-top: 3px double var(--primary-text);
-
-    &::after {
-      content: "❃";
-      padding: 0 4px;
-      position: relative;
-      top: -1em;
-      z-index: -9;
-    }
-  }
-
-  ::selection {
-    background-color: rgba(100, 148, 237, 0.534);
-  }
+  // Selection styling moved to theme.scss
 
   .color-switch {
     input {
@@ -190,19 +243,20 @@ body {
     display: inline-block;
     height: 2em;
     width: 3.5em;
+    z-index: 100;
   }
 
   .slider {
     &:before {
       position: absolute;
-      content: "️";
+      content: "";
       height: 1.5rem;
       width: 1.5rem;
       left: 3px;
       bottom: 4px;
-      background-color: white;
-      -webkit-transition: 0.4s;
-      transition: 0.4s;
+      background-color: rgba(255, 255, 255, 0.9);
+      -webkit-transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     &.round {
@@ -219,10 +273,11 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    -webkit-transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  // Keep Google colors for the Google logo
   .google {
     font-family: "Product Sans", sans-serif;
 
@@ -258,6 +313,14 @@ body {
       font-weight: normal;
       font-size: 0.8em;
       border: none;
+
+      &:hover svg {
+        transform: translateY(2px);
+      }
+
+      svg {
+        transition: transform 0.2s ease;
+      }
     }
 
     tr,
@@ -267,39 +330,52 @@ body {
   }
 
   #scroll-to-top {
-    div {
-      height: 0.8em;
-    }
-
     &:active {
-      transform: translate(2px, 2px);
+      transform: translateX(0) translateY(1px);
     }
 
     &:hover {
       cursor: pointer;
+      transform: translateX(0) translateY(-3px);
+      border-color: var(--accent-warm);
+
+      svg {
+        stroke: var(--accent-warm);
+      }
     }
 
-    font-family: "Product Sans", serif;
-    font-size: 2.2rem;
-    font-weight: bold;
-
-    width: 4vw;
-    min-width: 2.5rem;
-    max-width: 5vh;
-    aspect-ratio: 1/1;
+    width: 2.75rem;
+    height: 2.75rem;
 
     position: fixed;
-    right: 6%;
-    bottom: 1em;
+    right: 2rem;
+    bottom: 2rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    border-radius: 1em;
-    border: none;
+    background: var(--page-background);
+    border: 2px solid var(--accent-earth);
+    border-radius: 0.5rem;
 
+    // Start off-screen to the right
     opacity: 0;
-    transition: opacity 0.25s;
+    transform: translateX(80px);
+    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    // When visible (controlled by JS adding .visible class)
+    &.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      stroke: var(--accent-earth);
+      transition: stroke 0.2s ease;
+    }
   }
 }
