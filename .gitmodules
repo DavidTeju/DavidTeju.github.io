@@ -1,6 +1,0 @@
-[submodule "src/projects/Bidaily-creations"]
-	path = src/projects/Bidaily-creations
-	url = https://github.com/DavidTeju/Bidaily-creations.git
-[submodule "src/projects/David-O-Meter"]
-	path = src/projects/David-O-Meter
-	url = https://github.com/DavidTeju/David-O-Meter.git

@@ -40,22 +40,6 @@ function swapThemeStyleSheet() {
 
 }
 
-/**
- * To help maintain themes for pages that still link to old stylesheets
- */
-function updateStyleSheet() {
-    document.documentElement.className = "light-theme";
-
-    const styleTag = document.getElementById("page-color");
-
-    if (!styleTag) return;
-
-    const styleLink = styleTag.getAttribute("href")!;
-
-    if (styleLink.includes("dark.css") || styleLink.includes("colorful.css")) {
-        styleTag.setAttribute("href", "/styling/theme.css");
-    }
-}
 
 function elementOuterHeight(el: Element) {
     const style = getComputedStyle(el);
@@ -68,8 +52,6 @@ function elementOuterHeight(el: Element) {
 }
 
 pushFooter();
-
-updateStyleSheet();
 
 let themeSwitch = document.getElementById("color-switch") as HTMLInputElement;
 loadThemeCookie(themeSwitch);

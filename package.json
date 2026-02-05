@@ -1,14 +1,15 @@
 {
   "name": "davidteju.github.io",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "scripts": {
     "watch:eleventy": "eleventy --serve",
-    "watch:sass": "sass src/styling:build/styles src/projects:build/styles --watch --style compressed",
+    "watch:sass": "sass src/styling:build/styles --watch --style compressed",
     "watch:typescript": "tsc --watch",
     "start": "npm run watch:sass & npm run watch:typescript & npm run watch:eleventy",
     "build:eleventy": "env NODE_ENV=production npx eleventy",
-    "build:sass": "npx sass src/styling:build/styles src/projects:build/styles --style compressed",
+    "build:sass": "npx sass src/styling:build/styles --style compressed",
     "build:typescript": "npx tsc",
     "build": "rm -rf build; npm run build:eleventy & npm run build:sass & npm run build:typescript; npm run minify",
     "minify": "find ./build -type f -name \"*.js\" | xargs -I{} esbuild {} --allow-overwrite --minify --outfile={}"
@@ -17,14 +18,14 @@
   "author": "David Tejuosho",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy": "^3.1.2",
     "esbuild": "^0.17.15",
     "html-minifier": "^4.0.0",
     "js-yaml": "^4.1.0",
     "sass": "^1.58.3",
-    "typescript": "^4.9.5"
+    "typescript": "^5.9.3"
   },
   "dependencies": {
-    "markdown-it": "^13.0.1"
+    "markdown-it": "^14.1.0"
   }
 }

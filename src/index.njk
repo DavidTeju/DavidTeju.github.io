@@ -145,7 +145,7 @@ excludeSwitch: true
             <div id="projects-display">
 
                 <!-- projects.njk -->
-                {% for project in collections.projects %}
+                {% for project in projects %}
                     <a class="project" href="{{ project.urlToProject }}">
                         <h3>{{ project.projectName }}</h3>
                         <p class="dates">{{ project.durationString }}</p>
@@ -197,36 +197,6 @@ excludeSwitch: true
             </ul>
         </section>
 
-        <!-- <section>
-            <h2>Education</h2>
-            <hr />
-
-            <div class="sub-education">
-                <div class="subheading">
-                    <h3>Dominican University</h3>
-                    <h3>River Forest</h3>
-                </div>
-                <div class="subheading">
-                    <p title="and computer engineering (hopefully)">
-                        Bachelor of Science in Mathematics and Computer Science
-                    </p>
-                    <p>expected May 2025</p>
-                </div>
-                <ul>
-                    <li>
-                        Presidential Scholarship, Graham Scholarship, Pillars
-                        Scholarship
-                    </li>
-                    <li>
-                        Relevant Coursework: Data Structures, Computer Programming,
-                        Web Development I
-                    </li>
-                    <li>
-                        <strong>GPA:</strong> 3.33/4.0; <strong>SAT:</strong> 1530
-                    </li>
-                </ul>
-            </div>
-        </section> -->
     </div>
 </section>
 <section id="stuff-i-like">

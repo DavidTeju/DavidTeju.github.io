@@ -22,7 +22,7 @@
   longDescription: "Designed, developed, and documented application to generate configurable trend reports on my school's graduating student survey data from Qualtrics"
   languageString: "Python, Pandas, Flask, Qualtrics"
 
-- urlToProject: "/projects/David-O-Meter/"
+- urlToProject: "https://github.com/DavidTeju/David-O-Meter"
   projectName: "David-O-Meter"
   durationString: "April 2022"
   longDescription: "Built site displaying ratio of sentiments of tweets containing 'David'"
