@@ -1,3 +1,9 @@
+- urlToProject: "https://github.com/DavidTeju/flight-statistics"
+  projectName: "Flight Statistics"
+  durationString: "May 2026"
+  longDescription: "Built a calendar heatmap and sliding weekly chart of TSA passenger volumes to scout less busy days for standby flights"
+  languageString: "SvelteKit, TypeScript, SVG"
+
 - urlToProject: "https://undocustudent.org/"
   projectName: "College Advising Database for Undocumented Students"
   durationString: "April 2025"
