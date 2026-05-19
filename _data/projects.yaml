@@ -1,4 +1,4 @@
-- urlToProject: "https://github.com/DavidTeju/flight-statistics"
+- urlToProject: "https://whentofly.app/"
   projectName: "Flight Statistics"
   durationString: "May 2026"
   longDescription: "Built a calendar heatmap and sliding weekly chart of TSA passenger volumes to scout less busy days for standby flights"
