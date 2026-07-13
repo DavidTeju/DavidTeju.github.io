@@ -19,11 +19,11 @@ September 2025 – Present
 </div>
 
 - Built recurring tasks feature for Microsoft Planner—complex recurrence patterns (every 4th Thursday, every other Tue/Wed), performant rendering on unbounded calendars, timezone support for distributed teams
-- Currently figuring out dev prod in the age of AI
+- Designed and built azstack—a CLI and framework for creating and managing stacked pull requests in Azure DevOps—and drove adoption across teams
 
 <!-- RESUME VERSION:
 - Shipped recurring tasks for Microsoft Planner supporting complex recurrence patterns, performant calendar rendering, and timezone handling for distributed teams
-- Driving developer productivity initiatives
+- Designed, built and drove adoption for azstack; a cli and framework for creating and managing stacked pull requests in Azure DevOps
 -->
 
 <div class="subheading">
@@ -72,6 +72,28 @@ May – August 2024
 <!-- RESUME VERSION:
 - Developed filtering feature for structured data tables used by 200K+ scientists for experimental data capture
 - Redesigned selection model, clipboard operations, fill-down, search, and formula referencing across data layer and UI to support non-contiguous cell selections
+-->
+
+<div class="subheading">
+
+### Louisville Automation and Robotics Research Lab
+
+### Louisville, KY
+
+</div>
+
+<div class="subheading">
+
+Student Researcher
+
+August – December 2023
+
+</div>
+
+- Built and maintained the ROS/Gazebo simulation environment for the ARNA medical robot study—testing the efficacy of human-precise control of motor-powered carts for hospitals and nursing homes
+
+<!-- RESUME VERSION:
+- Developed and maintained Ros/Gazebo simulation environment for the ARNA medical bot research study on the efficacy of human-precise control of motor-powered carts for use in hospitals and nursing homes
 -->
 
 <div class="subheading">
