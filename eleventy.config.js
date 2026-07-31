@@ -1,4 +1,4 @@
-import htmlmin from "html-minifier";
+import { minify as htmlminify } from "html-minifier-terser";
 import markdownIt from "markdown-it";
 import yaml from "js-yaml";
 
@@ -12,9 +12,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/styling/*.css": "./styles" });
 
   // HTML minification
-  eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
+  eleventyConfig.addTransform("htmlmin", async (content, outputPath) => {
     if (outputPath?.endsWith(".html")) {
-      return htmlmin.minify(content, {
+      return await htmlminify(content, {
         collapseWhitespace: true,
         removeComments: true,
         useShortDoctype: true,
