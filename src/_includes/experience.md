@@ -19,11 +19,15 @@ September 2025 – Present
 </div>
 
 - Built recurring tasks feature for Microsoft Planner—complex recurrence patterns (every 4th Thursday, every other Tue/Wed), performant rendering on unbounded calendars, timezone support for distributed teams
-- Designed and built azstack—a CLI and framework for creating and managing stacked pull requests in Azure DevOps—and drove adoption across teams
+- Designed and built azstack—a CLI and framework for creating and managing stacked pull requests in Azure DevOps—and drove adoption across 16 engineers, cutting median PR size ~16% and lifting large-change completion rates 2.5x
+- Drove AI adoption across the org: shipped PR-workflow agent skills enforced through harness hooks to prevent mid-PR toil, cut MCP context bloat from 70k to 10k tokens with no eval regression, designed a package/dependency-sharing system that cut worktree creation time 90%, and ran learning sessions
+- Built a code-review agent pipeline with automatic PR generation for testing and accepting agent-suggested code changes
 
 <!-- RESUME VERSION:
-- Shipped recurring tasks for Microsoft Planner supporting complex recurrence patterns, performant calendar rendering, and timezone handling for distributed teams
-- Designed, built and drove adoption for azstack; a cli and framework for creating and managing stacked pull requests in Azure DevOps
+- Shipped "recurring tasks" feature for Microsoft Planner supporting complex recurrence patterns, performant calendar rendering, and time zone handling for distributed teams
+- Solo-engineered and drove adoption with 16 engineers for azstack; a cli and framework for creating and managing stacked pull requests in Azure DevOps, cutting median PR size by ~16% and lifting large code change completion rates 2.5x
+- Drove AI adoption across org, by incorporating PR-workflow agent skills and enforcement within harness hooks to prevent developer toil mid-PR, by cutting down MCP context bloat from 70k tokens to 10k, with no change to eval performance, by designing package/dependency-sharing system to cut down work-trees creation time by 90%, and hosting learning sessions.
+- Built code-review agent pipeline with auto PR generation, allowing for testing and accepting agent-suggested code changes
 -->
 
 <div class="subheading">
@@ -117,7 +121,6 @@ May – August 2023
 
 <!-- RESUME VERSION:
 - Designed and implemented Grading Periods and Excused State features for Google Classroom mobile app (150M+ users), achieving feature parity with web for mobile-only users
-- Updated data layer with new DAOs, on-disk cache migration, and feature rollout safeguards
 -->
 
 <div class="subheading">
@@ -141,8 +144,7 @@ June – December 2022
 - Created C# and TypeScript libraries for parsing messy data between JSON, DataTables, and HTML
 
 <!-- RESUME VERSION:
-- Developed automation tooling supporting clinical trial audit processes in R&D
-- Automated team newsletter generation, reducing manual effort by 4 hours per week
+- Automated team newsletter generation, reducing manual effort by 4 hours per week, and developed tooling supporting clinical trial audit processes in R&D
 - Built C# and Node.js (TypeScript) libraries for parsing and converting between JSON, DataTables, and HTML formats
 -->
 

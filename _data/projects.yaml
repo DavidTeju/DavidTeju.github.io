@@ -4,6 +4,12 @@
   longDescription: "Built a calendar heatmap and sliding weekly chart of TSA passenger volumes to scout less busy days for standby flights"
   languageString: "SvelteKit, TypeScript, SVG"
 
+- urlToProject: "https://github.com/DavidTeju/claude-inspector"
+  projectName: "Claude Inspector"
+  durationString: "February 2026"
+  longDescription: "Built agent loop allowing codex, copilot and claude code sessions to be continued with whatever harness of choice"
+  languageString: "Docker, SvelteKit, SupaBase, TypeScript"
+
 - urlToProject: "https://undocustudent.org/"
   projectName: "College Advising Database for Undocumented Students"
   durationString: "April 2025"
