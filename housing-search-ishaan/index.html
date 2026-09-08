@@ -5,11 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <meta name="referrer" content="no-referrer">
-<meta name="color-scheme" content="light">
+<meta name="color-scheme" content="dark light">
 <title>SF shared-home search · public view</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2326382f'/%3E%3Ctext x='10' y='45' font-size='40' fill='%23f6f3ec' font-family='Georgia'%3Esf%3C/text%3E%3C/svg%3E">
 <style>
-:root{--paper:#f6f3ec;--ink:#1f2a24;--muted:#6b7369;--line:#d7d2c4;--accent:#b4562f}
+:root{color-scheme:light;--paper:#f6f3ec;--ink:#1f2a24;--muted:#6b7369;--line:#d7d2c4;--accent:#b4562f}
+@media not print{:root[data-theme=dark]{color-scheme:dark;--paper:#161b18;--ink:#e6e1d6;--muted:#9aa398;--line:#343d37;--accent:#d98a5f}}
 html,body{height:100%;margin:0;background:var(--paper);color:var(--ink);font:13px/1.4 "Avenir Next",Avenir,"Gill Sans","Trebuchet MS",Verdana,sans-serif}
 body{display:flex;flex-direction:column;min-height:100dvh}
 .bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 14px;border-bottom:1px solid var(--line);padding-top:max(8px,env(safe-area-inset-top))}
@@ -21,6 +22,55 @@ iframe{flex:1;width:100%;border:0;background:var(--paper);min-height:0}
 noscript{display:block;padding:20px;text-align:center}
 @media (max-width:480px){.bar span{display:none}}
 </style>
+<script id="theme-boot">
+(function(){
+"use strict";
+var KEY = "sf-housing-theme", MSG = "sf-housing-theme", THEMES = {dark: true, light: true};
+var root = document.documentElement, saved = null, theme = "dark", warned = {};
+function knownStorageError(err){
+  return typeof DOMException !== "undefined" && err instanceof DOMException &&
+    (err.name === "SecurityError" || err.name === "QuotaExceededError" || err.name === "NS_ERROR_DOM_QUOTA_REACHED");
+}
+function settle(failure, op){
+  if (!failure) return;
+  if (!knownStorageError(failure)) throw failure;
+  if (warned[op]) return;
+  warned[op] = true;
+  console.warn("[sf-housing wrapper] theme " + op + " unavailable: " + failure.name + " (" + failure.message + "). The theme still applies, for this visit only.");
+}
+function paint(next){ theme = next; root.setAttribute("data-theme", next); }
+function choose(next){
+  paint(next);
+  var failure = null;
+  try { window.localStorage.setItem(KEY, next); saved = next; } catch (err) { failure = err; }
+  settle(failure, "save");
+}
+function frame(){ return document.querySelector("iframe"); }
+function appOrigin(f){ var origin = new URL(f.src).origin; return /^https?:\/\//.test(origin) ? origin : null; }
+/* The framed app owns the choice: it answers our hello with the theme in force and reports every toggle.
+   Only messages from the framed window at the framed origin are honoured. */
+window.addEventListener("message", function(ev){
+  var f = frame(), origin = f && appOrigin(f);
+  if (!origin || ev.origin !== origin || ev.source !== f.contentWindow) return;
+  var data = ev.data;
+  if (!data || typeof data !== "object" || data.type !== MSG || THEMES[data.theme] !== true) return;
+  if (data.theme !== theme || saved !== data.theme) choose(data.theme);
+});
+/* The iframe's own load event climbs (capture phase) only as far as document — DOM event-path rules stop
+   load events at the Document, so a window listener never sees it. The hello carries only this page's saved choice. */
+document.addEventListener("load", function(ev){
+  var f = frame(), origin = f && appOrigin(f);
+  if (!origin || ev.target !== f) return;
+  f.contentWindow.postMessage({type: MSG, theme: saved}, origin);
+}, true);
+/* Boot last: paint before any storage error may propagate, with the listeners above already wired. */
+var readFailure = null;
+try { saved = window.localStorage.getItem(KEY); } catch (err) { readFailure = err; }
+if (THEMES[saved] !== true) saved = null;
+paint(saved || "dark");
+settle(readFailure, "read");
+})();
+</script>
 </head>
 <body>
 <div class="bar">
